@@ -63,3 +63,5 @@ syrk_result.csv
 
 /build
 /.vscode
+
+/Testing/*

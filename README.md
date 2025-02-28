@@ -99,6 +99,14 @@ mpirun -np 4 MPI_SYRK_implementation -m 200 -n 100 -a 3 -c config.txt input.txt
 
 ### 📂 **Test Files & Expected Results**  
 
+#### Unity test (GTest)
+
+To run the GTest use the following:
+
+```
+(cd ./build/test/; ctest --output-on-failure)
+```
+
 **Test files** and **expected results** can be found in:  
   - Input files: `./resource/input/`  
   - Expected results: `./resource/in/`  

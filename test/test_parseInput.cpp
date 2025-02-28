@@ -79,10 +79,24 @@ class ParseInputTest : public ::testing::Test {
     TEST_F(ParseInputTest, MissingFileName) {
         const char* argv[] = {"program", "-a", "1", "-m", "10", "-n", "20"};
         int argc = sizeof(argv) / sizeof(argv[0]);
+    
+        // Capture the output
+        testing::internal::CaptureStdout();
+        testing::internal::CaptureStderr();
+    
+        parseInput(&config, argc, const_cast<char**>(argv), rank);
+    
+        std::string output_stdout = testing::internal::GetCapturedStdout();
+        std::string output_stderr = testing::internal::GetCapturedStderr();
 
-        EXPECT_EXIT(
-            parseInput(&config, argc, const_cast<char**>(argv), rank), 
-            ::testing::ExitedWithCode(EXIT_FAILURE), 
-            "missing input file name"
-        );
+        EXPECT_EQ(config.algo, 1);
+        EXPECT_EQ(config.m, 10);
+        EXPECT_EQ(config.n, 20);
+        EXPECT_EQ(config.fileName, nullptr);
+
+        printf("stdout: %s\n", output_stdout.c_str());
+        printf("stderr: %s\n", output_stderr.c_str());
+
+        EXPECT_EQ(output_stderr, "missing input file name\n Generate random input\n");
+
     }

@@ -13,6 +13,9 @@ project(MPI_SYRK_implementation
         DESCRIPTION "Implementation for the bachelor thesis by Held Johannes"
 )
 
+# Print the value of HYDRA
+message(STATUS "HYDRA is set to: ${HYDRA}")
+
 # MPI & BLAS Konfigurationen
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/CMakeModules)
 include(MPIConfig)

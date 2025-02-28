@@ -11,6 +11,7 @@ enable_testing()
 set(SOURCES 
     test.cpp
     test_parseInput.cpp
+    test_calculateQI.cpp
 )
 
 # Fetch GoogleTest via CMake FetchContent

@@ -8,6 +8,7 @@
 #include "MPI_Syrk_implementation.h"
 #include "one_d_syrk.h"
 #include "two_d_syrk.h"
+#include "three_d_syrk.h"
 
 #define ROOT 0
 
@@ -264,11 +265,17 @@ int main(int argc, char *argv[]) {
             break;
         case 2:
             // 1D SYRK - OpenBLAS
+            //In the case that m ≤ n and P is not too large
             syrk_withOpenBLAS(&config, rank, index_arr_rank, rank_input, rank_syrk_result);
             break;
         case 3:
             // 2D SYRK - OpenBLAS
+            // In the case that m > n and P is not too large, a 2D algorithm is optimal
             two_d_syrk(&config, rank, rank_syrk_result, rank_input);
+            break;
+        case 4:
+            // 3D SYRK - OpenBLAS
+            three_d_syrk(&config, rank, rank_syrk_result, rank_input);
             break;
         default:
             log_fatal("no SYRK operator selected --> error ALOG %d not in [0..2]", config.algo);

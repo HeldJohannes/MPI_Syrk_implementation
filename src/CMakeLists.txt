@@ -6,6 +6,7 @@ set(SOURCES
         log.c
         two_d_syrk.c
         one_d_syrk.c
+        three_d_syrk.c
 )
 
 set(HEADERS
@@ -13,6 +14,7 @@ set(HEADERS
         log.h
         two_d_syrk.h
         one_d_syrk.h
+        three_d_syrk.h
 )
 
 add_library(MPI_SYRK_lib STATIC ${SOURCES} ${HEADERS})
