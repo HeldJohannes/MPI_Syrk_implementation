@@ -9,6 +9,10 @@
 
 void parseInput(run_config *s, int argc, char **argv, int rank) {
 
+    if (argc <= 5) {
+        error_exit(rank, argv[0], "To many or not enough input variables!");
+    }
+
     log_trace("Enter parseInput");
     //total_row_number
     s->m = -1;

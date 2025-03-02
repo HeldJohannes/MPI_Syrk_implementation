@@ -11,7 +11,9 @@ extern "C" {
 
 #include "MPI_Syrk_implementation.h"
 
-void calculate_Q_i(int *q_i, int m_bloc_i, int c);
+void create_communicators(run_config *s, MPI_Comm *pMpiCommunicators);
+
+int calculate_Q_i(int *q_i, int m_bloc_i, int c);
 
 int cal_block_size(run_config *s);
 

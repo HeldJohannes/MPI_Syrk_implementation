@@ -15,14 +15,17 @@ extern "C" {
 #include <cblas.h>
 #include "log.h"
 
+/**
+ * Structure to store the configuration values for the program.
+ */
 typedef struct {
-    int algo;
-    int world_size;
-    int m;
-    int n;
-    int c;
-    char *fileName;
-    char *result_File;
+    int algo;           // 0 for tripple for-loop, 1 for improved tripple for-loop, 2 for 1D, 3 for 2D and 4 for 3D
+    int world_size;     // total number of processors
+    int m;              // total number of rows
+    int n;              // total number of columns
+    int c;              // c is a prime number (e.g. 3, so that P = c(c+1) = 12) and is required for the 2D and 3D algorithm
+    char *fileName;     // name of the input file if not provided random input will be generated
+    char *result_File;  // name of the output file
 } run_config;
 
 /**
@@ -60,10 +63,28 @@ void parseInput(run_config *s, int argc, char **argv, int rank);
 
 void printResult(run_config *s, int cols, float* array);
 
+/**
+ * This function prints an array to the specified file.
+ *
+ * @param row The number of rows in the array
+ * @param cols The number of columns in the array
+ * @param array The array to be printed
+ * @param file The file where the array will be printed
+ */
 void printArray(int row, int cols, const float *array, FILE *file);
 
+/**
+ * This function calculates the block size for the input array.
+ */
 void index_calculation(int *arr, long n, int p);
 
+/**
+ * This function reads the input file and populates the input array.
+ *
+ * @param input A pointer to an integer array where the input values will be stored.
+ * @param rank The rank of the current processor
+ * @param argv An array of strings containing the command-line arguments.
+ */
 void readInputFile(int *input, int rank, char **argv);
 
 void computeInputAndTransposed(run_config *s, int rank, int index_arr_rank, int cum_index_arr_rank, float **input, float **rank_input, float **rank_input_t);
@@ -77,6 +98,12 @@ void computeInputAndTransposed(run_config *s, int rank, int index_arr_rank, int 
  */
 void transposeMatrix(long m, long n, float** matrix, float** result);
 
+/**
+ * Generates random input values for the matrix A.
+ *
+ * @param s A pointer to a run_config structure containing the matrix dimensions.
+ * @param A A pointer to a float array where the input values will be stored.
+ */
 void generate_input(run_config *s, float **A);
 
 /**
@@ -86,6 +113,14 @@ void generate_input(run_config *s, float **A);
  */
 void print_usage(char *prog_name);
 
+/**
+ * This function is used to print error messages and exit the program.
+ *
+ * @param rank Rank of the caller
+ * @param name Name of the program or function where the error occurred
+ * @param msg Format string for the error message
+ * @param ... Additional arguments for the error message (variable argument list)
+ */
 void error_exit(int rank, char *name, const char *msg, ...);
 
 #ifdef __cplusplus

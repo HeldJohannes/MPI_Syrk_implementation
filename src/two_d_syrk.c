@@ -69,12 +69,21 @@ int calculate_D_k(int k, int c) {
 }
 
 /**
+ * calculate the set of processors Q_i that are assigned to a particular row block i
  *
  * @param q_i array of size c+1
  * @param m_bloc_i (0 ≤ i < c^2)
  * @param c prime number such that P=c(c+1)
+ * 
+ * @return -1 if m_bloc_i is not in the range [0, c^2) or 0 otherwise
  */
-void calculate_Q_i(int *q_i, int m_bloc_i, int c) {
+int calculate_Q_i(int *q_i, int m_bloc_i, int c) {
+
+    // Überprüfen, ob 0 ≤ m_bloc_i < c^2 erfüllt ist
+    if (!(m_bloc_i >= 0 && m_bloc_i < c * c)) {
+        return -1; 
+    }
+
     if (m_bloc_i < c) {
         for (int i = 0; i < c; ++i) {
             assert(q_i + i != NULL);
@@ -90,6 +99,7 @@ void calculate_Q_i(int *q_i, int m_bloc_i, int c) {
         assert(q_i + c != NULL);
         q_i[c] = c * c + m_bloc_i / c;
     }
+    return 0;
 }
 
 int cal_block_size(run_config *s) {
@@ -423,4 +433,41 @@ void two_d_syrk(run_config *s, int k, float *rank_result, float **input) {
     free(Q_i);
     free(B);
     free(A);
+}
+
+void create_communicators(run_config *s, MPI_Comm *pMpiCommunicators) {
+    MPI_Group main_group;
+    MPI_Comm_group(MPI_COMM_WORLD, &main_group);
+        
+    // create c^2 mpi - groups:
+    MPI_Group *pMpiGroups = (MPI_Group *) malloc(s->c * s->c * sizeof (MPI_Group ));
+    if (!pMpiGroups) {
+        log_fatal("Memory allocation failed for pMpiGroups", 0);
+        MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
+    }
+
+    int *Q_i = (int *) calloc(s->c + 1, sizeof(int));
+    for (int i = 0; i < s->c * s->c; ++i) {
+        calculate_Q_i(Q_i, i, s->c);
+        int ret = MPI_Group_incl(
+            main_group, 
+            s->c + 1, 
+            Q_i, 
+            &pMpiGroups[i]
+        );
+        if (ret != MPI_SUCCESS) {
+            log_fatal("MPI_Group_incl failed for group %d", i);
+            MPI_Abort(MPI_COMM_WORLD, ret);
+        }
+        assert(pMpiGroups[i] != NULL);
+        int err = MPI_Comm_create(
+            MPI_COMM_WORLD, 
+            pMpiGroups[i], 
+            &pMpiCommunicators[i]
+        );
+        if (err != MPI_SUCCESS) {
+            log_error("MPI_Comm_create_group error");
+        }
+        assert(pMpiCommunicators[i] != NULL);
+    }
 }
