@@ -237,3 +237,7 @@ srun -p q_thesis -t 1 -N 1 --ntasks-per-node=1 ./build/src/MPI_SYRK_implementati
 ```
 srun -p q_thesis -t 1 -N 12 --ntasks-per-node=1 ./build/src/MPI_SYRK_implementation -m 360 -n 100 -a 3 -c 3
 ```
+
+```
+srun -p q_thesis -t 1 -N 12 --ntasks-per-node=1 ./build/src/MPI_SYRK_implementation -m 36 -n 12 -a 3 -c 3
+```

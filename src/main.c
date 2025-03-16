@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
     /** ************************************************************************************************
      * STEP 1: Initialize the MPI environment and parse the input parameters
      ************************************************************************************************ */
-    log_set_level(LOG_INFO);
+    log_set_level(LOG_DEBUG);
     static run_config config;
     config.fileName = NULL;
 
@@ -64,18 +64,11 @@ int main(int argc, char *argv[]) {
     int index_arr_rank;
     // array to store the index array values for all processors
     intArray index_arr;
-    index_arr.length = world_size;
-    index_arr.data = (int *) calloc(index_arr.length, sizeof(int));
-    if (!index_arr.data) {
-        log_fatal("Memory allocation failed for cumulate_index_arr");
-        MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
-    }
+    allocate_int_array(&index_arr, world_size);
+    
     // array to store the cumulate index array values for all processors
-    int *cumulate_index_arr = (int *) calloc(world_size, sizeof(int));
-    if (!cumulate_index_arr) {
-        log_fatal("Memory allocation failed for cumulate_index_arr");
-        MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
-    }
+    intArray cumulate_index_arr;
+    allocate_int_array(&cumulate_index_arr, world_size);
 
     
     if (rank == ROOT) {
@@ -94,8 +87,8 @@ int main(int argc, char *argv[]) {
         // TODO check if this is necessary:
         int rank_count = 0;
         for (int i = 0; i < world_size; ++i) {
-            assert(cumulate_index_arr + i != NULL);
-            cumulate_index_arr[i] = rank_count;
+            assert(cumulate_index_arr.data + i != NULL);
+            cumulate_index_arr.data[i] = rank_count;
             assert(index_arr.length > i);
             rank_count += index_arr.data[i];
         }
@@ -119,11 +112,11 @@ int main(int argc, char *argv[]) {
     //MPI_Scatter(cumulate_index_arr, 1, MPI_INT, &cumulate_index_arr_rank, 1, MPI_INT, 0, MPI_COMM_WORLD);
 
     //input matrix for each node:
-    float **rank_input = NULL;
+    floatMatrix rank_input;
 
     // transposed input matrix for each node:
     // needed only for 1D-Algo
-    float **rank_input_t = NULL;
+    floatMatrix rank_input_t;
 
     if (config.algo != 3) {
 
@@ -136,14 +129,7 @@ int main(int argc, char *argv[]) {
          * STEP 2.1:
          * allocate memory for the node input matrix of size m * index_arr[rank] (= index_arr_rank)
          ************************************************************************************************ */
-        rank_input = (float **) calloc(config.m, sizeof(float *));
-        for (int i = 0; i < config.m; ++i) {
-            rank_input[i] = (float *) calloc(index_arr_rank, sizeof(float));
-            if (!rank_input[i]) {
-                log_fatal("Memory allocation failed for rank_input[%d]", i);
-                MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
-            }
-        }
+        allocate_float_matrix(&rank_input, config.m, index_arr_rank);
 
         /** ************************************************************************************************
          * STEP 2.2:
@@ -155,9 +141,9 @@ int main(int argc, char *argv[]) {
             MPI_Scatterv(
                 input[i],                   // row to be scatterd
                 index_arr.data,             // array holding number of elements to send to each processor
-                cumulate_index_arr,         // array holding the displacement to apply to the message sent by each processor
+                cumulate_index_arr.data,    // array holding the displacement to apply to the message sent by each processor
                 MPI_FLOAT,                  // data type of the buffer
-                rank_input[i],              // receive buffer of size index_arr_rank
+                rank_input.data[i],         // receive buffer of size index_arr_rank
                 index_arr_rank,             // number of elements to receive
                 MPI_FLOAT,                  // data type of the recive buffer  
                 ROOT,                       // root process
@@ -166,23 +152,13 @@ int main(int argc, char *argv[]) {
         }
 
         //transposed input matrix for each node:
-        rank_input_t = (float **) calloc(index_arr_rank, sizeof(float *));
-        if (config.algo != 3) {
-            for (int i = 0; i < index_arr_rank; ++i) {
-                rank_input_t[i] = (float *) calloc(config.m, sizeof(float));
-                if (!rank_input_t[i]) {
-                    log_fatal("Memory allocation failed for input");
-                    MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
-                }
-            }
+        allocate_float_matrix(&rank_input_t, index_arr_rank, config.m);
+        
+        // compute the input matrix, and it's transpose,
+        // which consists of the columns and all rows in that column:
+        //computeInputAndTransposed(&config, rank, index_arr_rank, cumulate_index_arr_rank, input, rank_input, rank_input_t);
 
-
-            // compute the input matrix, and it's transpose,
-            // which consists of the columns and all rows in that column:
-            //computeInputAndTransposed(&config, rank, index_arr_rank, cumulate_index_arr_rank, input, rank_input, rank_input_t);
-
-            transposeMatrix(config.m, index_arr_rank, rank_input, rank_input_t);
-        }
+        transposeMatrix(config.m, index_arr_rank, rank_input.data, rank_input_t.data);
 
     } else {
         assert(input_array.data != NULL);
@@ -194,25 +170,15 @@ int main(int argc, char *argv[]) {
         int row_block_length = config.n / (config.c + 1);
 
         // allocate memory for the node input matrix of size row_block_height * n
-        rank_input = (float **) calloc(config.c * row_block_height, sizeof (float *));
-        if (!rank_input) {
-            log_fatal("Memory allocation failed for rank_input", 0);
-            MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
-        }
-        for (int i = 0; i < config.c * row_block_height; ++i) {
-            rank_input[i] = (float *) calloc(row_block_length, sizeof (float ));
-            if (!rank_input[i]) {
-                log_fatal("Memory allocation failed for rank_input[%d]", i);
-                MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
-            }
-        }
-        distribute_input_matrix_2D(&config, rank, input_array.data, rank_input);
-        assert(rank_input != NULL);
+        allocate_float_matrix(&rank_input, config.c * row_block_height, row_block_length);
+        
+        distribute_input_matrix_2D(&config, rank, input_array.data, rank_input.data);
+        assert(rank_input.data != NULL);
     }
 
     // free index_arr and cumulate_index_arr because they are no longer needed
     free(index_arr.data);
-    free(cumulate_index_arr);
+    free(cumulate_index_arr.data);
 
     // TODO: remove
     // to test if distribute_input_matrix_2D works correctly 
@@ -238,9 +204,7 @@ int main(int argc, char *argv[]) {
     }*/
 
     // input no longer needed
-    free(input_array.data);
-    if (rank == ROOT) log_info("Successfully freed the input buffer");
-
+    free_float_array(input_array);
 
     // SYRK:
     // Compute the result matrix for each node which gets
@@ -259,26 +223,26 @@ int main(int argc, char *argv[]) {
 
     switch (config.algo) {
         case 0:
-            syrkIterative(&config, rank, index_arr_rank, rank_input, rank_input_t, rank_syrk_result);
+            syrkIterative(&config, rank, index_arr_rank, rank_input.data, rank_input_t.data, rank_syrk_result);
             break;
         case 1:
-            improved_syrkIterative(&config, rank, index_arr_rank, rank_input, rank_input_t, rank_syrk_result);
+            improved_syrkIterative(&config, rank, index_arr_rank, rank_input.data, rank_input_t.data, rank_syrk_result);
             break;
         case 2:
             // 1D SYRK - OpenBLAS
             //In the case that m ≤ n and P is not too large
-            syrk_withOpenBLAS(&config, rank, index_arr_rank, rank_input, rank_syrk_result);
+            syrk_withOpenBLAS(&config, rank, index_arr_rank, rank_input.data, rank_syrk_result);
             break;
         case 3:
             // 2D SYRK - OpenBLAS
             // In the case that m > n and P is not too large, a 2D algorithm is optimal
-            assert(rank_input != NULL);
+            assert(rank_input.data != NULL);
             assert(rank_syrk_result != NULL);
-            two_d_syrk(&config, rank, rank_syrk_result, rank_input);
+            two_d_syrk(&config, rank, rank_syrk_result, rank_input.data);
             break;
         case 4:
             // 3D SYRK - OpenBLAS
-            three_d_syrk(&config, rank, rank_syrk_result, rank_input);
+            three_d_syrk(&config, rank, rank_syrk_result, rank_input.data);
             break;
         default:
             log_fatal("no SYRK operator selected --> error ALOG %d not in [0..2]", config.algo);
@@ -288,28 +252,20 @@ int main(int argc, char *argv[]) {
     //MPI_Barrier(MPI_COMM_WORLD);
     //log_info("Syrk algo(%d) took %f sec", ALGO, MPI_Wtime() - start);
     log_debug("Successfully freed the buffer -> cumulate_index_arr");
-    free(rank_input);
+    free_float_matrix(&rank_input);
     log_debug("Successfully freed the buffer -> rank_input");
-    free(rank_input_t);
+    free_float_matrix(&rank_input_t);
     log_debug("Successfully freed the buffer -> rank_input_t");
 
 
     intArray counts;
-    counts.length = world_size;
-    counts.data = (int *) calloc(counts.length, sizeof(int));
-    if (!counts.data) {
-        log_fatal("Memory allocation failed for counts");
-        MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
-    }
+    allocate_int_array(&counts, world_size);
+    
     index_calculation(counts, (long) config.m * config.m, world_size);
+    log_debug("Successfully allocated the buffer -> counts");
 
     floatArray reduction_result;
-    reduction_result.length = counts.data[rank];
-    reduction_result.data = (float *) calloc(reduction_result.length, sizeof(float));
-    if (!reduction_result.data) {
-        log_fatal("Memory allocation failed for reduction_result");
-        MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
-    }
+    allocate_float_array(&reduction_result, counts.data[rank]);
 
     // Save the time before the MPI_Reduce_scatter (Start the colock)
     double start_mpi_reduce_scatter = MPI_Wtime();
@@ -340,22 +296,16 @@ int main(int argc, char *argv[]) {
         log_debug("m = %d", config.m);
         log_debug("[int] config.m * config.m = %d", config.m * config.m);
         log_debug("[long] config.m * config.m = %ld", config.m * config.m);
-        float *buffer = (float *) calloc(config.m * config.m, sizeof(float));
 
-        if (!buffer) {
-            log_fatal("Memory allocation failed for input with errno");
-            MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
-        }
+        floatArray buffer;
+        allocate_float_array(&buffer, config.m * config.m);
 
+        intArray displacements;
+        allocate_int_array(&displacements, world_size);
 
-        int *displacements = (int *) calloc(world_size, sizeof(int));
-        if (!displacements) {
-            log_error("Memory allocation failed for input with errno");
-            MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
-        }
-        displacements[0] = 0;
+        displacements.data[0] = 0;
         for (int i = 1; i < world_size; ++i) {
-            displacements[i] = displacements[i - 1] + counts.data[i - 1];
+            displacements.data[i] = displacements.data[i - 1] + counts.data[i - 1];
         }
 //        printf("counts:\n");
 //        printResult(rank, world_size, counts);
@@ -365,9 +315,9 @@ int main(int argc, char *argv[]) {
             reduction_result.data,      // send buffer
             counts.data[rank],          // number of elements to send
             MPI_FLOAT,                  // data type of the
-            buffer,                     // receive buffer
+            buffer.data,                // receive buffer
             counts.data,                // number of elements to receive from each processor
-            displacements,              // An array containing the displacement to apply to the message received by each process
+            displacements.data,         // An array containing the displacement to apply to the message received by each process
             MPI_FLOAT,                  // data type of the buffer
             0,                          // root process
             MPI_COMM_WORLD              // communicator
@@ -384,16 +334,14 @@ int main(int argc, char *argv[]) {
             // No synchronization needed because only processor 0 operates here
             double start_print_results = MPI_Wtime();
 
-            printResult(&config, config.m, buffer);
+            printResult(&config, config.m, buffer.data);
 
             double runtime_print_results = MPI_Wtime() - start_print_results;
             log_info("runtime_print_results = %f", runtime_print_results);
         }
 
-        free(buffer);
-        log_debug("[if rank == 0]: Successfully freed -> buffer...");
-        free(displacements);
-        log_debug("[if rank == 0]: Successfully freed -> displacements...");
+        free_float_array(buffer);
+        free_int_array(displacements);
     } else {
         // all processes in the communicator must invoke Gatherv 
         // the reciver buffer, size and displacements are ignored and therefore NULL
@@ -413,8 +361,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    free(reduction_result.data);
-    log_debug("Successfully freed the buffer -> reduction_result");
+    free_float_array(reduction_result);
 
     free(rank_syrk_result);
     log_debug("Successfully freed the buffer -> rank_syrk_result");
