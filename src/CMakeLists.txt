@@ -4,6 +4,7 @@ set(CMAKE_CXX_COMPILER mpicc)
 set(SOURCES 
         MPI_Syrk_implementation.c
         log.c
+        utils.c
         two_d_syrk.c
         one_d_syrk.c
         three_d_syrk.c
@@ -12,6 +13,7 @@ set(SOURCES
 set(HEADERS
         MPI_Syrk_implementation.h
         log.h
+        utils.h
         two_d_syrk.h
         one_d_syrk.h
         three_d_syrk.h
