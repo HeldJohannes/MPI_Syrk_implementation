@@ -60,11 +60,14 @@ mpirun -np <CORES> MPI_SYRK_implementation -m <ROWS> -n <COLS> -a <ALGORITHM> [-
 
 | Option               | Description |
 |----------------------|-------------|
-| `-m <ROWS>`         | **(Required)** Number of rows in the input matrix |
-| `-n <COLS>`         | **(Required)** Number of columns in the input matrix |
-| `-a <ALGORITHM>`    | **(Required)** Algorithm mode (`0`, `1`, `2`, or `3`) |
+| `-m [--rows] <ROWS>`         | **(Required)** Number of rows in the input matrix |
+| `-n [--columns] <COLS>`         | **(Required)** Number of columns in the input matrix |
+| `-a [] <ALGORITHM>`    | **(Required)** Algorithm mode (`0`, `1`, `2`, or `3`) |
 | `-c <CONFIG>`       | **(Optional, only if `-a 3`)** Configuration parameter for algorithm `3` which fullfills = c(c + 1) for prime c |
+| `-o [--output <output_file>]` | **(Optional)** Output file; if not proviede, syrk_result.csv is used |
+| `--print-result` | option to print the result to the output file; if not set nothing will be printed |
 | `<input_file>`      | **(Optional)** Input file; if not provided, a random input will be generated |
+
 
 ### ⚙ **Examples**  
 
@@ -92,7 +95,7 @@ mpirun -np 4 MPI_SYRK_implementation -m 100 -n 50 -a 2 input.txt
 
 3. **Algorithm `3` with additional `-c` option**  
 ```bash
-mpirun -np 4 MPI_SYRK_implementation -m 200 -n 100 -a 3 -c config.txt input.txt
+mpirun -np 12 MPI_SYRK_implementation -m 360 -n 100 -a 3 -c 3 
 ```
 
 ---
@@ -101,7 +104,9 @@ mpirun -np 4 MPI_SYRK_implementation -m 200 -n 100 -a 3 -c config.txt input.txt
 
 #### Unity test (GTest)
 
-To run the GTest use the following:
+Unity tests use the Google Test framework, and their compilation can be controlled using the `PACKAGE_TESTS` flag.
+
+If the test cases have been compiled, you can run the GTest using the following command:
 
 ```
 (cd ./build/test/; ctest --output-on-failure)
@@ -204,16 +209,31 @@ Rscript --vanilla ./resourec/GernateTestdata.R <dir_to_safe> <Number of Rows (m)
     <summary>on HYDRA</summary>
 
     ```
-    mkdir build
-    cd build/
-    cmake .. -DHYDRA=ON
-    cmake --build .
+    cmake -S . -B build -DHYDRA=ON
+    cmake --build build
+    ```
+</details>
+
+### what to do if srun can not be found
+
+<details>
+    <summary>on HYDRA</summary>
+
+    ```
+    module list
+    module show <SLURM>
+    export PATH=$PATH:<prepend-path>
     ```
 </details>
 
 
 ### To test that everything works as expected:
 
+Test case with Alog 2:
 ```
-mpiexec -np 1 ./build/src/MPI_SYRK_implementation -m 2 -n 3 -a 2 ./resource/input/test2x3.csv
+srun -p q_thesis -t 1 -N 1 --ntasks-per-node=1 ./build/src/MPI_SYRK_implementation -m 20 -n 30 -a 2
+```
+
+```
+srun -p q_thesis -t 1 -N 12 --ntasks-per-node=1 ./build/src/MPI_SYRK_implementation -m 360 -n 100 -a 3 -c 3
 ```
