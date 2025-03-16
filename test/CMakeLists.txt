@@ -12,6 +12,8 @@ set(SOURCES
     test.cpp
     test_parseInput.cpp
     test_calculateQI.cpp
+    test_copy_to_2D.cpp
+    #test_distributeInputMatrix2D.cpp
 )
 
 # Fetch GoogleTest via CMake FetchContent

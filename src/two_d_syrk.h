@@ -11,9 +11,12 @@ extern "C" {
 
 #include "MPI_Syrk_implementation.h"
 
-void create_communicators(run_config *s, MPI_Comm *pMpiCommunicators);
+
+void distribute_input_matrix_2D(run_config *s, int rank, float *input_array, float **rank_input);
 
 int calculate_Q_i(int *q_i, int m_bloc_i, int c);
+
+void copy_to_2D(float *B, float **A, int k, int block_height, int block_length, int index);
 
 int cal_block_size(run_config *s);
 

@@ -6,6 +6,9 @@
 #include <time.h>
 #include <float.h>
 #include "log.h"
+#include <getopt.h>
+
+#define ROOT 0
 
 void parseInput(run_config *s, int argc, char **argv, int rank) {
 
@@ -19,9 +22,21 @@ void parseInput(run_config *s, int argc, char **argv, int rank) {
     //total_col_number
     s->n = -1;
 
+    // define the long options
+    static struct option long_options[] = {
+        // option, has_arg, flag, val
+        {"algorithm", required_argument, 0, 'a'},
+        {"rows", required_argument, 0, 'm'},
+        {"columns", required_argument, 0, 'n'},
+        {"output", required_argument, 0, 'o'},
+        {"c", required_argument, 0, 'c'},
+        {"print-result", no_argument, 0, 'p'},
+        {0, 0, 0, 0}
+    };
+
     int opt;
     char *end;
-    while ((opt = getopt(argc, argv, "a:m:n:o:c:")) != -1) {
+    while ((opt = getopt_long(argc, argv, "a:m:n:o:c:", long_options, NULL)) != -1) {
         switch (opt) {
             case 'a':
                 s->algo = (int) strtol(optarg, &end, 10);
@@ -38,9 +53,12 @@ void parseInput(run_config *s, int argc, char **argv, int rank) {
             case 'c':
                 s->c = (int) strtol(optarg, &end, 10);
                 break;
+            case 'p':
+                s->print_result = true;
+                break;
             default:
             case '?':
-                fprintf(stderr, "wrong usage: option %c doesn't exist", optopt);
+                if (rank == ROOT) log_info("wrong usage: option %c doesn't exist", optopt);
                 //print_usage(argv[0]);
                 exit(EXIT_FAILURE); 
         }
@@ -50,16 +68,16 @@ void parseInput(run_config *s, int argc, char **argv, int rank) {
 
     if (s->m == -1)
     {
-        fprintf(stderr, "missing parameter m\n");
+        if (rank == ROOT) log_info("missing parameter m\n");
         exit(EXIT_FAILURE);
     }
     if (s->n == -1)
     {
-        fprintf(stderr, "missing parameter n\n");
+        if (rank == ROOT) log_info("missing parameter n\n");
         exit(EXIT_FAILURE);
     }
     if (s->m <= -1 || s->n <= -1) {
-        fprintf(stderr, "parameters m (= %d) and n (= %d) have to be bigger than 0\n", s->m, s->n);
+        if (rank == ROOT) log_info("parameters m (= %d) and n (= %d) have to be bigger than 0\n", s->m, s->n);
         exit(EXIT_FAILURE);
     }
 
@@ -67,7 +85,9 @@ void parseInput(run_config *s, int argc, char **argv, int rank) {
     if (optind < argc) {
         s->fileName = argv[optind];
     } else {
-        fprintf(stderr, "missing input file name\n Generate random input\n");
+        if (rank == ROOT) {
+            log_info("missing input file name --> Generate random input\n");
+        }
     }
     log_trace("Exit parseInput");
 }
@@ -103,17 +123,17 @@ void printArray(int row, int cols, const float *array, FILE *file) {
     }
 }
 
-void index_calculation(int *arr, long n, int p) {
+void index_calculation(intArray arr, long n, int p) {
     long input_size = n / p;
 
     long rest = n % p;
     log_trace("rest = %d", rest);
 
     for (int i = 0; i < p; ++i) {
-        assert(arr + i != NULL);
-        arr[i] = (int) input_size;
+        assert(arr.data + i != NULL);
+        arr.data[i] = (int) input_size;
         if (i < rest) {
-            arr[i] += 1;
+            arr.data[i] += 1;
         }
     }
 }

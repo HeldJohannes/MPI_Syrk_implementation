@@ -14,6 +14,7 @@ extern "C" {
 #include <stdlib.h>
 #include <cblas.h>
 #include "log.h"
+#include "utils.h"
 
 /**
  * Structure to store the configuration values for the program.
@@ -26,6 +27,7 @@ typedef struct {
     int c;              // c is a prime number (e.g. 3, so that P = c(c+1) = 12) and is required for the 2D and 3D algorithm
     char *fileName;     // name of the input file if not provided random input will be generated
     char *result_File;  // name of the output file
+    _Bool print_result; // flag to print the result
 } run_config;
 
 /**
@@ -76,7 +78,7 @@ void printArray(int row, int cols, const float *array, FILE *file);
 /**
  * This function calculates the block size for the input array.
  */
-void index_calculation(int *arr, long n, int p);
+void index_calculation(intArray arr, long n, int p);
 
 /**
  * This function reads the input file and populates the input array.

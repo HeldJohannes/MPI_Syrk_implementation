@@ -12,8 +12,6 @@
 
 #define ROOT 0
 
-_Bool PRINT_RESULT = false;
-
 /**
  *
  *
@@ -51,25 +49,24 @@ int main(int argc, char *argv[]) {
     
     // allocate memory for the input matrix (of size m * n) 
     // this is done on all processors
-    float *input_array = (float *) calloc(config.m * config.n, sizeof(float ));
-    if (input_array == NULL) {
-        log_fatal("Memory allocation failed for input");
-        MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
-    }
+    floatArray input_array;
+    allocate_float_array(&input_array, config.m * config.n);
 
     // TODO: check if this is necessary
     // allocate memory for the ... (of size m)
     float **input = (float **) calloc(config.m, sizeof(float *));
     for (int i = 0; i < config.m; ++i) {
-        input[i] = &(input_array[config.n * i]);
+        input[i] = &(input_array.data[config.n * i]);
     }
 
 
     // variable to store the index array value at the current rank
     int index_arr_rank;
     // array to store the index array values for all processors
-    int *index_arr = (int *) calloc(world_size, sizeof(int));
-    if (!index_arr) {
+    intArray index_arr;
+    index_arr.length = world_size;
+    index_arr.data = (int *) calloc(index_arr.length, sizeof(int));
+    if (!index_arr.data) {
         log_fatal("Memory allocation failed for cumulate_index_arr");
         MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
     }
@@ -88,7 +85,7 @@ int main(int argc, char *argv[]) {
         if (config.fileName != NULL) {
             read_input_file(rank, &config, input);
         } else {
-           generate_input(&config, input);
+            generate_input(&config, input);
         }
 
         // calculate how many cols each node gets and save it in index_arr
@@ -99,15 +96,15 @@ int main(int argc, char *argv[]) {
         for (int i = 0; i < world_size; ++i) {
             assert(cumulate_index_arr + i != NULL);
             cumulate_index_arr[i] = rank_count;
-            assert(index_arr + i != NULL);
-            rank_count += index_arr[i];
+            assert(index_arr.length > i);
+            rank_count += index_arr.data[i];
         }
     }
 
     // send index_arr[rank] to all processors using MPI_Scatter 
     // and continune work with index_arr_rank
     MPI_Scatter(
-        index_arr,          // send buffer
+        index_arr.data,     // send buffer
         1,                  // number of elements to send to each processor
         MPI_INT,            // senddata type
         &index_arr_rank,    // receive buffer
@@ -116,13 +113,29 @@ int main(int argc, char *argv[]) {
         0,                  // root process
         MPI_COMM_WORLD      // communicator (in this case the default communicator)
     );
+    if(rank == ROOT) log_debug("successfully scattered the index_arr to all processors");
 
     // send cumulate_index_arr[rank] to all processors and work with cumulate_index_arr_rank
     //MPI_Scatter(cumulate_index_arr, 1, MPI_INT, &cumulate_index_arr_rank, 1, MPI_INT, 0, MPI_COMM_WORLD);
 
     //input matrix for each node:
-    float **rank_input;
+    float **rank_input = NULL;
+
+    // transposed input matrix for each node:
+    // needed only for 1D-Algo
+    float **rank_input_t = NULL;
+
     if (config.algo != 3) {
+
+        // if the algo is not 3 (2D-Algo) we can split the input matrix into rows and distribute them to the processors
+        // this is done by using MPI_Scatterv to split the input matrix
+
+
+
+        /** ************************************************************************************************
+         * STEP 2.1:
+         * allocate memory for the node input matrix of size m * index_arr[rank] (= index_arr_rank)
+         ************************************************************************************************ */
         rank_input = (float **) calloc(config.m, sizeof(float *));
         for (int i = 0; i < config.m; ++i) {
             rank_input[i] = (float *) calloc(index_arr_rank, sizeof(float));
@@ -132,52 +145,60 @@ int main(int argc, char *argv[]) {
             }
         }
 
-        for (int i = 0; i < config.m; ++i) {
-            // for each row split and distribute across all processors
-            MPI_Scatterv(input[i], index_arr, cumulate_index_arr, MPI_FLOAT, rank_input[i], index_arr_rank, MPI_FLOAT,
-                         0,
-                         MPI_COMM_WORLD);
-        }
-    } else {
-
-        // If algo == 3 (2D-Algo), we need to split the input matrix into c blocks of A_i^(k)
-
-        //TODO find a better solution:
-        // broadcast the input matrix to all processors
-        MPI_Bcast(
-            input_array,            // buffer to broadcast
-            config.m * config.n,    // number of elements in the buffer
-            MPI_FLOAT,              // data type of the buffer
-            0,                      // root process
-            MPI_COMM_WORLD          // communicator
-        );
-
-        /** ************************************************************************************************
-         * STEP 2.1:
-         * Create new Communicators Based on Q_i to take advantage of MPI_SCATTER to split A_i as A_i^(k).
-         * note: this step might not be necessary but I couldn't find a better current solution
-         ************************************************************************************************ */
-        MPI_Comm *pMpiCommunicators = (MPI_Comm *) malloc(config.c * config.c * sizeof (MPI_Comm ));
-        if (!pMpiCommunicators) {
-            log_fatal("Memory allocation failed for pMpiCommunicators", 0);
-            MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
-        }
-        create_communicators(&config, pMpiCommunicators);
-
-
         /** ************************************************************************************************
          * STEP 2.2:
-         *
-         * Spilt the input:
+         * Distribute the input matrix to all processors using MPI_Scatterv 
+         * which allows to scatter the input matrix with different sizes 
          ************************************************************************************************ */
+        for (int i = 0; i < config.m; ++i) {
+            // for each row split and distribute across all processors
+            MPI_Scatterv(
+                input[i],                   // row to be scatterd
+                index_arr.data,             // array holding number of elements to send to each processor
+                cumulate_index_arr,         // array holding the displacement to apply to the message sent by each processor
+                MPI_FLOAT,                  // data type of the buffer
+                rank_input[i],              // receive buffer of size index_arr_rank
+                index_arr_rank,             // number of elements to receive
+                MPI_FLOAT,                  // data type of the recive buffer  
+                ROOT,                       // root process
+                MPI_COMM_WORLD              // communicator
+            );
+        }
+
+        //transposed input matrix for each node:
+        rank_input_t = (float **) calloc(index_arr_rank, sizeof(float *));
+        if (config.algo != 3) {
+            for (int i = 0; i < index_arr_rank; ++i) {
+                rank_input_t[i] = (float *) calloc(config.m, sizeof(float));
+                if (!rank_input_t[i]) {
+                    log_fatal("Memory allocation failed for input");
+                    MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
+                }
+            }
+
+
+            // compute the input matrix, and it's transpose,
+            // which consists of the columns and all rows in that column:
+            //computeInputAndTransposed(&config, rank, index_arr_rank, cumulate_index_arr_rank, input, rank_input, rank_input_t);
+
+            transposeMatrix(config.m, index_arr_rank, rank_input, rank_input_t);
+        }
+
+    } else {
+        assert(input_array.data != NULL);
 
         // Allocate the arrays:
-        // each node gets c blocks of A_i^(k)
+        // each node gets c block parts of A (A_i)
+        // each block has m / (c * c) rows and n / (c+1) columns
         int row_block_height = config.m / (config.c * config.c);
-        int row_block_length = (config.n / (config.c + 1));
-        //log_info("[rank = %d] row_block_length = %d", rank, row_block_length);
+        int row_block_length = config.n / (config.c + 1);
+
+        // allocate memory for the node input matrix of size row_block_height * n
         rank_input = (float **) calloc(config.c * row_block_height, sizeof (float *));
-        //int row_block_size = row_block_height * row_block_length;
+        if (!rank_input) {
+            log_fatal("Memory allocation failed for rank_input", 0);
+            MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
+        }
         for (int i = 0; i < config.c * row_block_height; ++i) {
             rank_input[i] = (float *) calloc(row_block_length, sizeof (float ));
             if (!rank_input[i]) {
@@ -185,65 +206,41 @@ int main(int argc, char *argv[]) {
                 MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
             }
         }
-
-        int *counts = (int *) calloc(config.c * config.c, sizeof(int ));
-        int *Q_i = (int *) calloc(config.c + 1, sizeof(int));
-
-        // Distribute the rows of A with MPI_Scatter along the Q_i processors
-        for (int i = 0; i < config.c * config.c; ++i) {
-            calculate_Q_i(Q_i, i, config.c);
-            for (int j = 0; j < row_block_height; ++j) {
-                assert(pMpiCommunicators[i] != NULL);
-                if (pMpiCommunicators[i] != MPI_COMM_NULL) {
-                    MPI_Scatter(
-                        input[i * row_block_height + j],                        // send buffer
-                        row_block_length,                                       // number of elements to send to each processor
-                        MPI_FLOAT,                                              // senddata type
-                        rank_input[((counts[rank]) * row_block_height) + j],    // receive buffer    
-                        row_block_length,                                       // number of elements to receive
-                        MPI_FLOAT,                                              // recive data type
-                        Q_i[0],                                                 // root process
-                        pMpiCommunicators[i]                                    // communicator
-                    );                  
-                }
-            }
-        }
-
-        free(counts);
-        free(Q_i);
+        distribute_input_matrix_2D(&config, rank, input_array.data, rank_input);
+        assert(rank_input != NULL);
     }
 
     // free index_arr and cumulate_index_arr because they are no longer needed
-    free(index_arr);
+    free(index_arr.data);
     free(cumulate_index_arr);
 
-    // input no longer needed
-    free(input_array);
-    log_debug("Successfully freed the buffer -> input");
-
-    /** ************************************************************************************************
-     * STEP 3: Compute the transpose matrix for each node
-     ************************************************************************************************ */
-
-
-    //transposed input matrix for each node:
-    float **rank_input_t = (float **) calloc(index_arr_rank, sizeof(float *));
-    if (config.algo != 3) {
-        for (int i = 0; i < index_arr_rank; ++i) {
-            rank_input_t[i] = (float *) calloc(config.m, sizeof(float));
-            if (!rank_input_t[i]) {
-                log_fatal("Memory allocation failed for input");
-                MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
+    // TODO: remove
+    // to test if distribute_input_matrix_2D works correctly 
+    // I print the input matrix and the rank_input matrix for a specific processor:
+    /*if (rank == 11) {
+        log_info("input array:");
+        for (int i = 0; i < config.m; ++i) {
+            for (int j = 0; j < config.n; ++j) {
+                fprintf(stderr, "%0.0f ", input_array[i* config.n + j]);
             }
+            fprintf(stderr, "\n");
         }
 
+        log_info("rank_input:");
+        for (int i = 0; i < config.m / config.c; i++)
+        {
+            for (int j = 0; j < config.n / (config.c + 1); j++)
+            {
+                fprintf(stderr, "%0.0f ", rank_input[i][j]);
+            }
+            fprintf(stderr, "\n"); 
+        }
+    }*/
 
-        // compute the input matrix, and it's transpose,
-        // which consists of the columns and all rows in that column:
-        //computeInputAndTransposed(&config, rank, index_arr_rank, cumulate_index_arr_rank, input, rank_input, rank_input_t);
+    // input no longer needed
+    free(input_array.data);
+    if (rank == ROOT) log_info("Successfully freed the input buffer");
 
-        transposeMatrix(config.m, index_arr_rank, rank_input, rank_input_t);
-    }
 
     // SYRK:
     // Compute the result matrix for each node which gets
@@ -275,6 +272,8 @@ int main(int argc, char *argv[]) {
         case 3:
             // 2D SYRK - OpenBLAS
             // In the case that m > n and P is not too large, a 2D algorithm is optimal
+            assert(rank_input != NULL);
+            assert(rank_syrk_result != NULL);
             two_d_syrk(&config, rank, rank_syrk_result, rank_input);
             break;
         case 4:
@@ -295,22 +294,34 @@ int main(int argc, char *argv[]) {
     log_debug("Successfully freed the buffer -> rank_input_t");
 
 
-    int *counts = (int *) calloc(world_size, sizeof(int));
+    intArray counts;
+    counts.length = world_size;
+    counts.data = (int *) calloc(counts.length, sizeof(int));
+    if (!counts.data) {
+        log_fatal("Memory allocation failed for counts");
+        MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
+    }
     index_calculation(counts, (long) config.m * config.m, world_size);
 
-    float *reduction_result = (float *) calloc(counts[rank], sizeof(float));
+    floatArray reduction_result;
+    reduction_result.length = counts.data[rank];
+    reduction_result.data = (float *) calloc(reduction_result.length, sizeof(float));
+    if (!reduction_result.data) {
+        log_fatal("Memory allocation failed for reduction_result");
+        MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
+    }
 
     // Save the time before the MPI_Reduce_scatter (Start the colock)
     double start_mpi_reduce_scatter = MPI_Wtime();
 
     // Reduce the results of all processors and scatter the result to all processors
     int result = MPI_Reduce_scatter(
-        rank_syrk_result,   // send buffer
-        reduction_result,   // receive buffer
-        counts,             // number of elements to receive from each processor
-        MPI_FLOAT,          // data type of the buffer
-        MPI_SUM,            // operation to perform
-        MPI_COMM_WORLD      // communicator
+        rank_syrk_result,       // send buffer
+        reduction_result.data,  // receive buffer
+        counts.data,            // number of elements to receive from each processor
+        MPI_FLOAT,              // data type of the buffer
+        MPI_SUM,                // operation to perform
+        MPI_COMM_WORLD          // communicator
     );
     // check if the MPI_Reduce_scatter was successful
     if (result != MPI_SUCCESS) {
@@ -344,22 +355,22 @@ int main(int argc, char *argv[]) {
         }
         displacements[0] = 0;
         for (int i = 1; i < world_size; ++i) {
-            displacements[i] = displacements[i - 1] + counts[i - 1];
+            displacements[i] = displacements[i - 1] + counts.data[i - 1];
         }
 //        printf("counts:\n");
 //        printResult(rank, world_size, counts);
 //        printf("displacements:\n");
 //        printResult(rank, world_size, displacements);
         int status = MPI_Gatherv(
-            reduction_result,       // send buffer
-            counts[rank],           // number of elements to send
-            MPI_FLOAT,              // data type of the
-            buffer,                 // receive buffer
-            counts,                 // number of elements to receive from each processor
-            displacements,          // An array containing the displacement to apply to the message received by each process
-            MPI_FLOAT,              // data type of the buffer
-            0,                      // root process
-            MPI_COMM_WORLD          // communicator
+            reduction_result.data,      // send buffer
+            counts.data[rank],          // number of elements to send
+            MPI_FLOAT,                  // data type of the
+            buffer,                     // receive buffer
+            counts.data,                // number of elements to receive from each processor
+            displacements,              // An array containing the displacement to apply to the message received by each process
+            MPI_FLOAT,                  // data type of the buffer
+            0,                          // root process
+            MPI_COMM_WORLD              // communicator
         );
 
         if (status != MPI_SUCCESS) {
@@ -369,7 +380,7 @@ int main(int argc, char *argv[]) {
         //Print the result:
         log_info("Values gathered in the buffer on process %d\n", rank);
 
-        if (PRINT_RESULT) {
+        if (config.print_result) {
             // No synchronization needed because only processor 0 operates here
             double start_print_results = MPI_Wtime();
 
@@ -387,8 +398,8 @@ int main(int argc, char *argv[]) {
         // all processes in the communicator must invoke Gatherv 
         // the reciver buffer, size and displacements are ignored and therefore NULL
         int status = MPI_Gatherv(
-            reduction_result,   // send buffer
-            counts[rank],       // number of elements to send
+            reduction_result.data,  // send buffer
+            counts.data[rank],      // number of elements to send
             MPI_FLOAT, 
             NULL,
             NULL, 
@@ -402,7 +413,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    free(reduction_result);
+    free(reduction_result.data);
     log_debug("Successfully freed the buffer -> reduction_result");
 
     free(rank_syrk_result);
