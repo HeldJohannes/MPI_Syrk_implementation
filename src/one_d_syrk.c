@@ -6,8 +6,8 @@
     #define CBLAS_SYRK cblas_ssyrk
 #endif
 
-void syrkIterative(run_config *s, int rank, int index_arr_rank, float **rank_input, float **rank_input_t,
-                   float *rank_result) {
+void syrkIterative(run_config *s, int rank, int index_arr_rank, floatMatrix rank_input, floatMatrix rank_input_t,
+                   floatArray rank_result) {
     log_trace("[rank %d] syrkIterative()", rank);
     // for each result row:
     for (long row = 0; row < s->m; ++row) {
@@ -15,7 +15,7 @@ void syrkIterative(run_config *s, int rank, int index_arr_rank, float **rank_inp
         for (long col = 0; col < s->m; ++col) {
             // run for slice of the input:
             for (long c = 0; c < index_arr_rank; ++c) {
-                rank_result[row * s->m + col] += rank_input[row][c] * rank_input_t[c][col];
+                rank_result.data[row * s->m + col] += rank_input.data[row][c] * rank_input_t.data[c][col];
             }
         }
     }

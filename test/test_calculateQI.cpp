@@ -2,6 +2,7 @@
 #include <vector>
 #include <iostream>
 #include "two_d_syrk.h"
+#include "utils.h"
 
 extern int calculate_Q_i(int *q_i, int m_bloc_i, int c);
 
@@ -31,12 +32,14 @@ std::vector<std::vector<int>> expected_q_i = {
 // Testfälle für verschiedene Werte von m_bloc_i
 TEST_F(CalculateQITest, HandlesCorrectComputation) {
     for (int i = 0; i < expected_q_i.size(); ++i) {
-        int q_i[c + 1] = {0};  // Array für Ergebnisse
+        intArray q_i;
+        q_i.data = (int *) malloc((c + 1) * sizeof(int));
+        q_i.length = c + 1;
         calculate_Q_i(q_i, i, c);
 
         // Prüfen, ob das Ergebnis mit der erwarteten Menge übereinstimmt
         for (int j = 0; j <= c; ++j) {
-            EXPECT_EQ(q_i[j], expected_q_i[i][j])
+            EXPECT_EQ(q_i.data[j], expected_q_i[i][j])
                 << "Fehlermeldung bei m_bloc_i = " << i << ", Index " << j;
         }
     }
@@ -44,7 +47,9 @@ TEST_F(CalculateQITest, HandlesCorrectComputation) {
 
 TEST_F(CalculateQITest, HandlesCorrectComputationForNegativeValues) {
     // Testen, ob die Funktion korrekt mit negativen Werten umgeht
-    int q_i[c + 1] = {0};
+    intArray q_i;
+    q_i.data = (int *) malloc((c + 1) * sizeof(int));
+    q_i.length = c + 1;
     EXPECT_EQ(calculate_Q_i(q_i, -1, c), -1);
     EXPECT_EQ(calculate_Q_i(q_i, c * c, c), -1);
 }
@@ -54,15 +59,18 @@ TEST_F(CalculateQITest, HandlesCorrectComputationAndCount) {
     int counts[c * c] = {0};  // Array für die Anzahl der Elemente
 
     for (int i = 0; i < expected_q_i.size(); ++i) {
-        int q_i[c + 1] = {0};  // Array für Ergebnisse
+        intArray q_i;
+        q_i.data = (int *) malloc((c + 1) * sizeof(int)); // Array für Ergebnisse
+        q_i.length = c + 1;
+
         calculate_Q_i(q_i, i, c);
 
         // Prüfen, ob die Anzahl der Elemente korrekt ist
         for (int j = 0; j <= c; ++j) {
-            ASSERT_LT(q_i[j], P)
+            ASSERT_LT(q_i.data[j], P)
                 << "Fehlermeldung bei Index " << j;
-            if (q_i[j] != -1) {
-                counts[q_i[j]] += 1;
+            if (q_i.data[j] != -1) {
+                counts[q_i.data[j]] += 1;
             }
         }
     }

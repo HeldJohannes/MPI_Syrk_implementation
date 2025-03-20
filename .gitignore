@@ -65,3 +65,5 @@ syrk_result.csv
 /.vscode
 
 /Testing/*
+
+log_*

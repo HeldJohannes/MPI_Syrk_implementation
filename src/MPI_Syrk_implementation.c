@@ -10,7 +10,7 @@
 
 #define ROOT 0
 
-void parseInput(run_config *s, int argc, char **argv, int rank) {
+int parseInput(run_config *s, int argc, char **argv, int rank) {
 
     if (argc <= 5) {
         error_exit(rank, argv[0], "To many or not enough input variables!");
@@ -31,12 +31,13 @@ void parseInput(run_config *s, int argc, char **argv, int rank) {
         {"output", required_argument, 0, 'o'},
         {"c", required_argument, 0, 'c'},
         {"print-result", no_argument, 0, 'p'},
+        {"prozessor-2", required_argument, 0, 'i'}
         {0, 0, 0, 0}
     };
 
     int opt;
     char *end;
-    while ((opt = getopt_long(argc, argv, "a:m:n:o:c:", long_options, NULL)) != -1) {
+    while ((opt = getopt_long(argc, argv, "a:m:n:o:c:i:", long_options, NULL)) != -1) {
         switch (opt) {
             case 'a':
                 s->algo = (int) strtol(optarg, &end, 10);
@@ -56,11 +57,17 @@ void parseInput(run_config *s, int argc, char **argv, int rank) {
             case 'p':
                 s->print_result = true;
                 break;
+            case 'i':
+                s->P2 = (int) strtol(optarg, &end, 10);
+                break;
             default:
             case '?':
-                if (rank == ROOT) log_info("wrong usage: option %c doesn't exist", optopt);
+                if (rank == ROOT) {
+                    fprintf(stderr, "wrong usage: option %c doesn't exist", optopt);
+                    fprintf(stderr, "Usage: %s -m <rows> -n <columns> <input_file>\n", argv[0]);
+                }
                 //print_usage(argv[0]);
-                exit(EXIT_FAILURE); 
+                return EXIT_FAILURE; 
         }
     }
 
@@ -68,17 +75,26 @@ void parseInput(run_config *s, int argc, char **argv, int rank) {
 
     if (s->m == -1)
     {
-        if (rank == ROOT) log_info("missing parameter m\n");
-        exit(EXIT_FAILURE);
+        if (rank == ROOT) {
+            fprintf(stderr, "missing parameter m\n");
+            fprintf(stderr, "Usage: %s -m <rows> -n <columns> <input_file>\n", argv[0]);
+        }
+        return EXIT_FAILURE;
     }
     if (s->n == -1)
     {
-        if (rank == ROOT) log_info("missing parameter n\n");
-        exit(EXIT_FAILURE);
+        if (rank == ROOT) {
+            fprintf(stderr, "missing parameter n\n");
+            fprintf(stderr, "Usage: %s -m <rows> -n <columns> <input_file>\n", argv[0]);
+        }
+        return EXIT_FAILURE;
     }
-    if (s->m <= -1 || s->n <= -1) {
-        if (rank == ROOT) log_info("parameters m (= %d) and n (= %d) have to be bigger than 0\n", s->m, s->n);
-        exit(EXIT_FAILURE);
+    if (s->m <= 0 || s->n <= 0) {
+        if (rank == ROOT) {
+            fprintf(stderr, "parameters m (= %d) and n (= %d) have to be bigger than 0\n", s->m, s->n);
+            fprintf(stderr, "Usage: %s -m <rows> -n <columns> <input_file>\n", argv[0]);
+        }
+        return EXIT_FAILURE;
     }
 
     log_trace("optind = %d, argc = %d", optind, argc);
@@ -86,14 +102,15 @@ void parseInput(run_config *s, int argc, char **argv, int rank) {
         s->fileName = argv[optind];
     } else {
         if (rank == ROOT) {
-            log_info("missing input file name --> Generate random input\n");
+            fprintf(stderr, "missing input file name --> Generate random input\n");
         }
     }
     log_trace("Exit parseInput");
+    return EXIT_SUCCESS;
 }
 
 
-void printResult(run_config *s, int cols, float *array) {
+void printResult(run_config *s, int cols, floatArray array) {
     FILE *file;
     if (s->result_File != NULL) {
         log_info("Printing result to set file = %s", s->result_File);
@@ -103,19 +120,45 @@ void printResult(run_config *s, int cols, float *array) {
         file = fopen("syrk_result.csv", "w");
     }
 
-    printArray(cols, cols, array, file);
+    printArray(array, cols, cols, file);
 
     log_debug("Finished printResults()");
 }
 
-void printArray(int row, int cols, const float *array, FILE *file) {
+void printArray(floatArray array, int row, int cols, FILE *file) {
+    log_info("Printing float array to file");
+    assert(array.data != NULL);
+    assert(array.length == row * cols);
     for (int i = 0; i < row; ++i) {
         for (int j = 0; j < cols; ++j) {
-            log_debug("array[%d][%d] = %f", i, j, array[i * cols + j]);
-            if (j == cols - 1) {
-                fprintf(file, "%0.0f", array[i * cols + j]);
+            //log_debug("array[%d][%d] = %f", i, j, array[i * cols + j]);
+            fprintf(file, j == cols - 1 ? "%0.0f" : "%0.0f; ", array.data[i * cols + j]);
+        }
+        fprintf(file, "\n");
+    }
+}
+
+void printDoubleArray(doubleArray array, int row, int cols, FILE *file) {
+    log_info("Printing float array to file");
+    assert(array.data != NULL);
+    assert(array.length == row * cols);
+    for (int i = 0; i < row; ++i) {
+        for (int j = 0; j < cols; ++j) {
+            fprintf(file, j == cols - 1 ? "%0.0lf" : "%0.0lf; ", array.data[i * cols + j]);
+        }
+        fprintf(file, "\n");
+    }
+}
+
+void printMatrix(floatMatrix matrix, FILE *file) {
+    log_info("Printing matrix to file");
+    assert(matrix.data != NULL);
+    for (int i = 0; i < matrix.rows; ++i) {
+        for (int j = 0; j < matrix.cols; ++j) {
+            if (j == matrix.cols - 1) {
+                fprintf(file, "%0.0f", matrix.data[i][j]);
             } else {
-                fprintf(file, "%0.0f; ", array[i * cols + j]);
+                fprintf(file, "%0.0f; ", matrix.data[i][j]);
             }
 
         }
