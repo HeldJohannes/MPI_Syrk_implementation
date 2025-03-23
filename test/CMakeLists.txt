@@ -19,6 +19,7 @@ set(SOURCES
     test_accumulate_B.cpp
     test_arrayCopy.cpp
     test_blas.cpp
+    test_sliceCopy.cpp
     #test_distributeInputMatrix2D.cpp
 )
 

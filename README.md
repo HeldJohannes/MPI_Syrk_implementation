@@ -63,8 +63,9 @@ mpirun -np <CORES> MPI_SYRK_implementation -m <ROWS> -n <COLS> -a <ALGORITHM> [-
 | `-m [--rows] <ROWS>`         | **(Required)** Number of rows in the input matrix |
 | `-n [--columns] <COLS>`         | **(Required)** Number of columns in the input matrix |
 | `-a [] <ALGORITHM>`    | **(Required)** Algorithm mode (`0`, `1`, `2`, or `3`) |
-| `-c <CONFIG>`       | **(Optional, only if `-a 3`)** Configuration parameter for algorithm `3` which fullfills = c(c + 1) for prime c |
+| `-c <INT>`       | **(Optional, only if `-a 3`)** Configuration parameter for algorithm `3` which fullfills p1 = c(c + 1) for prime c |
 | `-o [--output <output_file>]` | **(Optional)** Output file; if not proviede, syrk_result.csv is used |
+| `-i [--processor-2] <INT>` | **(Optional, only if `-a 4`)** Configuration parameter for algorithm `4` which fullfills Π = p1 * p2 |
 | `--print-result` | option to print the result to the output file; if not set nothing will be printed |
 | `<input_file>`      | **(Optional)** Input file; if not provided, a random input will be generated |
 
@@ -240,4 +241,9 @@ srun -p q_thesis -t 1 -N 12 --ntasks-per-node=1 ./build/src/MPI_SYRK_implementat
 
 ```
 srun -p q_thesis -t 1 -N 12 --ntasks-per-node=1 ./build/src/MPI_SYRK_implementation -m 36 -n 12 -a 3 -c 3
+```
+
+```
+srun -p q_thesis -t 1 -N 18 --ntasks-per-node=1 ./build/src/MPI_SYRK_implementation -m 36 -n 12 -a 4 -c 2 -i 3 --prin
+t-result
 ```

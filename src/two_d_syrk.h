@@ -29,7 +29,7 @@ int cal_block_size(run_config *s);
 
 void accumulate_B_into_A(run_config *s, int k, floatArray A, floatArray B, intArray R_k, intArray Q_i, floatMatrix input);
 
-void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input);
+void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input, MPI_Comm communicator);
 
 #ifdef __cplusplus
 }

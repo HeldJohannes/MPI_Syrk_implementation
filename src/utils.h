@@ -8,7 +8,8 @@ extern "C" {
 
 typedef struct {
     float* data;
-    int length;  
+    int length;
+    int row_length;  
 } floatArray;
 
 /**
@@ -17,7 +18,7 @@ typedef struct {
  * @param array The floatArray struct to be allocated.
  * @param length The length of the array.
  */
-void allocate_float_array(floatArray *array, int length);
+void allocate_float_array(floatArray *array, int rows, int row_length);
 
 void free_float_array(floatArray array);
 
@@ -56,6 +57,17 @@ typedef struct {
     int rows;
     int cols;
 } doubleMatrix;
+
+typedef struct {
+    int** data;
+    int length;
+    int rows;
+    int cols;
+} intMatrix;
+
+void allocate_int_matrix(intMatrix *matrix, int rows, int cols);
+
+void free_int_matrix(intMatrix *matrix);
 
 #ifdef __cplusplus
 }

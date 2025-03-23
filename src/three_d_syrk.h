@@ -1,8 +1,19 @@
 #ifndef MPI_SYRK_IMPLEMENTATION_THREE_D_SYRK_H
 #define MPI_SYRK_IMPLEMENTATION_THREE_D_SYRK_H
 
-#include "MPI_Syrk_implementation.h"
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-void three_d_syrk(run_config *s, int rank, float *rank_result, float **input);
+#include "MPI_Syrk_implementation.h"
+#include "two_d_syrk.h"
+
+void copy_array_slice(floatArray A_i, floatArray A, int block_height, int block_length, int shift);
+
+void three_d_syrk(run_config *s, int rank, floatArray rank_result, floatMatrix input, MPI_Comm communicator);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif //MPI_SYRK_IMPLEMENTATION_THREE_D_SYRK_H

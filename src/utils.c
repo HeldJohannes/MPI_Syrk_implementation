@@ -3,8 +3,9 @@
 #include <stdlib.h>
 #include <mpi.h>
 
-void allocate_float_array(floatArray *array, int length) {
-    array->length = length;
+void allocate_float_array(floatArray *array, int rows , int row_length) {
+    array->row_length = row_length;
+    array->length = rows * row_length;
     array->data = (float *) calloc(array->length, sizeof(float));
     if (array->data == NULL) {
         log_fatal("Memory allocation failed for input");
@@ -67,6 +68,32 @@ void allocate_float_matrix(floatMatrix *matrix, int rows, int cols) {
 }
 
 void free_float_matrix(floatMatrix *matrix) {
+    log_debug("Freeing matrix %p", matrix);
+    for (int i = 0; i < matrix->rows; ++i) {
+        free(matrix->data[i]);
+    }
+    free(matrix->data);
+}
+
+void allocate_int_matrix(intMatrix *matrix, int rows, int cols) {
+    matrix->length = rows * cols;
+    matrix->rows = rows;
+    matrix->cols = cols;
+    matrix->data = (int **) calloc(matrix->rows, sizeof(int *));
+    if (matrix->data == NULL) {
+        log_fatal("Memory allocation failed for input");
+        MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
+    }
+    for (int i = 0; i < matrix->rows; ++i) {
+        matrix->data[i] = (int *) calloc(matrix->cols, sizeof(int));
+        if (matrix->data[i] == NULL) {
+            log_fatal("Memory allocation failed for input");
+            MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
+        }
+    }
+}
+
+void free_int_matrix(intMatrix *matrix) {
     log_debug("Freeing matrix %p", matrix);
     for (int i = 0; i < matrix->rows; ++i) {
         free(matrix->data[i]);

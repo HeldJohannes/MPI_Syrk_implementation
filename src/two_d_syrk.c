@@ -228,9 +228,9 @@ void copy_to_d(double *A_i, float *A, int c, int block_height, int block_length,
 }
 
 /**
- * copy the values of a 2D array to a 1D array
+ * copy the values of a 1D array to a 1D array
  * @param A_i 1D destination array
- * @param A 2D source array
+ * @param A 1D source array
  * @param c prime number such that P=c(c+1)
  * @param block_height height of the block; needs to be (m / (c * (c+1)))
  * @param block_length length of the block; needs to be n
@@ -248,8 +248,11 @@ void copy_to_f(float *A_i, float *A, int c, int block_height, int block_length, 
         for (int i = 0; i < block_height; ++i) {
             for (int j = 0; j < c + 1; ++j) {
                 for (int k = 0; k < block_length; ++k) {
-                    A_i[k + j * block_length + i * block_length * (c + 1)] = A[k + j * block_size + i * block_length +
-                                                                               shift];
+
+                    int index_A_i = k + j * block_length + i * block_length * (c + 1);
+                    int index_A = k + j * block_size + i * block_length + shift;
+
+                    A_i[index_A_i] = A[index_A];
                 }
             }
         }
@@ -344,7 +347,7 @@ void accumulate_B_into_A(run_config *s, int k, floatArray A, floatArray B, intAr
  * @param rank_result result array of size ...
  * @param input input matrix A_i 
  */
-void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input) {
+void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input, MPI_Comm communicator) {
     
     assert(input.data != NULL);
     assert(rank_result.data != NULL);
@@ -363,12 +366,12 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input)
 
     //TODO remove:
     // print input matrix for a specific processor to test if correct
-    if (k == RANK) {
-        FILE *fp;
-        fp = fopen("log_input", "w");
-        printMatrix(input, fp);
-        fclose(fp);
-    }
+    //if (k == RANK) {
+    //    FILE *fp;
+    //    fp = fopen("log_input", "w");
+    //    printMatrix(input, fp);
+    //    fclose(fp);
+    //}
 
     // R_k defines the row block indices that defines the triangle block for a particular processor k
     intArray R_k;
@@ -388,7 +391,7 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input)
     // Step 1.1:
     // allocate array B of P blocks, each of size block_size [m*n / c^2 (c+1)]
     floatArray B;
-    allocate_float_array(&B, s->world_size * block_size);
+    allocate_float_array(&B, s->world_size, block_size);
 
     /** ************************************************************************************************
      * Step 2:
@@ -409,8 +412,6 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input)
         }
     }
 
-    log_debug("TEST After Step 2");
-
     // TODO: remove 
     // print the matrix B for a specific processor after copy to test if correct
     if (k == RANK) {
@@ -419,8 +420,6 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input)
         printArray(B, s->world_size, block_size, fp);
         fclose(fp);
     }
-
-    log_debug("TEST Before Step 3\n");
 
     assert(B.data != NULL);
     assert(B.data + block_size * (s->world_size +1) -1 != NULL);
@@ -434,10 +433,8 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input)
         B.data,         // receive buffer
         block_size,     // receive count
         MPI_FLOAT,      // receive datatype
-        MPI_COMM_WORLD  // communicator
+        communicator  // communicator
     );
-
-    log_debug("TEST After Step 3\n");
 
     // TODO remove:
     // print the matrix B after ALLtoALL:
@@ -449,9 +446,7 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input)
     }
 
     floatArray A;
-    allocate_float_array(&A, s->world_size * block_size);
-
-    fprintf(stderr, "TEST After Allocating A for rank %d\n", k);
+    allocate_float_array(&A, s->world_size, block_size);
 
     /** ************************************************************************************************
      * STEP 4:
@@ -461,8 +456,6 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input)
     // and has size c
 
     accumulate_B_into_A(s, k, A, B, R_k, Q_i, input);
-
-    log_debug("TEST After Step 4\n");
 
     //TODO remove:
     // print A after the accumulation
@@ -475,8 +468,6 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input)
             fclose(fp);
         }
     }
-
-    log_debug("TEST Before Step 5\n");
 
     /** ************************************************************************************************
      * STEP 5: 
@@ -494,7 +485,7 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input)
     // Temporary matrix to hold the result of DGEMM as float
     // this is needed to work with the rest of the code 
     floatArray result_f;
-    allocate_float_array(&result_f, block_height * block_height);
+    allocate_float_array(&result_f, block_height, block_height);
     
     // Temporary matrix A_i of size block_height x n 
     // to store the values of A_i as double
@@ -505,10 +496,6 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input)
     // to store the values of A_j as double
     doubleArray A_j;
     allocate_double_array(&A_j, block_height * s->n);
-
-    fprintf(stderr, "TEST After Allocating A_j\n");
-
-    fprintf(stderr, "TEST After Allocating Temp Arrays result, result_f, A_i and A_j\n");
 
     for (int i = 0; i < s->c; ++i) {
         for (int j = 0; j < s->c; ++j) {
@@ -610,8 +597,6 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input)
     
     free_double_array(A_j);
 
-    fprintf(stderr, "TEST Before Step 6\n");
-
     /** ************************************************************************************************
      * STEP 6:
      * Compute diagonal block if assigned
@@ -625,11 +610,11 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input)
 
         // Temporary array to store the result of SYRK for the diagonal block
         floatArray result_D_k;
-        allocate_float_array(&result_D_k, block_height * block_height);
+        allocate_float_array(&result_D_k, block_height, block_height);
         
         // Temporary array to store the values of A_i for the diagonal block as float
         floatArray A_i_D_k;
-        allocate_float_array(&A_i_D_k, block_height * s->n);
+        allocate_float_array(&A_i_D_k, block_height, s->n);
 
         for (int i = 0; i < s->c; ++i) {
             if (R_k.data[i] == d_k) {
@@ -689,8 +674,6 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input)
     free_float_array(B);
     
     free_float_array(A);
-    
-    fprintf(stderr, "TEST After Cleanup\n");
 }
 
 bool includes(intArray array, int value) {
@@ -702,6 +685,15 @@ bool includes(intArray array, int value) {
     return false;
 }
 
+/**
+ * Methode to distribute the data of an input matrix.
+ * 
+ * @param s run_config struct containing the configuration of the run
+ * @param rank rank of the processor
+ * @param input_array input to be distributed
+ * @param rank_input input for each rank after the distribution
+ * @param communicator MPI_Comm to distribut the data over
+ */
 void distribute_input_matrix_2D(run_config *s, int rank, floatArray input_array, floatMatrix rank_input, MPI_Comm communicator) {
     if (rank == ROOT) log_debug("Starting 2D-Algo array distribution");
 

@@ -80,6 +80,8 @@ void printDoubleArray(doubleArray array, int row, int cols, FILE *file);
 
 void printMatrix(floatMatrix matrix, FILE *file);
 
+void printIntMatrix(intMatrix matrix, FILE *file);
+
 /**
  * This function calculates the block size for the input array.
  */

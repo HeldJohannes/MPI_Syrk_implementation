@@ -31,7 +31,7 @@ int parseInput(run_config *s, int argc, char **argv, int rank) {
         {"output", required_argument, 0, 'o'},
         {"c", required_argument, 0, 'c'},
         {"print-result", no_argument, 0, 'p'},
-        {"prozessor-2", required_argument, 0, 'i'}
+        {"processor-2", required_argument, 0, 'i'},
         {0, 0, 0, 0}
     };
 
@@ -159,6 +159,22 @@ void printMatrix(floatMatrix matrix, FILE *file) {
                 fprintf(file, "%0.0f", matrix.data[i][j]);
             } else {
                 fprintf(file, "%0.0f; ", matrix.data[i][j]);
+            }
+
+        }
+        fprintf(file, "\n");
+    }
+}
+
+void printIntMatrix(intMatrix matrix, FILE *file) {
+    log_info("Printing matrix to file");
+    assert(matrix.data != NULL);
+    for (int i = 0; i < matrix.rows; ++i) {
+        for (int j = 0; j < matrix.cols; ++j) {
+            if (j == matrix.cols - 1) {
+                fprintf(file, "%d", matrix.data[i][j]);
+            } else {
+                fprintf(file, "%d; ", matrix.data[i][j]);
             }
 
         }
