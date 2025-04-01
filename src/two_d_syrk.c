@@ -1,5 +1,5 @@
 #include "two_d_syrk.h"
-#define RANK 11
+#define TEST_RANK 11
 #define ROOT 0
 
 #ifdef USE_CBLAS_64
@@ -414,7 +414,7 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
 
     // TODO: remove 
     // print the matrix B for a specific processor after copy to test if correct
-    if (k == RANK) {
+    if (k == TEST_RANK) {
         FILE *fp;
         fp = fopen("log_B", "w");
         printArray(B, s->world_size, block_size, fp);
@@ -438,7 +438,7 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
 
     // TODO remove:
     // print the matrix B after ALLtoALL:
-    if (k == RANK) {
+    if (k == TEST_RANK) {
         FILE *fp;
         fp = fopen("log_B_after_ATA", "w");
         printArray(B, s->world_size, block_size, fp);
@@ -460,14 +460,13 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
     //TODO remove:
     // print A after the accumulation
     // Attention after the accumulation the blocks are row wise in A_i
-    if (k == RANK) {
-        if (k == RANK) {
-            FILE *fp;
-            fp = fopen("log_A_i", "w");
-            printArray(A, s->world_size, block_size, fp);
-            fclose(fp);
-        }
+    if (k == TEST_RANK) {
+        FILE *fp;
+        fp = fopen("log_A_i", "w");
+        printArray(A, s->world_size, block_size, fp);
+        fclose(fp);
     }
+    
 
     /** ************************************************************************************************
      * STEP 5: 
@@ -507,17 +506,17 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
                  * and covert them from float to double
                  ************************************************************************************************  */ 
                 copy_to_d(A_i.data, A.data, s->c, block_height, block_length, i, false);
-                if (k == RANK) {
+                if (k == TEST_RANK) {
                     FILE *fp;
                     fp = fopen("log_A_i_tmp", "w");
-                    printDoubleArray(A_i, 1, block_height * s->n, fp);
+                    printDoubleArray(A_i, block_height, s->n, fp);
                     fclose(fp);
                 }
                 copy_to_d(A_j.data, A.data, s->c, block_height, block_length, j, true);
-                if (k == RANK) {
+                if (k == TEST_RANK) {
                     FILE *fp;
                     fp = fopen("log_A_j_tmp", "w");
-                    printDoubleArray(A_j, 1, block_height * s->n, fp);
+                    printDoubleArray(A_j, block_height, s->n, fp);
                     fclose(fp);
                 }
 
@@ -552,7 +551,7 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
 
                 //TODO: remove
                 // print result
-                if (k == RANK) {
+                if (k == TEST_RANK) {
                     FILE *fp;
                     fp = fopen("log_result_tmp", "w");
                     printDoubleArray(result, block_height, block_height, fp);
@@ -625,7 +624,7 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
                 CBLAS_SYRK(
                     CblasRowMajor,
                     CblasLower,
-                    CblasConjNoTrans,
+                    CblasNoTrans,
                     block_height,
                     s->n,
                     1.0f,
@@ -649,8 +648,17 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
         }
 
         // TODO: remove
+        if (k == TEST_RANK) {
+            FILE *fp;
+            fp = fopen("log_A_i_D_k", "w");
+            printArray(A_i_D_k, block_height, s->n, fp);
+            fclose(fp);
+        }
+
+
+        // TODO: remove
         // print rank_result
-        if (k == RANK) {
+        if (k == TEST_RANK) {
             FILE *fp;
             fp = fopen("log_result_D_k", "w");
             printArray(result_D_k, block_height, block_height, fp);
@@ -711,7 +719,7 @@ void distribute_input_matrix_2D(run_config *s, int rank, floatArray input_array,
         communicator          // communicator
     );
 
-    if (rank == RANK) {
+    if (rank == TEST_RANK) {
         FILE *fp;
         fp = fopen("log_input_array", "w");
         printArray(input_array, s->m, s->n, fp);

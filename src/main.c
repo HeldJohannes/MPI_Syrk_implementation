@@ -11,7 +11,7 @@
 #include "three_d_syrk.h"
 
 #define ROOT 0
-#define TEST_RANK 4
+#define TEST_RANK 11
 
 /**
  *

@@ -12,7 +12,7 @@ static constexpr int BLOCK_LENGTH = 2;  // Example value
 
 class TestSliceCopy : public ::testing::Test {
     protected:
-        floatArray input;
+        floatArray input, A_i;
 
     void SetUp() override {
         input.row_length = 6;
@@ -27,10 +27,9 @@ class TestSliceCopy : public ::testing::Test {
 
 TEST_F(TestSliceCopy, ShouldCopySliceCorrectly) {
     // Allocate memory for A_i (output matrix)
-    floatArray A;
-    A.length = M * BLOCK_LENGTH;
-    A.data = new float[A.length];
-    std::memset(A.data, 0, A.length * sizeof(float));
+    A_i.length = M * BLOCK_LENGTH;
+    A_i.data = new float[A_i.length];
+    std::memset(A_i.data, 0, A_i.length * sizeof(float));
 
 
     floatArray expected_A;
@@ -41,10 +40,39 @@ TEST_F(TestSliceCopy, ShouldCopySliceCorrectly) {
         15, 16
     };
 
-    //Call test method:
-    copy_array_slice(A, input, M, BLOCK_LENGTH, 1 * BLOCK_LENGTH);
+    // Call test method:
+    EXPECT_NO_FATAL_FAILURE(copy_array_slice(A_i, input, M, BLOCK_LENGTH, 1 * BLOCK_LENGTH));
 
     for (int i = 0; i < expected_A.length; i++) {
-        EXPECT_EQ(A.data[i], expected_A.data[i]) << "Mismatch at index " << i;
+        EXPECT_EQ(A_i.data[i], expected_A.data[i]) << "Mismatch at index " << i;
     }
+}
+
+// Test null pointer case for source
+TEST_F(TestSliceCopy, SourceNullPointer) {
+    input.data = NULL;
+    EXPECT_DEATH(copy_array_slice(A_i, input, M, BLOCK_LENGTH, 1 * BLOCK_LENGTH), "A.data != NULL");
+}
+
+// Test null pointer case for destination
+TEST_F(TestSliceCopy, DestinationNullPointer) {
+    A_i.data = NULL;
+    EXPECT_DEATH(copy_array_slice(A_i, input, M, BLOCK_LENGTH, 1 * BLOCK_LENGTH), "A_i.data != NULL");
+}
+
+// Test invalid row length for source
+TEST_F(TestSliceCopy, SourceInvalidRowLength) {
+    input.row_length = 0;
+    EXPECT_DEATH(copy_array_slice(A_i, input, M, BLOCK_LENGTH, 1 * BLOCK_LENGTH), "A.row_length > 0");
+}
+
+// Test invalid row length for destination
+TEST_F(TestSliceCopy, DestinationInvalidRowLength) {
+    A_i.row_length = 0;
+    EXPECT_DEATH(copy_array_slice(A_i, input, 2, 2, 0), "A_i.row_length > 0");
+}
+
+// Test out-of-bounds access
+TEST_F(TestSliceCopy, OutOfBoundsIndex) {
+    EXPECT_DEATH(copy_array_slice(A_i, input, M+1, BLOCK_LENGTH+1, 2 * BLOCK_LENGTH), "");
 }

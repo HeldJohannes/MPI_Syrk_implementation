@@ -5,6 +5,7 @@
 extern "C" {
 #endif
 
+#define assert__(x) for ( ; !(x) ; assert(x) )
 
 typedef struct {
     float* data;

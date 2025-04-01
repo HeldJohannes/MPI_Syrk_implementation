@@ -96,8 +96,10 @@ void copy_array_slice(floatArray A_i, floatArray A, int block_height, int block_
             int index_A_i = i * block_length + j;
             int index_A = i * A.row_length + j + shift;
 
-            assert(index_A_i < A_i.length);
-            assert(index_A < A.length);
+            assert__(index_A_i < A_i.length) {
+                fprintf(stderr, "assertion will fail\n"); 
+            }
+            assert(index_A < A.length) ;
 
             A_i.data[index_A_i] = A.data[index_A];
         }

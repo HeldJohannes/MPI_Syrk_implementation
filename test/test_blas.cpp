@@ -90,6 +90,7 @@ TEST_F(TestBlas, MatrixMultiplication) {
     }
 }
 
+
 TEST_F(TestBlas, MatrixMultiplication_simple) {
 
     int block_height, k;
@@ -132,6 +133,55 @@ TEST_F(TestBlas, MatrixMultiplication_simple) {
         ASSERT_NEAR(C[i], expected_C[i], 1e-6) << "Mismatch at index " << i;
     }
 }
+
+TEST_F(TestBlas, MatrixSYRK) {
+
+    int block_height, k;
+    floatArray A;
+    std::vector<float> C, expected_C;
+
+    block_height = 4;  
+    k = 12; // Number of columns in A
+
+    // Initialize matrices
+    A.data = new float[block_height * k]{
+        0,  3,  8,  8,  6,  9,  1,  9,  8,  1,  1,  2,
+        4,  9,  1,  9,  9,  1,  8,  9,  7,  9,  9,  8,
+        10, 10, 2,  9,  6,  4,  3,  6,  7,  1,  5,  2,
+        9,  6,  2,  7,  7,  3,  9,  1,  2,  9,  9,  1
+    }; // 4x12 matrix
+
+    // Result matrix C (2x2), initialized to zero
+    C.assign(block_height * block_height, 0.0);
+
+    // Expected result: C = A * A^T
+    expected_C = {
+        406,  0,  0,  0,
+        349,  681,  0,  0,
+        313,  468,  461,  0,
+        213,  486,  374,  477
+    }; 
+
+    CBLAS_SYRK(
+        CblasRowMajor,          // Row/column order
+        CblasLower,             //Upper or Lower triangle of C
+        CblasNoTrans,       // How matrix A is to be transposed
+        block_height,                      // Number of rows and columns in matrix C
+        k,                      // Number of columns of the matrix A if it is not transposed, and number of rows otherwise.
+        1.0f,                   // The factor of matrix A
+        A.data,                 
+        k,                      //
+        0.0f,
+        C.data(),
+        block_height
+    );
+
+    // Verify each element in C matches expected_C within a tolerance
+    for (size_t i = 0; i < C.size(); ++i) {
+        ASSERT_NEAR(C[i], expected_C[i], 1e-6) << "Mismatch at index " << i;
+    }
+}
+
 
 TEST_F(TestBlas, MatrixSYRK_simple) {
 
