@@ -3,7 +3,7 @@
 
 #include "MPI_Syrk_implementation.h"
 
-extern void syrkIterative(run_config *config, int rank, int index_arr, float** rank_input, float** rank_input_t, float* rank_result);
+extern void syrkIterative(run_config *config, int rank, int index_arr, floatMatrix rank_input, floatMatrix rank_input_t, floatArray rank_result);
 
 extern void improved_syrkIterative(run_config *config, int rank, int index_arr, float** rank_input,
                             float** rank_input_t, float* rank_result);

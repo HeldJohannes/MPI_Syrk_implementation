@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.18)
 
+if(HYDRA)
+    add_compile_definitions(USE_CBLAS_64)
+endif()
 
 # Enforce C++14 standard
 set(CMAKE_CXX_STANDARD 14)
@@ -11,6 +14,13 @@ enable_testing()
 set(SOURCES 
     test.cpp
     test_parseInput.cpp
+    test_calculateQI.cpp
+    test_copy_to_2D.cpp
+    test_accumulate_B.cpp
+    test_arrayCopy.cpp
+    test_blas.cpp
+    test_sliceCopy.cpp
+    #test_distributeInputMatrix2D.cpp
 )
 
 # Fetch GoogleTest via CMake FetchContent
