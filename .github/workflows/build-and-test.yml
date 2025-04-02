@@ -22,14 +22,15 @@ jobs:
     - name: Install dependencies (CMake, OpenMPI, OpenBLAS, GoogleTest)
       run: |
         sudo apt-get update
-        sudo apt-get install -y cmake \
-          build-essential \
-          openmpi-bin \
-          libopenmpi-dev \
-          libopenblas-dev  \
-          libblas3  \
-          liblapack3
-        cmake --version
+        sudo apt-get install -y cmake build-essential \
+            openmpi-bin libopenmpi-dev \
+            libopenblas-dev libblas-dev liblapack-dev
+
+    - name: Check installed BLAS libraries
+      run: |
+        dpkg -l | grep blas
+        ls -l /usr/lib/x86_64-linux-gnu/ | grep libblas
+        ldd /home/runner/work/MPI_Syrk_implementation/MPI_Syrk_implementation/build/test/MPI_SYRK_test
 
     - name: Verify pkg-config paths
       run: |
@@ -85,6 +86,8 @@ jobs:
 
     - name: Check Build Dependencies
       run: |
+        echo "Print dependencies for MPI_SYRK_test..."
+        ldd ${{ github.workspace }}/build/test/MPI_SYRK_test || true
         echo "Checking dependencies for MPI_SYRK_test..."
         if ldd ${{ github.workspace }}/build/test/MPI_SYRK_test | grep "not found"; then
           echo "Error: Missing dependencies detected!"
