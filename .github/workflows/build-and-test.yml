@@ -8,8 +8,8 @@ on:
 
 env:
   BUILD_TYPE: Release
-  MPI_PROCESSES: 2  # Adjust as needed for parallel execution
-  BLAS_LIB: blas64
+  MPI_PROCESSES: 1  # Adjust as needed for parallel execution
+  BLAS_LIB: blas
 
 jobs:
   build:
@@ -22,10 +22,13 @@ jobs:
     - name: Install dependencies (CMake, OpenMPI, OpenBLAS, GoogleTest)
       run: |
         sudo apt-get update
-        sudo apt-get install -y cmake build-essential \
-            openmpi-bin libopenmpi-dev \
-            libopenblas64-dev \
-            libopenblas-dev
+        sudo apt-get install -y cmake \
+          build-essential \
+          openmpi-bin \ 
+          libopenmpi-dev \
+          libopenblas-dev  \ 
+          libblas3  \ 
+          liblapack3
         cmake --version
 
     - name: Verify pkg-config paths
@@ -47,7 +50,7 @@ jobs:
 
     - name: Build
       run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
-      
+
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4
       with:
@@ -80,8 +83,15 @@ jobs:
     - name: Verify File Permissions
       run: ls -l ${{ github.workspace }}/build/test
 
-    - name: Check Missing Dependencies
-      run: ldd ${{ github.workspace }}/build/test/MPI_SYRK_test || true
+    - name: Check Build Dependencies
+      run: |
+        echo "Checking dependencies for MPI_SYRK_test..."
+        if ldd ${{ github.workspace }}/build/test/MPI_SYRK_test | grep "not found"; then
+          echo "Error: Missing dependencies detected!"
+          exit 1
+        else
+          echo "All dependencies are resolved."
+        fi
 
     - name: Run Tests with GTest
       working-directory: ${{github.workspace}}/build/test
