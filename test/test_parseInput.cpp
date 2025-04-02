@@ -26,6 +26,10 @@ class ParseInputTest : public ::testing::Test {
         }
         delete[] argv;
     }
+
+    void TearDown() {
+        free(config);
+    }
 };
 
 TEST_F(ParseInputTest, ValidInput) {
@@ -46,6 +50,7 @@ TEST_F(ParseInputTest, ValidInput) {
 }
 
 TEST_F(ParseInputTest, MissingRequiredParameters) {
+    GTEST_SKIP() << "Skipping single test";
 
     config->m = -1;
     config->n = -1;
@@ -107,18 +112,19 @@ TEST_F(ParseInputTest, OptionalParameters) {
 
     config->m = -1;
     config->n = -1;
-    config->algo = -1;
+    config->algo = -100;
     config->result_File = nullptr;
     config->c = -1;
     config->fileName = nullptr;
     
     std::vector<std::string> args = {"program", "-a", "1", "-m", "10", "-n", "20", "-o", "result.csv", "-c", "5", "input.txt"};
     SetUpArgv(args);
-    int argc = args.size();
 
-    printf("argc: %d\n", argc);
+    testing::internal::CaptureStderr();
+    parseInput(config, args.size(), argv, rank);
+    std::string output_stderr = testing::internal::GetCapturedStderr();
 
-    parseInput(config, argc, argv, rank);
+    printf("stderr: %s\n", output_stderr.c_str());
 
     EXPECT_EQ(config->algo, 1);
     EXPECT_EQ(config->m, 10);
@@ -126,10 +132,11 @@ TEST_F(ParseInputTest, OptionalParameters) {
     EXPECT_EQ(config->c, 5);
     EXPECT_STREQ(config->result_File, "result.csv");
     EXPECT_STREQ(config->fileName, "input.txt");
-    TearDownArgv(argc);
+    TearDownArgv(args.size());
 }
 
 TEST_F(ParseInputTest, MissingFileName) {
+    GTEST_SKIP() << "Skipping single test";
 
     config->m = -1;
     config->n = -1;

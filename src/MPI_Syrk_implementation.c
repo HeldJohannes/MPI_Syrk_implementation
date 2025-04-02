@@ -43,27 +43,34 @@ int parseInput(run_config *s, int argc, char **argv, int rank) {
         if (opt == -1) break;
         switch (opt) {
             case 'a':
+                log_trace("Setting a");
                 s->algo = (int) strtol(optarg, &end, 10);
                 break;
             case 'm':
+                log_trace("Setting m");
                 s->m = (int) strtol(optarg, &end, 10);
                 break;
             case 'n':
+                log_trace("Setting a");
                 s->n = (int) strtol(optarg, &end, 10);
                 break;
             case 'o':
+                log_trace("Setting o");
                 s->result_File = optarg;
                 break;
             case 'c':
+                log_trace("Setting c");
                 s->c = (int) strtol(optarg, &end, 10);
                 break;
             case 'p':
+                log_trace("Setting p");
                 s->print_result = true;
                 break;
             case 'i':
+                log_trace("Setting i");
                 s->P2 = (int) strtol(optarg, &end, 10);
                 break;
-                case '?':
+            case '?':
                 if (optopt != 0 && rank == ROOT) { // Check if optopt is valid
                     fprintf(stderr, "wrong usage: option %c doesn't exist\n", opt);
                 }
