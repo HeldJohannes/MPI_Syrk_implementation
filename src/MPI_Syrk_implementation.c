@@ -22,22 +22,25 @@ int parseInput(run_config *s, int argc, char **argv, int rank) {
     //total_col_number
     s->n = -1;
 
-    // define the long options
-    static struct option long_options[] = {
-        // option, has_arg, flag, val
-        {"algorithm", required_argument, 0, 'a'},
-        {"rows", required_argument, 0, 'm'},
-        {"columns", required_argument, 0, 'n'},
-        {"output", required_argument, 0, 'o'},
-        {"c", required_argument, 0, 'c'},
-        {"print-result", no_argument, 0, 'p'},
-        {"processor-2", required_argument, 0, 'i'},
-        {0, 0, 0, 0}
-    };
-
     int opt;
     char *end;
-    while ((opt = getopt_long(argc, argv, "a:m:n:o:c:i:", long_options, NULL)) != -1) {
+    int option_index = 0;
+    while (1) {
+        // define the long options
+        static struct option long_options[] = {
+            // option, has_arg, flag, val
+            {"algorithm",   required_argument,  0, 'a'},
+            {"rows",        required_argument,  0, 'm'},
+            {"columns",     required_argument,  0, 'n'},
+            {"output",      required_argument,  0, 'o'},
+            {"c",           required_argument,  0, 'c'},
+            {"print-result", no_argument,       0, 'p'},
+            {"processor-2", required_argument,  0, 'i'},
+            {0,             0,                  0, 0}
+        };
+        opt = getopt_long(argc, argv, "a:m:n:o:c:i:", long_options, &option_index);
+        log_trace("Test switch");
+        if (opt == -1) break;
         switch (opt) {
             case 'a':
                 s->algo = (int) strtol(optarg, &end, 10);
@@ -78,6 +81,7 @@ int parseInput(run_config *s, int argc, char **argv, int rank) {
                 return EXIT_FAILURE;
         }
     }
+    log_trace("Test...");
 
     log_trace("m = %d; n = %d", s->m, s->n);
 

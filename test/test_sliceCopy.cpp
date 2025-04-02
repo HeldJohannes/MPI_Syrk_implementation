@@ -50,30 +50,30 @@ TEST_F(TestSliceCopy, ShouldCopySliceCorrectly) {
 }
 
 // Test null pointer case for source
-TEST_F(TestSliceCopy, SourceNullPointer) {
+TEST_F(TestSliceCopy, SourceNullPointerDeathTest) {
     input.data = NULL;
     EXPECT_DEATH_IF_SUPPORTED(copy_array_slice(A_i, input, M, BLOCK_LENGTH, 1 * BLOCK_LENGTH), "");
 }
 
 // Test null pointer case for destination
-TEST_F(TestSliceCopy, DestinationNullPointer) {
+TEST_F(TestSliceCopy, DestinationNullPointerDeathTest) {
     A_i.data = NULL;
     EXPECT_DEATH_IF_SUPPORTED(copy_array_slice(A_i, input, M, BLOCK_LENGTH, 1 * BLOCK_LENGTH), "");
 }
 
 // Test invalid row length for source
-TEST_F(TestSliceCopy, SourceInvalidRowLength) {
+TEST_F(TestSliceCopy, SourceInvalidRowLengthDeathTest) {
     input.row_length = 0;
     EXPECT_DEATH_IF_SUPPORTED(copy_array_slice(A_i, input, M, BLOCK_LENGTH, 1 * BLOCK_LENGTH), "");
 }
 
 // Test invalid row length for destination
-TEST_F(TestSliceCopy, DestinationInvalidRowLength) {
+TEST_F(TestSliceCopy, DestinationInvalidRowLengthDeathTest) {
     A_i.row_length = 0;
     EXPECT_DEATH_IF_SUPPORTED(copy_array_slice(A_i, input, 2, 2, 0), "");
 }
 
 // Test out-of-bounds access
-TEST_F(TestSliceCopy, OutOfBoundsIndex) {
+TEST_F(TestSliceCopy, OutOfBoundsIndexDeathTest) {
     EXPECT_DEATH_IF_SUPPORTED(copy_array_slice(A_i, input, M+1, BLOCK_LENGTH+1, 2 * BLOCK_LENGTH), "");
 }
