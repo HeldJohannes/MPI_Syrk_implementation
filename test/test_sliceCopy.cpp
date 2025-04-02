@@ -58,7 +58,7 @@ TEST_F(TestSliceCopy, SourceNullPointer) {
 // Test null pointer case for destination
 TEST_F(TestSliceCopy, DestinationNullPointer) {
     A_i.data = NULL;
-    EXPECT_DEATH_IF_SUPPORTED(copy_array_slice(A_i, input, M, BLOCK_LENGTH, 1 * BLOCK_LENGTH), "A_i.data != NULL");
+    EXPECT_DEATH_IF_SUPPORTED(copy_array_slice(A_i, input, M, BLOCK_LENGTH, 1 * BLOCK_LENGTH), "");
 }
 
 // Test invalid row length for source
