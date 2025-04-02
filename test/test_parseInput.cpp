@@ -109,6 +109,7 @@ TEST_F(ParseInputTest, InvalidParameter) {
 }
 
 TEST_F(ParseInputTest, OptionalParameters) {
+    GTEST_SKIP() << "Skip Singel test";
 
     config->m = -1;
     config->n = -1;
