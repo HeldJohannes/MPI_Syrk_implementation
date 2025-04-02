@@ -24,10 +24,10 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y cmake \
           build-essential \
-          openmpi-bin \ 
+          openmpi-bin \
           libopenmpi-dev \
-          libopenblas-dev  \ 
-          libblas3  \ 
+          libopenblas-dev  \
+          libblas3  \
           liblapack3
         cmake --version
 
