@@ -29,7 +29,8 @@ class TestArrayCopy : public ::testing::Test {
         config.n = N;
         config.c = C;
 
-        B.length = C * (C + 1) * BLOCK_HEIGHT * BLOCK_LENGTH;
+        B.row_length = BLOCK_HEIGHT * BLOCK_LENGTH;
+        B.length = C * (C + 1) * B.row_length;
         B.data = new float[B.length]{
             6, 1, 9, 2, 2, 1, 8, 9, 1, 1, 3, 10, // (A_60)
             7, 4, 5, 2, 3, 4, 5, 8, 8, 0, 8, 2,  // (A_61)
@@ -49,9 +50,7 @@ class TestArrayCopy : public ::testing::Test {
     }
 
     void TearDown() override {
-        delete[] A.data;
-        delete[] B.data;
-        delete[] input.data;
+        
     }
 };
 
