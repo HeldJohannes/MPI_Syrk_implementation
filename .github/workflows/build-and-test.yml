@@ -64,7 +64,7 @@ jobs:
     - name: Install OpenMPI for Testing
       run: |
         sudo apt-get update
-        sudo apt-get install -y openmpi-bin libopenmpi-dev
+        sudo apt-get install -y openmpi-bin libopenmpi-dev libopenblas-dev libblas-dev liblapack-dev
 
     - name: Download Build Artifacts
       uses: actions/download-artifact@v4
@@ -77,12 +77,6 @@ jobs:
 
     - name: Verify File Permissions
       run: ls -l ${{ github.workspace }}/build/test
-
-    - name: Check installed BLAS libraries
-      run: |
-        dpkg -l | grep blas
-        ls -l /usr/lib/x86_64-linux-gnu/ | grep libblas
-        ldd /home/runner/work/MPI_Syrk_implementation/MPI_Syrk_implementation/build/test/MPI_SYRK_test
 
     - name: Check Build Dependencies
       run: |
