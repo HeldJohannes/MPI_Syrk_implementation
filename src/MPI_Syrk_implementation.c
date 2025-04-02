@@ -60,14 +60,22 @@ int parseInput(run_config *s, int argc, char **argv, int rank) {
             case 'i':
                 s->P2 = (int) strtol(optarg, &end, 10);
                 break;
-            default:
-            case '?':
-                if (rank == ROOT) {
-                    fprintf(stderr, "wrong usage: option %c doesn't exist", optopt);
+                case '?':
+                if (optopt != 0 && rank == ROOT) { // Check if optopt is valid
+                    fprintf(stderr, "wrong usage: option %c doesn't exist\n", opt);
+                }
+                if(rank == ROOT){
                     fprintf(stderr, "Usage: %s -m <rows> -n <columns> <input_file>\n", argv[0]);
                 }
-                //print_usage(argv[0]);
-                return EXIT_FAILURE; 
+                return EXIT_FAILURE;
+            default: // Handle other unexpected cases
+                if (opt != 0 && rank == ROOT) { // Check if opt is valid
+                    fprintf(stderr, "wrong usage: option %c doesn't exist\n", opt);
+                }
+                if(rank == ROOT){
+                    fprintf(stderr, "Usage: %s -m <rows> -n <columns> <input_file>\n", argv[0]);
+                }
+                return EXIT_FAILURE;
         }
     }
 
@@ -76,7 +84,7 @@ int parseInput(run_config *s, int argc, char **argv, int rank) {
     if (s->m == -1)
     {
         if (rank == ROOT) {
-            fprintf(stderr, "missing parameter m\n");
+            fprintf(stderr, "missing required parameter m\n");
             fprintf(stderr, "Usage: %s -m <rows> -n <columns> <input_file>\n", argv[0]);
         }
         return EXIT_FAILURE;
@@ -84,7 +92,7 @@ int parseInput(run_config *s, int argc, char **argv, int rank) {
     if (s->n == -1)
     {
         if (rank == ROOT) {
-            fprintf(stderr, "missing parameter n\n");
+            fprintf(stderr, "missing required parameter n\n");
             fprintf(stderr, "Usage: %s -m <rows> -n <columns> <input_file>\n", argv[0]);
         }
         return EXIT_FAILURE;
