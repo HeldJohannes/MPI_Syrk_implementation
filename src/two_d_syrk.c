@@ -1,5 +1,5 @@
 #include "two_d_syrk.h"
-#define TEST_RANK 11
+#define TEST_RANK -1
 #define ROOT 0
 
 #ifdef USE_CBLAS_64
@@ -278,9 +278,9 @@ void cast_d_to_f(double *pDouble, float *pFloat, int size) {
 void accumulate_B_into_A(run_config *s, int k, floatArray A, floatArray B, intArray R_k, intArray Q_i, floatMatrix input) {
     
     int block_height = s->m / (s->c * s->c);
-    fprintf(stderr, "block_height = %d\n", block_height);
+    //fprintf(stderr, "block_height = %d\n", block_height);
     int block_length = s->n / (s->c + 1);
-    fprintf(stderr, "block_length = %d\n", block_length);
+    //fprintf(stderr, "block_length = %d\n", block_length);
     
     for (int i = 0; i < s->c; ++i) {
         // for each i ∈ R_k calculate Q_i:

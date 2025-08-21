@@ -1,6 +1,6 @@
 #include "three_d_syrk.h"
 
-#define TEST_RANK 17
+#define TEST_RANK -1
 
 /**
  * @brief This function is used to compute the result of the SYRK operation for a given rank.
@@ -17,7 +17,7 @@
 void three_d_syrk(run_config *s, int rank, floatArray rank_result, floatMatrix input, MPI_Comm communicator) {
 
     //TODO: remove 
-    fprintf(stderr, "TEST: three_d_syrk with rank %d \n", rank);
+    //fprintf(stderr, "TEST: three_d_syrk with rank %d \n", rank);
 
     //TODO remove:
     // print input matrix for a specific processor to test if correct

@@ -11,7 +11,7 @@
 #include "three_d_syrk.h"
 
 #define ROOT 0
-#define TEST_RANK 11
+#define TEST_RANK -1
 
 /**
  *
@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
     /** ************************************************************************************************
      * STEP 1: Initialize the MPI environment and parse the input parameters
      ************************************************************************************************ */
-    log_set_level(LOG_DEBUG);
+    log_set_level(LOG_FATAL);
     static run_config config;
     config.fileName = NULL;
 
