@@ -14,8 +14,18 @@
 #define TEST_RANK -1
 
 /**
- *
- *
+ * Main function of the MPI SYRK implementation.
+ * This function initializes the MPI environment, parses input parameters,
+ * allocates memory for the input matrix, distributes the input matrix to all processors,
+ * performs the SYRK operation based on the specified algorithm, and finally gathers the results.
+ * It supports multiple SYRK algorithms:
+ * - 0: Triple for-loop SYRK
+ * - 1: Improved triple for-loop SYRK
+ * - 2: 1D SYRK using OpenBLAS
+ * - 3: 2D SYRK using OpenBLAS
+ * - 4: 3D SYRK using OpenBLAS
+ * * The input parameters can be specified via command line arguments, where -m specifies the number of input rows
+ * and -n specifies the number of input columns.
  *
  * @param argc number of input parameters
  * @param argv  available options are -n and -m; where -m specifies the number of input rows and -n the number of input columns
@@ -58,7 +68,7 @@ int main(int argc, char *argv[]) {
     allocate_float_array(&input_array, config.m, config.n);
 
     // TODO: check if this is necessary
-    // allocate memory for the ... (of size m)
+    // Point the input matrix to the input_array
     float **input = (float **) calloc(config.m, sizeof(float *));
     for (int i = 0; i < config.m; ++i) {
         input[i] = &(input_array.data[config.n * i]);
@@ -411,7 +421,7 @@ int main(int argc, char *argv[]) {
             three_d_syrk(&config, comm_rank, rank_syrk_result, rank_input, pMpiCommunicators[rank % config.P2]);
             break;
         default:
-            log_fatal("no SYRK operator selected --> error ALOG %d not in [0..2]", config.algo);
+            log_fatal("no SYRK operator selected --> error ALOG %d not in [0..4]", config.algo);
             error_exit(rank, argv[0], "no SYRK operator selected");
     }
     // Synchronize again before obtaining the time
