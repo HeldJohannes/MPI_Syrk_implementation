@@ -5,7 +5,7 @@
 #include "utils.h"
 
 extern void copy_to_d(double *A_i, float *A, int c, int block_height, int block_length, int index, _Bool trans);
-extern void copy_to_f(float *A_i, float *A, int c, int block_height, int block_length, int index, _Bool trans);
+extern void copy_to_f(float *A_i, float *A, int c, int block_height, int block_length, int index);
 
 extern void copy_to_1D(float *dest, float *source, int r_pos, int w_pos, int block_height, int block_length, int row_length, int w_offset);
 
@@ -19,7 +19,8 @@ static constexpr int N = 12;  // Example matrix width
 class TestArrayCopy : public ::testing::Test {
     protected:
         run_config config;
-        doubleArray A;
+        doubleArray A_d;
+        floatArray A_f;
         floatArray B;
         floatMatrix input;
 
@@ -54,11 +55,34 @@ class TestArrayCopy : public ::testing::Test {
     }
 };
 
+TEST_F(TestArrayCopy, ShouldCopyToFCorrectly) {
+    // Allocate memory for A_i (output matrix)
+    A_f.length = BLOCK_HEIGHT * N;
+    A_f.data = new float[A_f.length];
+    std::memset(A_f.data, 0, A_f.length * sizeof(float));
+
+    floatArray expected_A;
+    expected_A.length = BLOCK_HEIGHT * N;
+    expected_A.data = new float[expected_A.length]{
+    // (A_60)       (A_61)       (A_62)       (A_63)
+        6, 1, 9,    7, 4, 5,     2, 7, 9,     5, 3, 9,   
+        2, 2, 1,    2, 3, 4,     9, 5, 0,     4, 4, 9,
+        8, 9, 1,    5, 8, 8,     7, 4, 9,     6, 1, 3, 
+        1, 3, 10,   0, 8, 2,     10, 1, 5,    1, 3, 8
+    };
+
+    copy_to_f(A_f.data, B.data, C, BLOCK_HEIGHT, BLOCK_LENGTH, 0);
+
+    for (int i = 0; i < A_f.length; i++) {
+        EXPECT_EQ(A_f.data[i], expected_A.data[i]) << "Mismatch at index " << i;
+    }
+}
+
 TEST_F(TestArrayCopy, ShouldCopyToDCorrectly) {
     // Allocate memory for A_i (output matrix)
-    A.length = BLOCK_HEIGHT * N;
-    A.data = new double[A.length];
-    std::memset(A.data, 0, A.length * sizeof(double));
+    A_d.length = BLOCK_HEIGHT * N;
+    A_d.data = new double[A_d.length];
+    std::memset(A_d.data, 0, A_d.length * sizeof(double));
 
     doubleArray expected_A;
     expected_A.length = BLOCK_HEIGHT * N;
@@ -70,19 +94,19 @@ TEST_F(TestArrayCopy, ShouldCopyToDCorrectly) {
         1, 3, 10,   0, 8, 2,     10, 1, 5,    1, 3, 8
     };
 
-    copy_to_d(A.data, B.data, C, BLOCK_HEIGHT, BLOCK_LENGTH, 0, false);
+    copy_to_d(A_d.data, B.data, C, BLOCK_HEIGHT, BLOCK_LENGTH, 0, false);
 
-    for (int i = 0; i < A.length; i++) {
-        EXPECT_EQ(A.data[i], expected_A.data[i]) << "Mismatch at index " << i;
+    for (int i = 0; i < A_d.length; i++) {
+        EXPECT_EQ(A_d.data[i], expected_A.data[i]) << "Mismatch at index " << i;
     }
 }
 
 TEST_F(TestArrayCopy, ShouldCopyToDTransposeCorrectly) {
 
     // Allocate memory for A_i (output matrix)
-    A.length = BLOCK_HEIGHT * N;
-    A.data = new double[A.length];
-    std::memset(A.data, 0, A.length * sizeof(double));
+    A_d.length = BLOCK_HEIGHT * N;
+    A_d.data = new double[A_d.length];
+    std::memset(A_d.data, 0, A_d.length * sizeof(double));
 
     doubleArray expected_A;
     expected_A.length = BLOCK_HEIGHT * N;
@@ -104,10 +128,10 @@ TEST_F(TestArrayCopy, ShouldCopyToDTransposeCorrectly) {
         9, 9, 3, 8      // ((A_63)^T)
     };
 
-    copy_to_d(A.data, B.data, C, BLOCK_HEIGHT, BLOCK_LENGTH, 0, true);
+    copy_to_d(A_d.data, B.data, C, BLOCK_HEIGHT, BLOCK_LENGTH, 0, true);
 
-    for (int i = 0; i < A.length; i++) {
-        EXPECT_EQ(A.data[i], expected_A.data[i]) << "Mismatch at index " << i;
+    for (int i = 0; i < A_d.length; i++) {
+        EXPECT_EQ(A_d.data[i], expected_A.data[i]) << "Mismatch at index " << i;
     }
 
 }

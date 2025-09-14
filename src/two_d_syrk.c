@@ -237,26 +237,26 @@ void copy_to_d(double *A_i, float *A, int c, int block_height, int block_length,
  * @param index block index in the 2D array A; needs to be in [0, c]
  * @param trans transpose the array
  */
-void copy_to_f(float *A_i, float *A, int c, int block_height, int block_length, int index, _Bool trans) {
+void copy_to_f(float *A_i, float *A, int c, int block_height, int block_length, int index) {
 
     assert(A_i != NULL);
     assert(A != NULL);
 
     int block_size = (block_height * block_length);
-    int shift = index * block_size * (c + 1);
-    if (!trans) {
-        for (int i = 0; i < block_height; ++i) {
-            for (int j = 0; j < c + 1; ++j) {
-                for (int k = 0; k < block_length; ++k) {
+    int shift = index  * (c + 1) * block_size;
+    
+    for (int i = 0; i < block_height; ++i) {            //rows
+        for (int j = 0; j < c + 1; ++j) {               //cols
+            for (int k = 0; k < block_length; ++k) {    //elements in the block
 
-                    int index_A_i = k + j * block_length + i * block_length * (c + 1);
-                    int index_A = k + j * block_size + i * block_length + shift;
+                int index_A_i = k + j * block_length + i * block_length * (c + 1);
+                int index_A = k + j * block_size + i * block_length + shift;
 
-                    A_i[index_A_i] = A[index_A];
-                }
+                A_i[index_A_i] = A[index_A];
             }
         }
     }
+
 }
 
 /**
@@ -352,12 +352,16 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
     assert(input.data != NULL);
     assert(rank_result.data != NULL);
 
+    fprintf(stderr, "[rank %d] s->m = %d, s->n = %d, s->c = %d, s->world_size = %d\n", k, s->m, s->n, s->c, s->world_size);
+
     // block size is the number of elements in a block A_i^(k)
     int block_size = cal_block_size(s);
     // block height is the number of rows in a block A_i^(k)
     int block_height = s->m / (s->c * s->c);
     // block length is the number of cols in a block A_i^(k)
     int block_length = s->n / (s->c + 1);
+
+    fprintf(stderr ,"block_size = %d, block_height = %d, block_length = %d\n", block_size, block_height, block_length);
 
     assert(block_size != 0);
     assert(block_height != 0);
@@ -424,8 +428,10 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
     assert(B.data != NULL);
     assert(B.data + block_size * (s->world_size +1) -1 != NULL);
 
-    // Step 3:
-    // Communicate B ALL-TO-ALL
+    /** ************************************************************************************************
+     * Step 3:
+     * Communicate B ALL-TO-ALL
+     ************************************************************************************************ */
     MPI_Alltoall(
         B.data,         // send buffer
         block_size,     // send count
@@ -433,7 +439,7 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
         B.data,         // receive buffer
         block_size,     // receive count
         MPI_FLOAT,      // receive datatype
-        communicator  // communicator
+        communicator   // communicator
     );
 
     // TODO remove:
@@ -618,7 +624,7 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
         for (int i = 0; i < s->c; ++i) {
             if (R_k.data[i] == d_k) {
                 //log_info("[rank == %d] i == %d", k, i);
-                copy_to_f(A_i_D_k.data, A.data, s->c, block_height, block_length, i, false);
+                copy_to_f(A_i_D_k.data, A.data, s->c, block_height, block_length, i);
                 
                 //C_ii = Local-SYRK(A_i)
                 CBLAS_SYRK(

@@ -20,7 +20,7 @@ void copy_to_2D(float *B, float **A, int k, int block_height, int block_length, 
 
 void copy_to_d(double *A_i, float *A, int c, int block_height, int block_length, int index, _Bool trans);
 
-void copy_to_f(float *A_i, float *A, int c, int block_height, int block_length, int index, _Bool trans);
+void copy_to_f(float *A_i, float *A, int c, int block_height, int block_length, int index);
 
 void copy_to_1D(float *dest, float *source, int r_pos, int w_pos, int block_height, int block_length, int row_length, int w_offset);
 
