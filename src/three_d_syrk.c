@@ -62,15 +62,13 @@ void three_d_syrk(run_config *s, int rank, floatArray rank_result, floatMatrix i
     run_config_copy->algo = s->algo;         
     run_config_copy->world_size = s->world_size;     
     run_config_copy->m = s->m;              
-    run_config_copy->n = s->n / s->P2;              
+    run_config_copy->n = s->n;              
     run_config_copy->c = s->c;              
     run_config_copy->P2 = s->P2;             
       
     two_d_syrk(run_config_copy, rank, rank_result, input, communicator);
 
     free(run_config_copy);
-
-    // TODO: implement the three_d_syrk function
 
     /* ****************************************
     STEP 3: Compute the final result C_kl by summing up the intermediate results C_kl 

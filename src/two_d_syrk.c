@@ -198,30 +198,27 @@ void copy_to_d(double *A_i, float *A, int c, int block_height, int block_length,
     assert(A_i != NULL);
     assert(A != NULL);
 
-    int block_size = (block_height * block_length);
-    int shift = index * block_size * (c + 1);
+    int block_size = block_height * block_length;
+
     if (!trans) {
         for (int i = 0; i < block_height; ++i) {
-            for (int j = 0; j < c + 1; ++j) {
-                for (int k = 0; k < block_length; ++k) {
+            for (int j = 0; j < block_length; ++j) {
+                    
+                int index_A_i = j + i * block_length;
+                int index_A = j + i * block_length + index * block_size;
 
-                    int index_A_i = k + j * block_length + i * block_length * (c + 1);
-                    int index_A = k + j * block_size + i * block_length + shift;
-
-                    A_i[index_A_i] = A[index_A];
-                }
+                A_i[index_A_i] = A[index_A];
             }
         }
     } else {
-        for (int j = 0; j < c + 1; ++j) {
-            for (int k = 0; k < block_length; ++k) {
-                for (int i = 0; i < block_height; ++i) {
+        for (int i = 0; i < block_height; ++i) {
+            for (int j = 0; j < block_length; ++j) {
 
-                    int index_A_i = i + k * block_height + j * block_size;
-                    int index_A = i * block_length + k + j * block_size + shift;
+                int index_A_i = i + j * block_height;
+                int index_A = j + i * block_length + index * block_size;
 
-                    A_i[index_A_i] = A[index_A];
-                }
+
+                A_i[index_A_i] = A[index_A];
             }
         }
     }
@@ -243,17 +240,14 @@ void copy_to_f(float *A_i, float *A, int c, int block_height, int block_length, 
     assert(A != NULL);
 
     int block_size = (block_height * block_length);
-    int shift = index  * (c + 1) * block_size;
     
     for (int i = 0; i < block_height; ++i) {            //rows
-        for (int j = 0; j < c + 1; ++j) {               //cols
-            for (int k = 0; k < block_length; ++k) {    //elements in the block
+        for (int j = 0; j < block_length; ++j) {        //cols
 
-                int index_A_i = k + j * block_length + i * block_length * (c + 1);
-                int index_A = k + j * block_size + i * block_length + shift;
+                int index_A_i = j + i * block_length;
+                int index_A = j + i * block_length + index * block_size;
 
                 A_i[index_A_i] = A[index_A];
-            }
         }
     }
 
@@ -295,14 +289,34 @@ void accumulate_B_into_A(run_config *s, int k, floatArray A, floatArray B, intAr
             if (Q_i.data[j] != k) {
 
                 int read_position = Q_i.data[j];
-                int write_position = j + ((s->c + 1) * i);
 
-                copy_to_1D(A.data, B.data, read_position, write_position, block_height, block_length, block_length, 0);
+                //copy_to_1D(A.data, B.data, read_position, write_position, block_height, block_length, block_length, 0);
+
+                int block_size = (block_height * block_length);
+                for (int m = 0; m < block_height; ++m) { //row 
+                    for (int n = 0; n < block_length; ++n) { //col
+                        
+                        int A_index = i * (s->c+1) * block_size + j * block_length + m * block_size + n;
+                        int B_index = read_position * block_size + (m * block_length) + n;
+
+                        A.data[A_index] = B.data[B_index];
+                    }
+                }
+
             } else {
 
-                int write_position = j + ((s->c + 1) * i);
+                // copy_to_2D(A.data, input.data, write_position, block_height, block_length, i);
+                int block_size = (block_height * block_length);
+                for (int m = 0; m < block_height; ++m) { //row 
+                    for (int n = 0; n < block_length; ++n) { //col
 
-                copy_to_2D(A.data, input.data, write_position, block_height, block_length, i);
+                        int A_index = i * (s->c+1) * block_size + j * block_length + m * block_size + n;
+                        int input_index = m + (block_height * i);
+
+                        A.data[A_index] = input.data[input_index][n];
+
+                    }
+                }
             }
         }
     }
@@ -370,12 +384,12 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
 
     //TODO remove:
     // print input matrix for a specific processor to test if correct
-    //if (k == RANK) {
-    //    FILE *fp;
-    //    fp = fopen("log_input", "w");
-    //    printMatrix(input, fp);
-    //    fclose(fp);
-    //}
+    FILE *fp;
+    char filename[256]; 
+    snprintf(filename, sizeof(filename), "log_input_%d", k);
+    fp = fopen(filename, "w");
+    printMatrix(input, fp);
+    fclose(fp);
 
     // R_k defines the row block indices that defines the triangle block for a particular processor k
     intArray R_k;
@@ -416,17 +430,19 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
         }
     }
 
-    // TODO: remove 
-    // print the matrix B for a specific processor after copy to test if correct
-    if (k == TEST_RANK) {
-        FILE *fp;
-        fp = fopen("log_B", "w");
-        printArray(B, s->world_size, block_size, fp);
-        fclose(fp);
-    }
 
     assert(B.data != NULL);
     assert(B.data + block_size * (s->world_size +1) -1 != NULL);
+
+    // create MPI datatype for a row of blocks of size block_size
+    MPI_Datatype rowtype;
+    MPI_Type_contiguous(block_size, MPI_FLOAT, &rowtype);
+    MPI_Type_commit(&rowtype);
+
+    // creat array to hold the result of the ALLtoALL operation
+    // - this is nessary because MPI_AlltoAll operates in batches and overwrites the send buffer
+    floatArray B_ATA;
+    allocate_float_array(&B_ATA, s->world_size, block_size);
 
     /** ************************************************************************************************
      * Step 3:
@@ -434,23 +450,15 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
      ************************************************************************************************ */
     MPI_Alltoall(
         B.data,         // send buffer
-        block_size,     // send count
-        MPI_FLOAT,      // send datatype
-        B.data,         // receive buffer
-        block_size,     // receive count
-        MPI_FLOAT,      // receive datatype
+        1,     // send count
+        rowtype,      // send datatype
+        B_ATA.data,         // receive buffer
+        1,     // receive count
+        rowtype,      // receive datatype
         communicator   // communicator
     );
 
-    // TODO remove:
-    // print the matrix B after ALLtoALL:
-    if (k == TEST_RANK) {
-        FILE *fp;
-        fp = fopen("log_B_after_ATA", "w");
-        printArray(B, s->world_size, block_size, fp);
-        fclose(fp);
-    }
-
+    // create array A to hold the accumulated blocks
     floatArray A;
     allocate_float_array(&A, s->world_size, block_size);
 
@@ -461,17 +469,15 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
     // R_k contains the row block indices that defines the triangle block for a particular processor k 
     // and has size c
 
-    accumulate_B_into_A(s, k, A, B, R_k, Q_i, input);
+    accumulate_B_into_A(s, k, A, B_ATA, R_k, Q_i, input);
 
     //TODO remove:
     // print A after the accumulation
     // Attention after the accumulation the blocks are row wise in A_i
-    if (k == TEST_RANK) {
-        FILE *fp;
-        fp = fopen("log_A_i", "w");
-        printArray(A, s->world_size, block_size, fp);
-        fclose(fp);
-    }
+    snprintf(filename, sizeof(filename), "log_A_%d", k);
+    fp = fopen(filename, "w");
+    printArray(A, s->world_size, block_size, fp);
+    fclose(fp);
     
 
     /** ************************************************************************************************
@@ -514,7 +520,9 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
                 copy_to_d(A_i.data, A.data, s->c, block_height, block_length, i, false);
                 if (k == TEST_RANK) {
                     FILE *fp;
-                    fp = fopen("log_A_i_tmp", "w");
+                    char filename[256]; 
+                    snprintf(filename, sizeof(filename), "log_A_i_%d_%d", i, k);
+                    fp = fopen(filename, "w");
                     printDoubleArray(A_i, block_height, s->n, fp);
                     fclose(fp);
                 }
@@ -624,7 +632,7 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
         for (int i = 0; i < s->c; ++i) {
             if (R_k.data[i] == d_k) {
                 //log_info("[rank == %d] i == %d", k, i);
-                copy_to_f(A_i_D_k.data, A.data, s->c, block_height, block_length, i);
+                copy_to_f(A_i_D_k.data, A.data, s->c, block_height, s->n, i);
                 
                 //C_ii = Local-SYRK(A_i)
                 CBLAS_SYRK(
@@ -674,7 +682,6 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
         // free the no longer neede temporary arrays 
         // because the result is copied to the rank_result array
         free_float_array(result_D_k);
-    
         free_float_array(A_i_D_k);
         
     }
@@ -682,11 +689,9 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
     // cleanup: free the no longer needed arrays
     // the computation is done and the results are stored in rank_result
     free_int_array(R_k);
-
     free_int_array(Q_i);
-    
     free_float_array(B);
-    
+    free_float_array(B_ATA);
     free_float_array(A);
 }
 
