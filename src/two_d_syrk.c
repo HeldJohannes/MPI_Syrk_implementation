@@ -517,7 +517,7 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
                  * copy  the required index values of A to A_i and A_j 
                  * and covert them from float to double
                  ************************************************************************************************  */ 
-                copy_to_d(A_i.data, A.data, s->c, block_height, block_length, i, false);
+                copy_to_d(A_i.data, A.data, s->c, block_height, s->n, i, false);
                 if (k == TEST_RANK) {
                     FILE *fp;
                     char filename[256]; 
@@ -526,11 +526,13 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
                     printDoubleArray(A_i, block_height, s->n, fp);
                     fclose(fp);
                 }
-                copy_to_d(A_j.data, A.data, s->c, block_height, block_length, j, true);
+                copy_to_d(A_j.data, A.data, s->c, block_height, s->n, j, true);
                 if (k == TEST_RANK) {
                     FILE *fp;
-                    fp = fopen("log_A_j_tmp", "w");
-                    printDoubleArray(A_j, block_height, s->n, fp);
+                    char filename[256]; 
+                    snprintf(filename, sizeof(filename), "log_A_j_%d_%d", j, k);
+                    fp = fopen(filename, "w");
+                    printDoubleArray(A_j, s->n, block_height, fp);
                     fclose(fp);
                 }
 
