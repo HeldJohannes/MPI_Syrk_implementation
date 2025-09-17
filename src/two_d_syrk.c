@@ -270,6 +270,9 @@ void cast_d_to_f(double *pDouble, float *pFloat, int size) {
 }
 
 void accumulate_B_into_A(run_config *s, int k, floatArray A, floatArray B, intArray R_k, intArray Q_i, floatMatrix input) {
+
+    // The data gets rearranged in A but the length stays the same
+    assert(A.length == B.length);
     
     int block_height = s->m / (s->c * s->c);
     //fprintf(stderr, "block_height = %d\n", block_height);
@@ -296,8 +299,14 @@ void accumulate_B_into_A(run_config *s, int k, floatArray A, floatArray B, intAr
                 for (int m = 0; m < block_height; ++m) { //row 
                     for (int n = 0; n < block_length; ++n) { //col
                         
-                        int A_index = i * (s->c+1) * block_size + j * block_length + m * block_size + n;
+                        int A_index = i * (s->c+1) * block_size + j * block_length + m * s->n + n;
                         int B_index = read_position * block_size + (m * block_length) + n;
+
+                        if (A_index >= A.length) {
+                            fprintf(stderr ,"A_index (%d) >= A.length (%d) for i (%d) j (%d) m (%d) n (%d) ", A_index, A.length, i, j, m, n);
+                            MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
+                        }
+                        assert(B.length > B_index);
 
                         A.data[A_index] = B.data[B_index];
                     }
@@ -310,8 +319,14 @@ void accumulate_B_into_A(run_config *s, int k, floatArray A, floatArray B, intAr
                 for (int m = 0; m < block_height; ++m) { //row 
                     for (int n = 0; n < block_length; ++n) { //col
 
-                        int A_index = i * (s->c+1) * block_size + j * block_length + m * block_size + n;
+                        int A_index = i * (s->c+1) * block_size + j * block_length + m * s->n + n;
                         int input_index = m + (block_height * i);
+
+                        if (A_index >= A.length) {
+                            fprintf(stderr ,"A_index (%d) >= A.length (%d) for i (%d) j (%d) m (%d) n (%d) ", A_index, A.length, i, j, m, n);
+                            MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
+                        }
+                        assert(input.rows > input_index);
 
                         A.data[A_index] = input.data[input_index][n];
 
@@ -320,33 +335,6 @@ void accumulate_B_into_A(run_config *s, int k, floatArray A, floatArray B, intAr
             }
         }
     }
-
-    /*
-    for (int i = 0; i < s->c; ++i) {
-        // for each i ∈ R_k calculate Q_i:
-        int ret = calculate_Q_i(Q_i, R_k.data[i], s->c);
-        if (ret == -1) {
-            log_fatal("calculate_Q_i failed for i == %d", i);
-            MPI_Abort(MPI_COMM_WORLD, EXIT_FAILURE);
-        }
-        for (int j = 0; j < s->c + 1; ++j) {
-            // for each k' ∈ Q_i do:
-            // Accumulate B_k' into A
-            if (Q_i.data[j] != k) {
-                int read_position = Q_i.data[j];
-                int write_position = j + ((s->c + 1) * i);
-                
-                assert(read_position < s->world_size);
-                assert(write_position < s->world_size);
-                copy_to_1D(A.data, B.data, read_position, write_position, block_height, block_length);
-            } else {
-                int write_position = j + ((s->c + 1) * i);
-                assert(write_position < s->world_size);
-                copy_to_2D(A.data, input.data, write_position, block_height, block_length, i);
-            }
-        }
-    }
-    */
 }
 
 /**
@@ -430,6 +418,7 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
         }
     }
 
+    fprintf(stderr ,"[rank %d] After copying input to B\n", k);
 
     assert(B.data != NULL);
     assert(B.data + block_size * (s->world_size +1) -1 != NULL);
@@ -458,6 +447,8 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
         communicator   // communicator
     );
 
+    fprintf(stderr ,"[rank %d] After ALLtoALL\n", k);
+
     // create array A to hold the accumulated blocks
     floatArray A;
     allocate_float_array(&A, s->world_size, block_size);
@@ -471,9 +462,10 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
 
     accumulate_B_into_A(s, k, A, B_ATA, R_k, Q_i, input);
 
+    fprintf(stderr ,"[rank %d] After accumulating B into A\n", k);
+
     //TODO remove:
     // print A after the accumulation
-    // Attention after the accumulation the blocks are row wise in A_i
     snprintf(filename, sizeof(filename), "log_A_%d", k);
     fp = fopen(filename, "w");
     printArray(A, s->world_size, block_size, fp);
@@ -507,6 +499,8 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
     // to store the values of A_j as double
     doubleArray A_j;
     allocate_double_array(&A_j, block_height * s->n);
+
+    fprintf(stderr ,"[rank %d] Before computing off-diagonal blocks\n", k);
 
     for (int i = 0; i < s->c; ++i) {
         for (int j = 0; j < s->c; ++j) {
@@ -565,32 +559,16 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
                  * write result to C_ij
                  */
 
-                //TODO: remove
-                // print result
-                if (k == TEST_RANK) {
-                    FILE *fp;
-                    fp = fopen("log_result_tmp", "w");
-                    printDoubleArray(result, block_height, block_height, fp);
-                    fclose(fp);
-                }
-                
-                // cast the result to float
+                // convert the result from double to float
                 cast_d_to_f(result.data, result_f.data, result.length);
-                // copy the result to the correct position in the rank_result array
 
-                copy_to_1D(
-                    rank_result.data, 
-                    result_f.data, 
-                    0, 
-                    R_k.data[i] * s->c * s->c, 
-                    block_height,
-                    block_height, 
-                    s->m, 
-                    R_k.data[j] * block_height
-                );
+                // copy the result to the correct position in the rank_result array
+                copy_to_1D(rank_result.data, result_f.data, 0, R_k.data[i] * s->c * s->c, block_height, block_height, s->m, R_k.data[j] * block_height);
             }
         }
     }
+
+    fprintf(stderr ,"[rank %d] After computing off-diagonal blocks\n", k);
 
     //TODO: remove
     // print result
@@ -662,6 +640,8 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
                 );
             }
         }
+
+        fprintf(stderr ,"[rank %d] After computing diagonal block\n", k);
 
         // TODO: remove
         if (k == TEST_RANK) {
