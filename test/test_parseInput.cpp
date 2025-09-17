@@ -50,7 +50,7 @@ TEST_F(ParseInputTest, ValidInput) {
 }
 
 TEST_F(ParseInputTest, MissingRequiredParameters) {
-    GTEST_SKIP() << "Skipping single test";
+    // GTEST_SKIP() << "Skipping single test";
 
     config->m = -1;
     config->n = -1;
@@ -109,7 +109,7 @@ TEST_F(ParseInputTest, InvalidParameter) {
 }
 
 TEST_F(ParseInputTest, OptionalParameters) {
-    GTEST_SKIP() << "Skip Singel test";
+    // GTEST_SKIP() << "Skip Singel test";
 
     config->m = -1;
     config->n = -1;
@@ -137,7 +137,7 @@ TEST_F(ParseInputTest, OptionalParameters) {
 }
 
 TEST_F(ParseInputTest, MissingFileName) {
-    GTEST_SKIP() << "Skipping single test";
+    // GTEST_SKIP() << "Skipping single test";
 
     config->m = -1;
     config->n = -1;

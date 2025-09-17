@@ -583,11 +583,8 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
     // because the values are copied to the rank_result array 
     // and can be freed
     free_double_array(result);
-    
     free_float_array(result_f);
-    
     free_double_array(A_i);
-    
     free_double_array(A_j);
 
     /** ************************************************************************************************
@@ -628,16 +625,9 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
                     result_D_k.data,
                     block_height
                 );
-                copy_to_1D(
-                    rank_result.data, 
-                    result_D_k.data, 
-                    0, 
-                    d_k * s->c * s->c, 
-                    block_height,
-                    block_height, 
-                    s->m, 
-                    d_k * block_height
-                );
+
+                // copy the result to the correct position in the rank_result array
+                copy_to_1D(rank_result.data, result_D_k.data, 0, d_k * s->c * s->c, block_height,block_height, s->m, d_k * block_height);
             }
         }
 
