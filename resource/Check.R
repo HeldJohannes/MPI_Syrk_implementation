@@ -9,7 +9,9 @@ if (length(args) < 3) {
 # Assign input arguments to variables
 filename_result <- args[[1]]
 filename_input <- args[[2]]
-ignore_lower_half <- tolower(args[[3]]) == "true"
+ignore_UPPER_half <- tolower(args[[3]]) == "upper"
+ignore_LOWER_half <- tolower(args[[3]]) == "lower"
+
 
 # Read the result data CSV
 result_data <- read.csv(filename_result, sep = ";", header = FALSE)
@@ -26,9 +28,14 @@ if (ncol(result_data) != nrow(result_data)) {
 computed_data <- input_data %*% t(input_data)
 
 # Optionally ignore the lower half of the computed matrix
-if (ignore_lower_half) {
+if (ignore_LOWER_half) {
+  message("Ignoring upper half of the computed matrix")
+  computed_data[upper.tri(computed_data)] <- 0
+} else if (ignore_UPPER_half) {
   message("Ignoring lower half of the computed matrix")
   computed_data[lower.tri(computed_data)] <- 0
+} else {
+  message("Considering the full computed matrix")
 }
 
 # Check if the result data and computed data are identical
