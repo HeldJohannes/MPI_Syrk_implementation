@@ -243,11 +243,36 @@ srun -p q_thesis -t 1 -N 12 --ntasks-per-node=1 ./build/src/MPI_SYRK_implementat
 srun -p q_thesis -t 1 -N 12 --ntasks-per-node=1 ./build/src/MPI_SYRK_implementation -m 36 -n 12 -a 3 -c 3
 ```
 
+------------------------------------------------------------
+## Example: Algorithm A3
+
+Parameters:
+   - m = 36 → split by c² = 3² = 9 → m / c² = 36 / 9 = 4
+   - n = 12 → split by (c + 1) = 3 + 1 = 4 → n / (c + 1) = 12 / 4 = 3
+
+Description:
+   For algorithm A3, the matrix of size 36×12 is divided into 
+   smaller blocks based on the chosen c value. 
+   The result is 4 blocks along the m dimension and 3 blocks 
+   along the n dimension.
+
+### Execution command:
 ```
 srun -p q_thesis -t 1 -N 12 --ntasks-per-node=1 ./build/src/MPI_SYRK_implementation -m 36 -n 12 -a 3 -c 3 --print-result ./syrk_input.csv
 ```
 
+## Example: Algorithm A4
+Parameters:
+  - n = 18 → split by i = 3 → n / i = 18 / 3 = 6
+            then split again by (c + 1) = 2 + 1 = 3 → 6 / 3 = 2
+  - m = 72 → split by c² = 2² = 4 → m / c² = 72 / 4 = 18
+
+Description:
+  For algorithm A4, the matrix of size 72×18 is divided 
+  according to both c and i. 
+  After two levels of division, the final block size along n 
+  becomes 2, while along m it becomes 18.
+### Execution command:
 ```
-srun -p q_thesis -t 1 -N 18 --ntasks-per-node=1 ./build/src/MPI_SYRK_implementation -m 36 -n 12 -a 4 -c 2 -i 3 --prin
-t-result
+srun -p q_thesis -t 1 -N 18 --ntasks-per-node=1 ./build/src/MPI_SYRK_implementation -m 72 -n 18 -a 4 -c 2 -i 3 --print-result
 ```
