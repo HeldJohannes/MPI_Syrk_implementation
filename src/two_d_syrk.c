@@ -354,7 +354,7 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
     assert(input.data != NULL);
     assert(rank_result.data != NULL);
 
-    fprintf(stderr, "[rank %d] s->m = %d, s->n = %d, s->c = %d, s->world_size = %d\n", k, s->m, s->n, s->c, s->world_size);
+    log_trace("[rank %d] s->m = %d, s->n = %d, s->c = %d, s->world_size = %d\n", k, s->m, s->n, s->c, s->world_size);
 
     // block size is the number of elements in a block A_i^(k)
     int block_size = cal_block_size(s);
@@ -363,7 +363,7 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
     // block length is the number of cols in a block A_i^(k)
     int block_length = s->n / (s->c + 1);
 
-    fprintf(stderr ,"block_size = %d, block_height = %d, block_length = %d\n", block_size, block_height, block_length);
+    log_trace("block_size = %d, block_height = %d, block_length = %d\n", block_size, block_height, block_length);
 
     assert(block_size != 0);
     assert(block_height != 0);
@@ -372,12 +372,15 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
 
     //TODO remove:
     // print input matrix for a specific processor to test if correct
-    FILE *fp;
-    char filename[256]; 
-    snprintf(filename, sizeof(filename), "log_input_%d", k);
-    fp = fopen(filename, "w");
-    printMatrix(input, fp);
-    fclose(fp);
+    if (k == TEST_RANK) {
+        FILE *fp;
+        char filename[256]; 
+        snprintf(filename, sizeof(filename), "log_input_%d", k);
+        fp = fopen(filename, "w");
+        printMatrix(input, fp);
+        fclose(fp);
+    }
+    
 
     // R_k defines the row block indices that defines the triangle block for a particular processor k
     intArray R_k;
@@ -418,7 +421,7 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
         }
     }
 
-    fprintf(stderr ,"[rank %d] After copying input to B\n", k);
+    log_debug("[rank %d] After copying input to B\n", k);
 
     assert(B.data != NULL);
     assert(B.data + block_size * (s->world_size +1) -1 != NULL);
@@ -447,7 +450,7 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
         communicator   // communicator
     );
 
-    fprintf(stderr ,"[rank %d] After ALLtoALL\n", k);
+    log_debug("[rank %d] After ALLtoALL\n", k);
 
     // create array A to hold the accumulated blocks
     floatArray A;
@@ -462,16 +465,19 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
 
     accumulate_B_into_A(s, k, A, B_ATA, R_k, Q_i, input);
 
-    fprintf(stderr ,"[rank %d] After accumulating B into A\n", k);
+    log_debug("[rank %d] After accumulating B into A\n", k);
 
     //TODO remove:
     // print A after the accumulation
-    snprintf(filename, sizeof(filename), "log_A_%d", k);
-    fp = fopen(filename, "w");
-    printArray(A, s->world_size, block_size, fp);
-    fclose(fp);
+    if (k == TEST_RANK) {
+        FILE *fp;
+        char filename[256];
+        snprintf(filename, sizeof(filename), "log_A_%d", k);
+        fp = fopen(filename, "w");
+        printArray(A, s->world_size, block_size, fp);
+        fclose(fp); 
+    }
     
-
     /** ************************************************************************************************
      * STEP 5: 
      * Compute c(c − 1)/2 off-diagonal blocks
@@ -500,7 +506,7 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
     doubleArray A_j;
     allocate_double_array(&A_j, block_height * s->n);
 
-    fprintf(stderr ,"[rank %d] Before computing off-diagonal blocks\n", k);
+    log_debug("[rank %d] Before computing off-diagonal blocks\n", k);
 
     for (int i = 0; i < s->c; ++i) {
         for (int j = 0; j < s->c; ++j) {
@@ -568,16 +574,18 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
         }
     }
 
-    fprintf(stderr ,"[rank %d] After computing off-diagonal blocks\n", k);
+    log_debug("[rank %d] After computing off-diagonal blocks\n", k);
 
     //TODO: remove
     // print result
-    // if (k == RANK) {
-    //     FILE *fp;
-    //     fp = fopen("log_result", "w");
-    //     printArray(rank_result, s->m, s->m, fp);
-    //     fclose(fp);
-    // }
+    if (k == TEST_RANK) {
+        FILE *fp;
+        char filename[256];
+        snprintf(filename, sizeof(filename), "log_result%d", k);
+        fp = fopen(filename, "w");
+        printArray(rank_result, s->m, s->m, fp);
+        fclose(fp);
+    }
 
     // the tmporary arrays are no longer needed 
     // because the values are copied to the rank_result array 
@@ -631,7 +639,7 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
             }
         }
 
-        fprintf(stderr ,"[rank %d] After computing diagonal block\n", k);
+        log_debug("[rank %d] After computing diagonal block\n", k);
 
         // TODO: remove
         if (k == TEST_RANK) {

@@ -272,6 +272,7 @@ Description:
   according to both c and i. 
   After two levels of division, the final block size along n 
   becomes 2, while along m it becomes 18.
+  
 ### Execution command:
 ```
 srun -p q_thesis -t 1 -N 18 --ntasks-per-node=1 ./build/src/MPI_SYRK_implementation -m 72 -n 18 -a 4 -c 2 -i 3 --print-result
