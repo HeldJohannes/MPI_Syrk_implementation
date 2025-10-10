@@ -70,24 +70,20 @@ TEST_F(CalculateQITest, HandlesCorrectComputation_c2) {
 TEST_F(CalculateQITest, HandlesCorrectComputationForNegativeValues) {
     // Testen, ob die Funktion korrekt mit negativen Werten umgeht
     intArray q_i;
-    q_i.data = (int *) malloc((c3 + 1) * sizeof(int));
-    q_i.length = c3 + 1;
+    allocate_int_array(&q_i, c3 + 1);
     EXPECT_EQ(calculate_Q_i(q_i, -1, c3), -1);
     EXPECT_EQ(calculate_Q_i(q_i, c3 * c3, c3), -1);
 }
 
 TEST_F(CalculateQITest, HandlesCorrectComputationAndCount) {
-    // GTEST_SKIP() << "Skip for now";
-    
     int counts[c3 * c3] = {0};  // Array für die Anzahl der Elemente
 
     intArray q_i;
-    q_i.data = (int *) malloc((c3 + 1) * sizeof(int)); // Array für Ergebnisse
-    q_i.length = c3 + 1;
+    allocate_int_array(&q_i, c3 + 1);
 
     for (int i = 0; i < expected_q_i_c3.size(); ++i) {
 
-        calculate_Q_i(q_i, i, 3);
+        EXPECT_EQ(calculate_Q_i(q_i, i, 3), 0);
 
         // Prüfen, ob die Anzahl der Elemente korrekt ist
         for (int j = 0; j <= c3; ++j) {
@@ -102,6 +98,6 @@ TEST_F(CalculateQITest, HandlesCorrectComputationAndCount) {
     // Prüfen, ob die Anzahl der Elemente korrekt ist
     for (int i = 0; i < c3 * c3; ++i) {
         EXPECT_EQ(counts[i], c3)
-            << "Fehlermeldung bei Index " << i;
+            << "Error at Index " << i;
     }
 }
