@@ -10,7 +10,7 @@ extern "C" {
 
 void copy_array_slice(floatArray A_i, floatArray A, int block_height, int block_length, int shift);
 
-void three_d_syrk(run_config *s, int rank, floatArray rank_result, floatMatrix input, MPI_Comm communicator);
+void three_d_syrk(run_config *s, int rank, int comm_rank, floatArray rank_result, floatMatrix input, MPI_Comm communicator);
 
 void distribute_input_matrix_3D(run_config *s, int rank, int *comm_rank, floatArray input_array, floatMatrix rank_input, MPI_Comm *pMpiCommunicators);
 

@@ -1,12 +1,14 @@
 #include "three_d_syrk.h"
 
 #define TEST_RANK -1
+#define PRINT_DEBUG false
 
 /**
  * @brief This function is used to compute the result of the SYRK operation for a given rank.
  * 
  * @param s A pointer to a run_config structure containing the configuration values.
  * @param rank The rank of the current processor.
+ * @param comm_rank The rank within the communicator.
  * @param rank_result A pointer to a float array where the result will be stored.
  * @param input A pointer to a 2D float array containing the input values.
  * 
@@ -14,16 +16,18 @@
  * @see two_d_syrk
  * @see MPI_Syrk_implementation
  */
-void three_d_syrk(run_config *s, int rank, floatArray rank_result, floatMatrix input, MPI_Comm communicator) {
+void three_d_syrk(run_config *s, int rank, int comm_rank, floatArray rank_result, floatMatrix input, MPI_Comm communicator) {
 
     //TODO: remove 
     //fprintf(stderr, "TEST: three_d_syrk with rank %d \n", rank);
 
     //TODO remove:
     // print input matrix for a specific processor to test if correct
-    if (rank == TEST_RANK) {
+    if (PRINT_DEBUG) {
         FILE *fp;
-        fp = fopen("log_input", "w");
+        char filename[256];
+        snprintf(filename, sizeof(filename), "log_input_3D_%d", rank);
+        fp = fopen(filename, "w");
         printMatrix(input, fp);
         fclose(fp);
     }
@@ -32,18 +36,18 @@ void three_d_syrk(run_config *s, int rank, floatArray rank_result, floatMatrix i
     // where p1 = c * (c + 1) and c is a prime number
 
     /* ****************************************
-    STEP 1: Split the rank into two parts
+    STEP 1: Split the comm_rank into two parts
     ******************************************/ 
 
     // in order to work the rank has to be split into 2 parts:
     // the first part k which is given by the modulo of the rank
     // k (0 <= k < p1) and p1 = c * (c + 1)
-    int p1 = s->c * (s->c + 1);
-    int k = rank % p1;
+    // int p1 = s->c * (s->c + 1);
+    // int k = rank % p1;
 
     // and into the second part l which is given by the division of the rank
     // l (0 <= l < p2)
-    int l = rank / p1;
+    // int l = rank / p1;
 
 
     /* ****************************************
@@ -60,13 +64,13 @@ void three_d_syrk(run_config *s, int rank, floatArray rank_result, floatMatrix i
     }
 
     run_config_copy->algo = s->algo;         
-    run_config_copy->world_size = s->world_size;     
+    run_config_copy->world_size = s->world_size / s->P2;     
     run_config_copy->m = s->m;              
-    run_config_copy->n = s->n;              
+    run_config_copy->n = s->n / s->P2;              
     run_config_copy->c = s->c;              
     run_config_copy->P2 = s->P2;             
       
-    two_d_syrk(run_config_copy, rank, rank_result, input, communicator);
+    two_d_syrk(run_config_copy, comm_rank, rank_result, input, communicator);
 
     free(run_config_copy);
 
@@ -135,9 +139,11 @@ void distribute_input_matrix_3D(run_config *s, int rank, int *comm_rank, floatAr
         processor_Ranks.data[l][k] = i;
     }
 
-    if (rank == TEST_RANK) {
+    if (false) {
         FILE *fp;
-        fp = fopen("log_processor_Ranks", "w");
+        char filename[256];
+        snprintf(filename, sizeof(filename), "log_processor_Ranks");
+        fp = fopen(filename, "w");
         printIntMatrix(processor_Ranks, fp);
         fclose(fp);
     }
@@ -215,10 +221,11 @@ void distribute_input_matrix_3D(run_config *s, int rank, int *comm_rank, floatAr
 
     //TODO: remove
     // to test if distribute works correctly 
-    if (rank == TEST_RANK) {
-        log_info("printing input_slice:");
+    if (PRINT_DEBUG) {
         FILE *fp;
-        fp = fopen("log_input_slice", "w");
+        char filename[256]; 
+        snprintf(filename, sizeof(filename), "log_input_slice_%d", rank);
+        fp = fopen(filename, "w");
         printArray(input_slice, s->m, (s->n / s->P2), fp);
         fclose(fp);
     }
@@ -241,10 +248,11 @@ void distribute_input_matrix_3D(run_config *s, int rank, int *comm_rank, floatAr
 
     free(run_config_copy);
 
-    if (rank == TEST_RANK) {
-        log_info("printing rank_input:");
+    if (PRINT_DEBUG) {
         FILE *fp;
-        fp = fopen("log_rank_input", "w");
+        char filename[256];
+        snprintf(filename, sizeof(filename), "log_rank_input_%d", rank);
+        fp = fopen(filename, "w");
         printMatrix(rank_input, fp);
         fclose(fp);
     }

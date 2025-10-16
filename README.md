@@ -126,7 +126,7 @@ The first number in the test files represents the **number of rows** (= m), and 
 You can use the R script `./resource/Check.R` to check if the computation is correct
 
 ```
-Rscript --vanilla ./resource/Check.R <result_file> <input_file> [TRUE|FALSE]
+Rscript --vanilla ./resource/Check.R <result_file> <input_file> [upper|lower]
 ```
 
 | Parameter       | Description |

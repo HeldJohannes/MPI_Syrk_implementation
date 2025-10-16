@@ -3,7 +3,7 @@ args <- commandArgs(trailingOnly = TRUE)
 
 # Check if required arguments are provided
 if (length(args) < 3) {
-  stop("Error: Missing required arguments. Usage: Check.R <result_file> <input_file> [TRUE|FALSE]")
+  stop("Error: Missing required arguments. Usage: Check.R <result_file> <input_file> [upper|lower]")
 }
 
 # Assign input arguments to variables
@@ -42,3 +42,13 @@ if (ignore_LOWER_half) {
 comparison_result <- all(result_data == computed_data)
 message(paste("The files are equal:", comparison_result))
 
+if (!comparison_result) {
+  cat("Preview of expected (computed) result matrix:\n")
+  print(head(computed_data, 10))  # show first 10 rows
+  # Find the indices of the first mismatch
+  mismatch_indices <- which(result_data != computed_data, arr.ind = TRUE)
+  first_mismatch <- mismatch_indices[1, ]
+  message(paste("First mismatch at row:", first_mismatch[1], "column:", first_mismatch[2]))
+  message(paste("Result value:", result_data[first_mismatch[1], first_mismatch[2]]))
+  message(paste("Computed value:", computed_data[first_mismatch[1], first_mismatch[2]]))
+}

@@ -144,7 +144,6 @@ int main(int argc, char *argv[]) {
             // this is done by using MPI_Scatterv to split the input matrix
 
 
-
             /** ************************************************************************************************
              * STEP 2.1:
              * allocate memory for the node input matrix of size m * index_arr[rank] (= index_arr_rank)
@@ -191,7 +190,9 @@ int main(int argc, char *argv[]) {
 
             // allocate memory for the node input matrix of size row_block_height * n
             allocate_float_matrix(&rank_input, config.c * row_block_height, row_block_length);
-            
+
+            // distribute the input matrix to all processors
+            // each processor gets c blocks of A (A_i)
             distribute_input_matrix_2D(&config, rank, input_array, rank_input, MPI_COMM_WORLD);
             assert(rank_input.data != NULL);
             break;
@@ -212,6 +213,7 @@ int main(int argc, char *argv[]) {
             }
 
             distribute_input_matrix_3D(&config, rank, &comm_rank, input_array, rank_input, pMpiCommunicators);
+            assert(comm_rank != -1);
             assert(rank_input.data != NULL);
             assert(pMpiCommunicators != NULL);
             assert(pMpiCommunicators[rank % config.P2] != MPI_COMM_NULL);
@@ -273,7 +275,7 @@ int main(int argc, char *argv[]) {
             assert(comm_rank != -1);
             assert(pMpiCommunicators != NULL);
             assert(pMpiCommunicators[rank % config.P2] != MPI_COMM_NULL);
-            three_d_syrk(&config, comm_rank, rank_syrk_result, rank_input, pMpiCommunicators[rank % config.P2]);
+            three_d_syrk(&config, rank, comm_rank, rank_syrk_result, rank_input, pMpiCommunicators[rank % config.P2]);
             break;
         default:
             log_fatal("no SYRK operator selected --> error ALOG %d not in [0..4]", config.algo);
@@ -302,29 +304,15 @@ int main(int argc, char *argv[]) {
     double start_mpi_reduce_scatter = MPI_Wtime();
 
     // TODO: remove
-    if(rank == TEST_RANK) {
+    if(false) {
         log_info("printing rank [%d] rank_syrk_result:", TEST_RANK);
         FILE *fp;
-        fp = fopen("log_rank_syrk_result_2", "w");
+        char filename[256];
+        snprintf(filename, sizeof(filename), "log_rank_syrk_result_%d", rank);
+        fp = fopen(filename, "w");
         printArray(rank_syrk_result, config.m, config.m, fp);
         fclose(fp);
     }
-    // TODO: remove
-    // if(rank == 3) {
-    //     log_info("printing rank [3] rank_syrk_result:");
-    //     FILE *fp;
-    //     fp = fopen("log_rank_syrk_result_1", "w");
-    //     printArray(rank_syrk_result, config.m, config.m, fp);
-    //     fclose(fp);
-    // }
-    // TODO: remove
-    // if(rank == 5) {
-    //     log_info("printing rank [5] rank_syrk_result:");
-    //     FILE *fp;
-    //     fp = fopen("log_rank_syrk_result_3", "w");
-    //     printArray(rank_syrk_result, config.m, config.m, fp);
-    //     fclose(fp);
-    // }
 
 
     // Reduce the results of all processors and scatter the result to all processors
