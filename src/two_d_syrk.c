@@ -1,5 +1,6 @@
 #include "two_d_syrk.h"
 #define TEST_RANK -1
+#define PRINT_DEBUG false
 #define ROOT 0
 
 #ifdef USE_CBLAS_64
@@ -112,6 +113,15 @@ int cal_block_size(run_config *s) {
     return (s->m * s->n) / (s->c * s->c * (s->c + 1));
 }
 
+/**
+ * copy a 2D array to a 1D array
+ * @param src source array
+ * @param des destination array
+ * @param h height of the array
+ * @param l length of the array
+ * @param offset_src offset in the source array
+ * @param offset_des offset in the destination array
+ */
 void copy_array(const double *src, double *des, int h, int l, int offset_src, int offset_des) {
     for (int i = 0; i < h; ++i) {
         for (int j = 0; j < l; ++j) {
@@ -355,6 +365,8 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
     assert(rank_result.data != NULL);
 
     log_trace("[rank %d] s->m = %d, s->n = %d, s->c = %d, s->world_size = %d\n", k, s->m, s->n, s->c, s->world_size);
+    fprintf(stderr, "[rank %d] s->m = %d, s->n = %d, s->c = %d, s->world_size = %d\n", k, s->m, s->n, s->c, s->world_size);
+
 
     // block size is the number of elements in a block A_i^(k)
     int block_size = cal_block_size(s);
@@ -364,6 +376,8 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
     int block_length = s->n / (s->c + 1);
 
     log_trace("block_size = %d, block_height = %d, block_length = %d\n", block_size, block_height, block_length);
+    fprintf(stderr ,"block_size = %d, block_height = %d, block_length = %d\n", block_size, block_height, block_length);
+
 
     assert(block_size != 0);
     assert(block_height != 0);
@@ -371,8 +385,7 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
     assert(block_size == block_height * block_length);
 
     //TODO remove:
-    // print input matrix for a specific processor to test if correct
-    if (k == TEST_RANK) {
+    if (PRINT_DEBUG) {
         FILE *fp;
         char filename[256]; 
         snprintf(filename, sizeof(filename), "log_input_%d", k);
@@ -422,6 +435,17 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
     }
 
     log_debug("[rank %d] After copying input to B\n", k);
+    
+    //TODO remove:
+    // print B after the accumulation
+    if (PRINT_DEBUG) {
+        FILE *fp;
+        char filename[256];
+        snprintf(filename, sizeof(filename), "log_B_%d", k);
+        fp = fopen(filename, "w");
+        printArray(B, s->world_size, block_size, fp);
+        fclose(fp); 
+    }
 
     assert(B.data != NULL);
     assert(B.data + block_size * (s->world_size +1) -1 != NULL);
@@ -452,9 +476,20 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
 
     log_debug("[rank %d] After ALLtoALL\n", k);
 
+    //TODO remove:
+    // print B_ATA after the accumulation
+    if (PRINT_DEBUG) {
+        FILE *fp;
+        char filename[256];
+        snprintf(filename, sizeof(filename), "log_B_ATA_%d", k);
+        fp = fopen(filename, "w");
+        printArray(B_ATA, s->world_size, block_size, fp);
+        fclose(fp); 
+    }
+
     // create array A to hold the accumulated blocks
     floatArray A;
-    allocate_float_array(&A, s->world_size, block_size);
+    allocate_float_array(&A, block_size, s->world_size);
 
     /** ************************************************************************************************
      * STEP 4:
@@ -469,12 +504,12 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
 
     //TODO remove:
     // print A after the accumulation
-    if (k == TEST_RANK) {
+    if (PRINT_DEBUG) {
         FILE *fp;
         char filename[256];
         snprintf(filename, sizeof(filename), "log_A_%d", k);
         fp = fopen(filename, "w");
-        printArray(A, s->world_size, block_size, fp);
+        printArray(A, block_size, s->world_size, fp);
         fclose(fp); 
     }
     
@@ -618,6 +653,15 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
             if (R_k.data[i] == d_k) {
                 //log_info("[rank == %d] i == %d", k, i);
                 copy_to_f(A_i_D_k.data, A.data, s->c, block_height, s->n, i);
+
+                if (PRINT_DEBUG) {
+                    FILE *fp;
+                    char filename[256];
+                    snprintf(filename, sizeof(filename), "log_A_i_D_%d", k);
+                    fp = fopen(filename, "w");
+                    printArray(A_i_D_k, block_height, s->n, fp);
+                    fclose(fp);
+                }
                 
                 //C_ii = Local-SYRK(A_i)
                 CBLAS_SYRK(
@@ -629,10 +673,19 @@ void two_d_syrk(run_config *s, int k, floatArray rank_result, floatMatrix input,
                     1.0f,
                     A_i_D_k.data,
                     s->n,
-                    0.0f,
+                    1.0f,
                     result_D_k.data,
                     block_height
                 );
+
+                if (PRINT_DEBUG) {
+                    FILE *fp;
+                    char filename[256];
+                    snprintf(filename, sizeof(filename), "log_result_D_%d", k);
+                    fp = fopen(filename, "w");
+                    printArray(result_D_k, block_height, block_height, fp);
+                    fclose(fp);
+                }
 
                 // copy the result to the correct position in the rank_result array
                 copy_to_1D(rank_result.data, result_D_k.data, 0, d_k * s->c * s->c, block_height,block_height, s->m, d_k * block_height);
