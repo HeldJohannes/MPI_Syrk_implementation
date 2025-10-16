@@ -18,8 +18,7 @@
  */
 void three_d_syrk(run_config *s, int rank, int comm_rank, floatArray rank_result, floatMatrix input, MPI_Comm communicator) {
 
-    //TODO: remove 
-    //fprintf(stderr, "TEST: three_d_syrk with rank %d \n", rank);
+    log_trace(stderr, "TEST: three_d_syrk with rank %d \n", rank);
 
     //TODO remove:
     // print input matrix for a specific processor to test if correct
@@ -32,22 +31,6 @@ void three_d_syrk(run_config *s, int rank, int comm_rank, floatArray rank_result
         fclose(fp);
     }
 
-    // requires the number of processors to be |π| = p1 * p2
-    // where p1 = c * (c + 1) and c is a prime number
-
-    /* ****************************************
-    STEP 1: Split the comm_rank into two parts
-    ******************************************/ 
-
-    // in order to work the rank has to be split into 2 parts:
-    // the first part k which is given by the modulo of the rank
-    // k (0 <= k < p1) and p1 = c * (c + 1)
-    // int p1 = s->c * (s->c + 1);
-    // int k = rank % p1;
-
-    // and into the second part l which is given by the division of the rank
-    // l (0 <= l < p2)
-    // int l = rank / p1;
 
 
     /* ****************************************
@@ -73,12 +56,6 @@ void three_d_syrk(run_config *s, int rank, int comm_rank, floatArray rank_result
     two_d_syrk(run_config_copy, comm_rank, rank_result, input, communicator);
 
     free(run_config_copy);
-
-    /* ****************************************
-    * STEP 3: Compute the final result C_kl by summing up the intermediate results C_kl 
-    * unsing REDUCE-SCATTER on C_kl and π_k*
-    ******************************************/
-
 
     log_trace("rank_result %p", rank_result);
 }
@@ -131,15 +108,22 @@ void distribute_input_matrix_3D(run_config *s, int rank, int *comm_rank, floatAr
     allocate_int_matrix(&processor_Ranks, s->P2, P1);
 
     for (int i = 0; i < s->world_size; i++){
-        //TODO find out why l = i % s->P2 works and the other not (???)
+        /* ****************************************
+        STEP 1: Split the comm_rank into two parts
+        ******************************************/ 
+        // in order to work the rank has to be split into 2 parts:
+        // the first part k which is given by the modulo of the rank
+        // k (0 <= k < p1) and p1 = c * (c + 1)
         //int l = i / P1; // [0 .. P2] because Π = P1 * P2
-        int l = i % s->P2;
+        int k = i % s->P2;
+        // and into the second part l which is given by the division of the rank
+        // l (0 <= l < p2)
         //int k = i % P1; // [0 .. P1]
-        int k = i / s->P2;
-        processor_Ranks.data[l][k] = i;
+        int l = i / s->P2;
+        processor_Ranks.data[k][l] = i;
     }
 
-    if (false) {
+    if (PRINT_DEBUG) {
         FILE *fp;
         char filename[256];
         snprintf(filename, sizeof(filename), "log_processor_Ranks");
