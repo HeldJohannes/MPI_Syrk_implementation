@@ -88,8 +88,8 @@ process_a4_data <- function(base_dir, subfolders, gflops_divisor = 1e9) {
 
 
 # --- Definitions for Block 1 (Older Data) ---
-base_dir_1 <- "/Users/johannes/Downloads/Uni/Bachelor Arbeit/A4_Scaling/2025-10-15"
-
+base_dir <- "../../experiments/raw"
+base_dir_1 <- file.path(base_dir, "A4_Scaling", "2025-10-15")
 subfolders_1 <- sprintf(
   "A4_scaling_%s",
   c("02", "1_2", "1_3", "1_4", "1_5", "1_6",
@@ -98,7 +98,7 @@ subfolders_1 <- sprintf(
 )
 
 # --- Definitions for Block 2 (Newer Data) ---
-base_dir_2 <- "/Users/johannes/Downloads/Uni/Bachelor Arbeit/A4_Scaling/2025-12-03"
+base_dir_2 <- file.path(base_dir, "A4_Scaling", "2025-12-03")
 subfolders_2 <- sprintf(
   "A4_scaling_%s",
   c("fat_2", "fat_3", "square_3", "square_2", "thin_2", "thin_3", "reference")
