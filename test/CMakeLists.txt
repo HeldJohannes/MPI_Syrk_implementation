@@ -20,6 +20,7 @@ set(SOURCES
     test_arrayCopy.cpp
     test_blas.cpp
     test_sliceCopy.cpp
+    test_calculateRk.cpp
     #test_distributeInputMatrix2D.cpp
 )
 

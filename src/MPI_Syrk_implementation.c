@@ -309,6 +309,17 @@ void generate_input(run_config *s, float **A) {
             A[i][j] = ((float) random() / RAND_MAX) * 10.0;
         }
     }
+
+    if (s->print_result) {
+        FILE *file;
+        log_info("Printing generated input to default file = syrk_input.csv");
+        file = fopen("syrk_input.csv", "w");
+        floatMatrix A_matrix;
+        A_matrix.data = A;
+        A_matrix.rows = s->m;
+        A_matrix.cols = s->n;
+        printMatrix(A_matrix, file);
+    }
 }
 
 void print_usage(char *prog_name) {

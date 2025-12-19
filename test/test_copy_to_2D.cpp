@@ -2,6 +2,7 @@
 #include <vector>
 #include <cstring>
 #include "two_d_syrk.h"
+#include "utils.h"
 
 extern void copy_to_2D(float *B, float **A, int k, int block_height, int block_length, int index);
 
@@ -11,30 +12,27 @@ protected:
     static constexpr int block_height = 2;
     static constexpr int block_length = 3;
 
-    float** A = nullptr;
-    float* B = nullptr;
+    floatMatrix A;
+    floatArray B;
 
     void SetUp() override {
         // Allocate 2D source array
-        A = new float*[c * block_height];
+        allocate_float_matrix(&A, c * block_height, block_length);
+        // Initialize source array with test data
         for (int i = 0; i < c * block_height; ++i) {
-            A[i] = new float[block_length];
             for (int j = 0; j < block_length; ++j) {
-                A[i][j] = static_cast<float>(i * block_length + j);
+                A.data[i][j] = static_cast<float>(i * block_length + j);
             }
         }
 
         // Allocate 1D destination array
-        B = new float[c * (c + 1) * block_height * block_length]();
+        allocate_float_array(&B, c * (c + 1), block_height * block_length);
     }
 
     void TearDown() override {
         // Free allocated memory
-        for (int i = 0; i < c * block_height; ++i) {
-            delete[] A[i];
-        }
-        delete[] A;
-        delete[] B;
+        free_float_matrix(&A);
+        free_float_array(B);
     }
 };
 
@@ -55,10 +53,10 @@ TEST_F(CopyTo2DTest, ShouldCopySingleBlockCorrectly) {
     };
 
     // Perform copy
-    copy_to_2D(B, A, k, block_height, block_length, index);
+    copy_to_2D(B.data, A.data, k, block_height, block_length, index);
 
     // Verify result
-    ASSERT_TRUE(std::equal(expected.begin(), expected.end(), B)) << "Copy failed!";
+    ASSERT_TRUE(std::equal(expected.begin(), expected.end(), B.data)) << "Copy failed!";
 }
 
 TEST_F(CopyTo2DTest, ShouldCopyMultipleBlocksCorrectly) {
@@ -76,11 +74,11 @@ TEST_F(CopyTo2DTest, ShouldCopyMultipleBlocksCorrectly) {
 
     // Perform copy multiple times
     for (int i = 0; i < 3; i++) {
-        copy_to_2D(B, A, i * 2, block_height, block_length, index);
+        copy_to_2D(B.data, A.data, i * 2, block_height, block_length, index);
     }
 
     // Verify result
-    ASSERT_TRUE(std::equal(expected.begin(), expected.end(), B)) << "Multiple block copy failed!";
+    ASSERT_TRUE(std::equal(expected.begin(), expected.end(), B.data)) << "Multiple block copy failed!";
 }
 
 int main(int argc, char **argv) {

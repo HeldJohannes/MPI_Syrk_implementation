@@ -6,36 +6,65 @@
     #define CBLAS_SYRK cblas_ssyrk
 #endif
 
+/**
+ * @brief This function computes the SYRK operation using a triple nested for-loop.
+ * 
+ * @param s A pointer to a run_config structure containing the configuration values.
+ * @param rank The rank of the current processor.
+ * @param index_arr_rank The size of the input slice for the current processor.
+ * @param rank_input A pointer to a 2D float array containing the input values.
+ * @param rank_input_t A pointer to a 2D float array containing the transposed input values.
+ * @param rank_result A pointer to a float array where the result will be stored.
+ */
 void syrkIterative(run_config *s, int rank, int index_arr_rank, floatMatrix rank_input, floatMatrix rank_input_t,
                    floatArray rank_result) {
     log_trace("[rank %d] syrkIterative()", rank);
     // for each result row:
-    for (long row = 0; row < s->m; ++row) {
+    for (int row = 0; row < s->m; ++row) {
         // for each result column
-        for (long col = 0; col < s->m; ++col) {
+        for (int col = 0; col < s->m; ++col) {
             // run for slice of the input:
-            for (long c = 0; c < index_arr_rank; ++c) {
+            for (int c = 0; c < index_arr_rank; ++c) {
                 rank_result.data[row * s->m + col] += rank_input.data[row][c] * rank_input_t.data[c][col];
             }
         }
     }
 }
 
+/**
+ * @brief This function computes the SYRK operation using an improved triple nested for-loop. 
+ *  The improvement comes from reducing the number of iterations in the inner loop by taking advantage of the symmetry of the result matrix.
+ *  In this version, the inner loop iterates only over the upper triangular part of the result matrix,
+ *  and the result is stored in a 1D array.
+ * 
+ * @param s A pointer to a run_config structure containing the configuration values.
+ * @param rank The rank of the current processor.
+ * @param index_arr_rank The size of the input slice for the current processor.
+ * @param rank_input A pointer to a 2D float array containing the input values.
+ * @param rank_input_t A pointer to a 2D float array containing the transposed input values.
+ * @param rank_result A pointer to a float array where the result will be stored.
+ */
 void improved_syrkIterative(run_config *s, int rank, const int index_arr_rank, float **rank_input, float **rank_input_t,
                             float *rank_result) {
     log_trace("[rank %d] improved_syrkIterative()", rank);
     for (int row = 0; row < s->m; ++row) {
-        //log_debug("outer for loop : row = %d; run_config.m = %d", row, s->m);
         for (int col = row; col < s->m; ++col) {
-            //log_debug("middle for loop : col = %d; run_config.n = %d", col, s->m);
             for (int c = 0; c < index_arr_rank; ++c) {
-
                 rank_result[row * s->m + col] += rank_input[row][c] * rank_input_t[c][col];
             }
         }
     }
 }
 
+/**
+ * @brief This function computes the SYRK operation using the OpenBLAS library.
+ * 
+ * @param s A pointer to a run_config structure containing the configuration values.
+ * @param rank The rank of the current processor.
+ * @param index_arr_rank The size of the input slice for the current processor.
+ * @param rank_input A pointer to a 2D float array containing the input values.
+ * @param rank_result A pointer to a float array where the result will be stored.
+ */
 void syrk_withOpenBLAS(run_config *config, int rank, int index_arr_rank, float **rank_input, float *rank_result) {
     log_trace("[rank %d] syrk_withOpenBLAS()", rank);
     // transform 2d array to 1d:
@@ -63,4 +92,7 @@ void syrk_withOpenBLAS(run_config *config, int rank, int index_arr_rank, float *
             0.0f,
             rank_result,
             config->m);
+    
+    // cleanup
+    free(A);
 }

@@ -51,34 +51,54 @@ TEST_F(TestSliceCopy, ShouldCopySliceCorrectly) {
 
 // Test null pointer case for source
 TEST_F(TestSliceCopy, SourceNullPointerDeathTest) {
-    GTEST_SKIP() << "Skip death test";
-    input.data = NULL;
-    EXPECT_DEATH_IF_SUPPORTED(copy_array_slice(A_i, input, M, BLOCK_LENGTH, 1 * BLOCK_LENGTH), "");
+    #ifndef NDEBUG 
+        // This test is only valid in debug mode where assertions are enabled   
+        input.data = NULL;
+        EXPECT_DEATH_IF_SUPPORTED(copy_array_slice(A_i, input, M, BLOCK_LENGTH, 1 * BLOCK_LENGTH), ".*Assertion.*failed.*");
+    #else
+        GTEST_SKIP() << "Assertions are disabled (NDEBUG defined)";
+    #endif
 }
 
 // Test null pointer case for destination
 TEST_F(TestSliceCopy, DestinationNullPointerDeathTest) {
-    GTEST_SKIP() << "Skip death test";
-    A_i.data = NULL;
-    EXPECT_DEATH_IF_SUPPORTED(copy_array_slice(A_i, input, M, BLOCK_LENGTH, 1 * BLOCK_LENGTH), "");
+    #ifndef NDEBUG 
+        // This test is only valid in debug mode where assertions are enabled   
+        A_i.data = NULL;
+        EXPECT_DEATH_IF_SUPPORTED(copy_array_slice(A_i, input, M, BLOCK_LENGTH, 1 * BLOCK_LENGTH), ".*Assertion.*failed.*");
+    #else
+        GTEST_SKIP() << "Assertions are disabled (NDEBUG defined)";
+    #endif
 }
 
 // Test invalid row length for source
 TEST_F(TestSliceCopy, SourceInvalidRowLengthDeathTest) {
-    GTEST_SKIP() << "Skip death test";
-    input.row_length = 0;
-    EXPECT_DEATH_IF_SUPPORTED(copy_array_slice(A_i, input, M, BLOCK_LENGTH, 1 * BLOCK_LENGTH), "");
+    #ifndef NDEBUG 
+        // This test is only valid in debug mode where assertions are enabled
+        input.row_length = 0;
+        EXPECT_DEATH_IF_SUPPORTED(copy_array_slice(A_i, input, M, BLOCK_LENGTH, 1 * BLOCK_LENGTH), ".*Assertion.*failed.*");
+    #else
+        GTEST_SKIP() << "Assertions are disabled (NDEBUG defined)";
+    #endif
 }
 
 // Test invalid row length for destination
 TEST_F(TestSliceCopy, DestinationInvalidRowLengthDeathTest) {
-    GTEST_SKIP() << "Skip death test";
-    A_i.row_length = 0;
-    EXPECT_DEATH_IF_SUPPORTED(copy_array_slice(A_i, input, 2, 2, 0), "");
+    #ifndef NDEBUG 
+        // This test is only valid in debug mode where assertions are enabled
+        A_i.row_length = 0;
+        EXPECT_DEATH_IF_SUPPORTED(copy_array_slice(A_i, input, 2, 2, 0), ".*Assertion.*failed.*");
+    #else
+        GTEST_SKIP() << "Assertions are disabled (NDEBUG defined)";
+    #endif
 }
 
 // Test out-of-bounds access
 TEST_F(TestSliceCopy, OutOfBoundsIndexDeathTest) {
-    GTEST_SKIP() << "Skip death test";
-    EXPECT_DEATH_IF_SUPPORTED(copy_array_slice(A_i, input, M+1, BLOCK_LENGTH+1, 2 * BLOCK_LENGTH), "");
+    #ifndef NDEBUG 
+        // This test is only valid in debug mode where assertions are enabled
+        EXPECT_DEATH_IF_SUPPORTED(copy_array_slice(A_i, input, M+1, BLOCK_LENGTH+1, 2 * BLOCK_LENGTH), ".*Assertion.*failed.*");
+    #else
+        GTEST_SKIP() << "Assertions are disabled (NDEBUG defined)";
+    #endif
 }
