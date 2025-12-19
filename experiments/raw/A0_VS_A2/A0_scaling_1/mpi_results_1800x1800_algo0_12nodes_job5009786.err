@@ -1,0 +1,201 @@
+missing input file name --> Generate random input
+slurmstepd: error: Munge decode failed: Unauthorized credential for client UID=30031 GID=30031
+slurmstepd: error:  mpi/pmix_v4: _auth_cred_verify: hydra33 [10]: pmixp_server.c:540: Verifying authentication credential: Invalid authentication credential
+slurmstepd: error:  mpi/pmix_v4: _direct_conn_establish: hydra33 [10]: pmixp_server.c:1284: Connection reject from 11(hydra34)
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_reset_if_to: hydra08 [7]: pmixp_coll_ring.c:741: 0x148268006ca0: collective timeout seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_log: hydra08 [7]: pmixp_coll.c:281: Dumping collective state
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra08 [7]: pmixp_coll_ring.c:759: 0x148268006ca0: COLL_FENCE_RING state seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra08 [7]: pmixp_coll_ring.c:762: my peerid: 7:hydra08
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra08 [7]: pmixp_coll_ring.c:769: neighbor id: next 8:hydra09, prev 6:hydra07
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra08 [7]: pmixp_coll_ring.c:778: Context ptr=0x148268006d18, #0, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra08 [7]: pmixp_coll_ring.c:778: Context ptr=0x148268006d50, #1, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra08 [7]: pmixp_coll_ring.c:778: Context ptr=0x148268006d88, #2, in-use=1
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra08 [7]: pmixp_coll_ring.c:787: 	 seq=0 contribs: loc=1/prev=9/fwd=10
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra08 [7]: pmixp_coll_ring.c:791: 	 neighbor contribs [12]:
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra08 [7]: pmixp_coll_ring.c:824: 		 done contrib: hydra[01-07,10,34]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra08 [7]: pmixp_coll_ring.c:826: 		 wait contrib: hydra[09,33]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra08 [7]: pmixp_coll_ring.c:828: 	 status=PMIXP_COLL_RING_PROGRESS
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra08 [7]: pmixp_coll_ring.c:831: 	 buf (offset/size): 750/1626
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_reset_if_to: hydra01 [0]: pmixp_coll_ring.c:741: 0x145d7c06f6c0: collective timeout seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_log: hydra01 [0]: pmixp_coll.c:281: Dumping collective state
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra01 [0]: pmixp_coll_ring.c:759: 0x145d7c06f6c0: COLL_FENCE_RING state seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra01 [0]: pmixp_coll_ring.c:762: my peerid: 0:hydra01
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra01 [0]: pmixp_coll_ring.c:769: neighbor id: next 1:hydra02, prev 11:hydra34
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra01 [0]: pmixp_coll_ring.c:778: Context ptr=0x145d7c06f738, #0, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra01 [0]: pmixp_coll_ring.c:778: Context ptr=0x145d7c06f770, #1, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra01 [0]: pmixp_coll_ring.c:778: Context ptr=0x145d7c06f7a8, #2, in-use=1
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra01 [0]: pmixp_coll_ring.c:787: 	 seq=0 contribs: loc=1/prev=2/fwd=3
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra01 [0]: pmixp_coll_ring.c:791: 	 neighbor contribs [12]:
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra01 [0]: pmixp_coll_ring.c:824: 		 done contrib: hydra[10,34]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra01 [0]: pmixp_coll_ring.c:826: 		 wait contrib: hydra[02-09,33]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra01 [0]: pmixp_coll_ring.c:828: 	 status=PMIXP_COLL_RING_PROGRESS
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra01 [0]: pmixp_coll_ring.c:831: 	 buf (offset/size): 239/1355
+missing input file name --> Generate random input
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_reset_if_to: hydra33 [10]: pmixp_coll_ring.c:741: 0x1468d0006570: collective timeout seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_log: hydra33 [10]: pmixp_coll.c:281: Dumping collective state
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra33 [10]: pmixp_coll_ring.c:759: 0x1468d0006570: COLL_FENCE_RING state seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra33 [10]: pmixp_coll_ring.c:762: my peerid: 10:hydra33
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra33 [10]: pmixp_coll_ring.c:769: neighbor id: next 11:hydra34, prev 9:hydra10
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra33 [10]: pmixp_coll_ring.c:778: Context ptr=0x1468d00065e8, #0, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra33 [10]: pmixp_coll_ring.c:778: Context ptr=0x1468d0006620, #1, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra33 [10]: pmixp_coll_ring.c:778: Context ptr=0x1468d0006658, #2, in-use=1
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra33 [10]: pmixp_coll_ring.c:787: 	 seq=0 contribs: loc=1/prev=11/fwd=1
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra33 [10]: pmixp_coll_ring.c:791: 	 neighbor contribs [12]:
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra33 [10]: pmixp_coll_ring.c:824: 		 done contrib: hydra[01-10,34]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra33 [10]: pmixp_coll_ring.c:826: 		 wait contrib: -
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra33 [10]: pmixp_coll_ring.c:828: 	 status=PMIXP_COLL_RING_FINILIZE
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra33 [10]: pmixp_coll_ring.c:831: 	 buf (offset/size): 0/1772
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_reset_if_to: hydra34 [11]: pmixp_coll_ring.c:741: 0x1468f8006570: collective timeout seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_log: hydra34 [11]: pmixp_coll.c:281: Dumping collective state
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra34 [11]: pmixp_coll_ring.c:759: 0x1468f8006570: COLL_FENCE_RING state seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra34 [11]: pmixp_coll_ring.c:762: my peerid: 11:hydra34
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra34 [11]: pmixp_coll_ring.c:769: neighbor id: next 0:hydra01, prev 10:hydra33
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra34 [11]: pmixp_coll_ring.c:778: Context ptr=0x1468f80065e8, #0, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra34 [11]: pmixp_coll_ring.c:778: Context ptr=0x1468f8006620, #1, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra34 [11]: pmixp_coll_ring.c:778: Context ptr=0x1468f8006658, #2, in-use=1
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra34 [11]: pmixp_coll_ring.c:787: 	 seq=0 contribs: loc=1/prev=1/fwd=2
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra34 [11]: pmixp_coll_ring.c:791: 	 neighbor contribs [12]:
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra34 [11]: pmixp_coll_ring.c:824: 		 done contrib: hydra10
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra34 [11]: pmixp_coll_ring.c:826: 		 wait contrib: hydra[01-09,33]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra34 [11]: pmixp_coll_ring.c:828: 	 status=PMIXP_COLL_RING_PROGRESS
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra34 [11]: pmixp_coll_ring.c:831: 	 buf (offset/size): 146/1022
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_reset_if_to: hydra10 [9]: pmixp_coll_ring.c:741: 0x15137406d900: collective timeout seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_log: hydra10 [9]: pmixp_coll.c:281: Dumping collective state
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra10 [9]: pmixp_coll_ring.c:759: 0x15137406d900: COLL_FENCE_RING state seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra10 [9]: pmixp_coll_ring.c:762: my peerid: 9:hydra10
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra10 [9]: pmixp_coll_ring.c:769: neighbor id: next 10:hydra33, prev 8:hydra09
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra10 [9]: pmixp_coll_ring.c:778: Context ptr=0x15137406d978, #0, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra10 [9]: pmixp_coll_ring.c:778: Context ptr=0x15137406d9b0, #1, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra10 [9]: pmixp_coll_ring.c:778: Context ptr=0x15137406d9e8, #2, in-use=1
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra10 [9]: pmixp_coll_ring.c:787: 	 seq=0 contribs: loc=1/prev=10/fwd=11
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra10 [9]: pmixp_coll_ring.c:791: 	 neighbor contribs [12]:
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra10 [9]: pmixp_coll_ring.c:824: 		 done contrib: hydra[01-09,34]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra10 [9]: pmixp_coll_ring.c:826: 		 wait contrib: hydra33
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra10 [9]: pmixp_coll_ring.c:828: 	 status=PMIXP_COLL_RING_PROGRESS
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra10 [9]: pmixp_coll_ring.c:831: 	 buf (offset/size): 823/1699
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_reset_if_to: hydra05 [4]: pmixp_coll_ring.c:741: 0x1455d005c610: collective timeout seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_log: hydra05 [4]: pmixp_coll.c:281: Dumping collective state
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra05 [4]: pmixp_coll_ring.c:759: 0x1455d005c610: COLL_FENCE_RING state seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra05 [4]: pmixp_coll_ring.c:762: my peerid: 4:hydra05
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra05 [4]: pmixp_coll_ring.c:769: neighbor id: next 5:hydra06, prev 3:hydra04
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra05 [4]: pmixp_coll_ring.c:778: Context ptr=0x1455d005c688, #0, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra05 [4]: pmixp_coll_ring.c:778: Context ptr=0x1455d005c6c0, #1, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra05 [4]: pmixp_coll_ring.c:778: Context ptr=0x1455d005c6f8, #2, in-use=1
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra05 [4]: pmixp_coll_ring.c:787: 	 seq=0 contribs: loc=1/prev=6/fwd=7
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra05 [4]: pmixp_coll_ring.c:791: 	 neighbor contribs [12]:
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra05 [4]: pmixp_coll_ring.c:824: 		 done contrib: hydra[01-04,10,34]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra05 [4]: pmixp_coll_ring.c:826: 		 wait contrib: hydra[06-09,33]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra05 [4]: pmixp_coll_ring.c:828: 	 status=PMIXP_COLL_RING_PROGRESS
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra05 [4]: pmixp_coll_ring.c:831: 	 buf (offset/size): 531/1407
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_reset_if_to: hydra03 [2]: pmixp_coll_ring.c:741: 0x150730071c00: collective timeout seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_log: hydra03 [2]: pmixp_coll.c:281: Dumping collective state
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra03 [2]: pmixp_coll_ring.c:759: 0x150730071c00: COLL_FENCE_RING state seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra03 [2]: pmixp_coll_ring.c:762: my peerid: 2:hydra03
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra03 [2]: pmixp_coll_ring.c:769: neighbor id: next 3:hydra04, prev 1:hydra02
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra03 [2]: pmixp_coll_ring.c:778: Context ptr=0x150730071c78, #0, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra03 [2]: pmixp_coll_ring.c:778: Context ptr=0x150730071cb0, #1, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra03 [2]: pmixp_coll_ring.c:778: Context ptr=0x150730071ce8, #2, in-use=1
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra03 [2]: pmixp_coll_ring.c:787: 	 seq=0 contribs: loc=1/prev=4/fwd=5
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra03 [2]: pmixp_coll_ring.c:791: 	 neighbor contribs [12]:
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra03 [2]: pmixp_coll_ring.c:824: 		 done contrib: hydra[01-02,10,34]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra03 [2]: pmixp_coll_ring.c:826: 		 wait contrib: hydra[04-09,33]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra03 [2]: pmixp_coll_ring.c:828: 	 status=PMIXP_COLL_RING_PROGRESS
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra03 [2]: pmixp_coll_ring.c:831: 	 buf (offset/size): 385/1261
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_reset_if_to: hydra04 [3]: pmixp_coll_ring.c:741: 0x151494066690: collective timeout seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_log: hydra04 [3]: pmixp_coll.c:281: Dumping collective state
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra04 [3]: pmixp_coll_ring.c:759: 0x151494066690: COLL_FENCE_RING state seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra04 [3]: pmixp_coll_ring.c:762: my peerid: 3:hydra04
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra04 [3]: pmixp_coll_ring.c:769: neighbor id: next 4:hydra05, prev 2:hydra03
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra04 [3]: pmixp_coll_ring.c:778: Context ptr=0x151494066708, #0, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra04 [3]: pmixp_coll_ring.c:778: Context ptr=0x151494066740, #1, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra04 [3]: pmixp_coll_ring.c:778: Context ptr=0x151494066778, #2, in-use=1
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra04 [3]: pmixp_coll_ring.c:787: 	 seq=0 contribs: loc=1/prev=5/fwd=6
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra04 [3]: pmixp_coll_ring.c:791: 	 neighbor contribs [12]:
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra04 [3]: pmixp_coll_ring.c:824: 		 done contrib: hydra[01-03,10,34]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra04 [3]: pmixp_coll_ring.c:826: 		 wait contrib: hydra[05-09,33]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra04 [3]: pmixp_coll_ring.c:828: 	 status=PMIXP_COLL_RING_PROGRESS
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra04 [3]: pmixp_coll_ring.c:831: 	 buf (offset/size): 458/1334
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_reset_if_to: hydra06 [5]: pmixp_coll_ring.c:741: 0x14f840006ca0: collective timeout seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_log: hydra06 [5]: pmixp_coll.c:281: Dumping collective state
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra06 [5]: pmixp_coll_ring.c:759: 0x14f840006ca0: COLL_FENCE_RING state seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra06 [5]: pmixp_coll_ring.c:762: my peerid: 5:hydra06
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra06 [5]: pmixp_coll_ring.c:769: neighbor id: next 6:hydra07, prev 4:hydra05
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra06 [5]: pmixp_coll_ring.c:778: Context ptr=0x14f840006d18, #0, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra06 [5]: pmixp_coll_ring.c:778: Context ptr=0x14f840006d50, #1, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra06 [5]: pmixp_coll_ring.c:778: Context ptr=0x14f840006d88, #2, in-use=1
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra06 [5]: pmixp_coll_ring.c:787: 	 seq=0 contribs: loc=1/prev=7/fwd=8
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra06 [5]: pmixp_coll_ring.c:791: 	 neighbor contribs [12]:
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra06 [5]: pmixp_coll_ring.c:824: 		 done contrib: hydra[01-05,10,34]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra06 [5]: pmixp_coll_ring.c:826: 		 wait contrib: hydra[07-09,33]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra06 [5]: pmixp_coll_ring.c:828: 	 status=PMIXP_COLL_RING_PROGRESS
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra06 [5]: pmixp_coll_ring.c:831: 	 buf (offset/size): 604/1480
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_reset_if_to: hydra02 [1]: pmixp_coll_ring.c:741: 0x151eec06bc90: collective timeout seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_log: hydra02 [1]: pmixp_coll.c:281: Dumping collective state
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra02 [1]: pmixp_coll_ring.c:759: 0x151eec06bc90: COLL_FENCE_RING state seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra02 [1]: pmixp_coll_ring.c:762: my peerid: 1:hydra02
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra02 [1]: pmixp_coll_ring.c:769: neighbor id: next 2:hydra03, prev 0:hydra01
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra02 [1]: pmixp_coll_ring.c:778: Context ptr=0x151eec06bd08, #0, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra02 [1]: pmixp_coll_ring.c:778: Context ptr=0x151eec06bd40, #1, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra02 [1]: pmixp_coll_ring.c:778: Context ptr=0x151eec06bd78, #2, in-use=1
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra02 [1]: pmixp_coll_ring.c:787: 	 seq=0 contribs: loc=1/prev=3/fwd=4
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra02 [1]: pmixp_coll_ring.c:791: 	 neighbor contribs [12]:
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra02 [1]: pmixp_coll_ring.c:824: 		 done contrib: hydra[01,10,34]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra02 [1]: pmixp_coll_ring.c:826: 		 wait contrib: hydra[03-09,33]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra02 [1]: pmixp_coll_ring.c:828: 	 status=PMIXP_COLL_RING_PROGRESS
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra02 [1]: pmixp_coll_ring.c:831: 	 buf (offset/size): 312/1188
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_reset_if_to: hydra07 [6]: pmixp_coll_ring.c:741: 0x153b4c006ca0: collective timeout seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_log: hydra07 [6]: pmixp_coll.c:281: Dumping collective state
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra07 [6]: pmixp_coll_ring.c:759: 0x153b4c006ca0: COLL_FENCE_RING state seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra07 [6]: pmixp_coll_ring.c:762: my peerid: 6:hydra07
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra07 [6]: pmixp_coll_ring.c:769: neighbor id: next 7:hydra08, prev 5:hydra06
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra07 [6]: pmixp_coll_ring.c:778: Context ptr=0x153b4c006d18, #0, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra07 [6]: pmixp_coll_ring.c:778: Context ptr=0x153b4c006d50, #1, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra07 [6]: pmixp_coll_ring.c:778: Context ptr=0x153b4c006d88, #2, in-use=1
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra07 [6]: pmixp_coll_ring.c:787: 	 seq=0 contribs: loc=1/prev=8/fwd=9
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra07 [6]: pmixp_coll_ring.c:791: 	 neighbor contribs [12]:
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra07 [6]: pmixp_coll_ring.c:824: 		 done contrib: hydra[01-06,10,34]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra07 [6]: pmixp_coll_ring.c:826: 		 wait contrib: hydra[08-09,33]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra07 [6]: pmixp_coll_ring.c:828: 	 status=PMIXP_COLL_RING_PROGRESS
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra07 [6]: pmixp_coll_ring.c:831: 	 buf (offset/size): 677/1553
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_reset_if_to: hydra09 [8]: pmixp_coll_ring.c:741: 0x155010006ca0: collective timeout seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_log: hydra09 [8]: pmixp_coll.c:281: Dumping collective state
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra09 [8]: pmixp_coll_ring.c:759: 0x155010006ca0: COLL_FENCE_RING state seq=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra09 [8]: pmixp_coll_ring.c:762: my peerid: 8:hydra09
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra09 [8]: pmixp_coll_ring.c:769: neighbor id: next 9:hydra10, prev 7:hydra08
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra09 [8]: pmixp_coll_ring.c:778: Context ptr=0x155010006d18, #0, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra09 [8]: pmixp_coll_ring.c:778: Context ptr=0x155010006d50, #1, in-use=0
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra09 [8]: pmixp_coll_ring.c:778: Context ptr=0x155010006d88, #2, in-use=1
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra09 [8]: pmixp_coll_ring.c:787: 	 seq=0 contribs: loc=1/prev=10/fwd=10
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra09 [8]: pmixp_coll_ring.c:791: 	 neighbor contribs [12]:
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra09 [8]: pmixp_coll_ring.c:824: 		 done contrib: hydra[01-08,10,34]
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra09 [8]: pmixp_coll_ring.c:826: 		 wait contrib: hydra33
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra09 [8]: pmixp_coll_ring.c:828: 	 status=PMIXP_COLL_RING_PROGRESS
+slurmstepd: error:  mpi/pmix_v4: pmixp_coll_ring_log: hydra09 [8]: pmixp_coll_ring.c:831: 	 buf (offset/size): 823/1699
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input
+missing input file name --> Generate random input

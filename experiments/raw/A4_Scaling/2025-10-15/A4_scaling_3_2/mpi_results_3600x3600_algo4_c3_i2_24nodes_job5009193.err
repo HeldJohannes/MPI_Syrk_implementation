@@ -1,0 +1,1470 @@
+missing input file name --> Generate random input
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+missing input file name --> Generate random input
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 11] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 5] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 6] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 8] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 3] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 0] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 4] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 10] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 1] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 7] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 9] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450
+[rank 2] s->m = 3600, s->n = 1800, s->c = 3, s->world_size = 12
+block_size = 180000, block_height = 400, block_length = 450

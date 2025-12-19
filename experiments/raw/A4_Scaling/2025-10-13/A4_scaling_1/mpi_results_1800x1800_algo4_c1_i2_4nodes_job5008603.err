@@ -1,0 +1,2119 @@
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325154] *** Process received signal ***
+[hydra03:325154] Signal: Aborted (6)
+[hydra03:325154] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:324031] *** Process received signal ***
+[hydra04:324031] Signal: Aborted (6)
+[hydra04:324031] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:463512] *** Process received signal ***
+[hydra02:463512] Signal: Aborted (6)
+[hydra02:463512] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325156] *** Process received signal ***
+[hydra03:325156] Signal: Aborted (6)
+[hydra03:325156] Signal code:  (-6)
+[hydra03:325154] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fde85b2bde0]
+[hydra03:325156] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f73d3524de0]
+[hydra03:325156] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f73d3524d61]
+[hydra03:325154] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fde85b2bd61]
+[hydra03:325154] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fde85b15537]
+[hydra03:325156] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f73d350e537]
+[hydra03:325154] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fde85b1540f]
+[hydra03:325156] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f73d350e40f]
+[hydra03:325154] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fde85b246e2]
+[hydra03:325156] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f73d351d6e2]
+[hydra03:325156] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5598d67ef540]
+[hydra03:325156] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5598d67e9ab0]
+[hydra03:325154] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x56335b375540]
+[hydra03:325154] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x56335b36fab0]
+[hydra03:325154] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fde85b16d7a]
+[hydra03:325154] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x56335b36f32a]
+[hydra03:325154] *** End of error message ***
+[hydra03:325156] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f73d350fd7a]
+[hydra03:325156] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5598d67e932a]
+[hydra03:325156] *** End of error message ***
+[hydra04:324031] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f1a0c0b1de0]
+[hydra04:324031] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f1a0c0b1d61]
+[hydra04:324031] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f1a0c09b537]
+[hydra04:324031] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f1a0c09b40f]
+[hydra04:324031] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f1a0c0aa6e2]
+[hydra04:324031] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x556a26dd5540]
+[hydra04:324031] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x556a26dcfab0]
+[hydra04:324031] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f1a0c09cd7a]
+[hydra04:324031] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x556a26dcf32a]
+[hydra04:324031] *** End of error message ***
+[hydra02:463512] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f0c79765de0]
+[hydra02:463512] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f0c79765d61]
+[hydra02:463512] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f0c7974f537]
+[hydra02:463512] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f0c7974f40f]
+[hydra02:463512] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f0c7975e6e2]
+[hydra02:463512] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55664473b540]
+[hydra02:463512] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x556644735ab0]
+[hydra02:463512] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f0c79750d7a]
+[hydra02:463512] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55664473532a]
+[hydra02:463512] *** End of error message ***
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.0:4]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.0:10]
+slurmstepd: error: *** STEP 5008603.0 ON hydra01 CANCELLED AT 2025-10-13T11:44:54 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: hydra03: task 7: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 1
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:324073] *** Process received signal ***
+[hydra04:324073] Signal: Aborted (6)
+[hydra04:324073] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325196] *** Process received signal ***
+[hydra03:325196] Signal: Aborted (6)
+[hydra03:325196] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325198] *** Process received signal ***
+[hydra03:325198] Signal: Aborted (6)
+[hydra03:325198] Signal code:  (-6)
+[hydra03:325196] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f75db93ade0]
+[hydra03:325198] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f57987eede0]
+[hydra03:325198] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f57987eed61]
+[hydra03:325196] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f75db93ad61]
+[hydra03:325198] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f57987d8537]
+[hydra03:325196] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f75db924537]
+[hydra03:325198] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f57987d840f]
+[hydra03:325196] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f75db92440f]
+[hydra03:325196] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f75db9336e2]
+[hydra03:325198] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f57987e76e2]
+[hydra03:325198] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55d25a4d3540]
+[hydra03:325198] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55d25a4cdab0]
+[hydra03:325196] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5614f3aa0540]
+[hydra03:325196] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5614f3a9aab0]
+[hydra03:325198] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f57987d9d7a]
+[hydra03:325198] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55d25a4cd32a]
+[hydra03:325196] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f75db925d7a]
+[hydra03:325196] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5614f3a9a32a]
+[hydra03:325196] *** End of error message ***
+[hydra03:325198] *** End of error message ***
+[hydra04:324073] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fdcf2d13de0]
+[hydra04:324073] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fdcf2d13d61]
+[hydra04:324073] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fdcf2cfd537]
+[hydra04:324073] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fdcf2cfd40f]
+[hydra04:324073] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fdcf2d0c6e2]
+[hydra04:324073] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x56455a0df540]
+[hydra04:324073] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x56455a0d9ab0]
+[hydra04:324073] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fdcf2cfed7a]
+[hydra04:324073] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x56455a0d932a]
+[hydra04:324073] *** End of error message ***
+[hydra02:463553] *** Process received signal ***
+[hydra02:463553] Signal: Aborted (6)
+[hydra02:463553] Signal code:  (-6)
+[hydra02:463553] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f39e533bde0]
+[hydra02:463553] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f39e533bd61]
+[hydra02:463553] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f39e5325537]
+[hydra02:463553] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f39e532540f]
+[hydra02:463553] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f39e53346e2]
+[hydra02:463553] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5637c8b0e540]
+[hydra02:463553] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5637c8b08ab0]
+[hydra02:463553] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f39e5326d7a]
+[hydra02:463553] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5637c8b0832a]
+[hydra02:463553] *** End of error message ***
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.1:10]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.1:4]
+slurmstepd: error: *** STEP 5008603.1 ON hydra01 CANCELLED AT 2025-10-13T11:44:56 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra03 [2]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.1:8]
+srun: error: hydra03: task 7: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 2
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:463597] *** Process received signal ***
+[hydra02:463597] Signal: Aborted (6)
+[hydra02:463597] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325241] *** Process received signal ***
+[hydra03:325241] Signal: Aborted (6)
+[hydra03:325241] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:324117] *** Process received signal ***
+[hydra04:324117] Signal: Aborted (6)
+[hydra04:324117] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325243] *** Process received signal ***
+[hydra03:325243] Signal: Aborted (6)
+[hydra03:325243] Signal code:  (-6)
+[hydra03:325241] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7efefd658de0]
+[hydra03:325243] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7efc6bf49de0]
+[hydra03:325243] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7efc6bf49d61]
+[hydra03:325241] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7efefd658d61]
+[hydra03:325243] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7efc6bf33537]
+[hydra03:325241] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7efefd642537]
+[hydra03:325243] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7efc6bf3340f]
+[hydra03:325241] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7efefd64240f]
+[hydra03:325243] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7efc6bf426e2]
+[hydra03:325243] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x56288b8d7540]
+[hydra03:325241] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7efefd6516e2]
+[hydra03:325241] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x556b5e8f8540]
+[hydra03:325241] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x556b5e8f2ab0]
+[hydra03:325243] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x56288b8d1ab0]
+[hydra03:325243] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7efc6bf34d7a]
+[hydra03:325243] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x56288b8d132a]
+[hydra03:325241] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7efefd643d7a]
+[hydra03:325243] *** End of error message ***
+[hydra03:325241] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x556b5e8f232a]
+[hydra03:325241] *** End of error message ***
+[hydra02:463597] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f2677fa9de0]
+[hydra02:463597] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f2677fa9d61]
+[hydra02:463597] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f2677f93537]
+[hydra02:463597] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f2677f9340f]
+[hydra04:324117] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f80a0164de0]
+[hydra02:463597] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f2677fa26e2]
+[hydra02:463597] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x562dbb7b7540]
+[hydra04:324117] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f80a0164d61]
+[hydra02:463597] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x562dbb7b1ab0]
+[hydra04:324117] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f80a014e537]
+[hydra02:463597] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f2677f94d7a]
+[hydra04:324117] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f80a014e40f]
+[hydra02:463597] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x562dbb7b132a]
+[hydra02:463597] *** End of error message ***
+[hydra04:324117] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f80a015d6e2]
+[hydra04:324117] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x560b5907e540]
+[hydra04:324117] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x560b59078ab0]
+[hydra04:324117] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f80a014fd7a]
+[hydra04:324117] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x560b5907832a]
+[hydra04:324117] *** End of error message ***
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.2:4]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.2:10]
+slurmstepd: error: *** STEP 5008603.2 ON hydra01 CANCELLED AT 2025-10-13T11:44:58 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: hydra03: task 7: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 3
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:463639] *** Process received signal ***
+[hydra02:463639] Signal: Aborted (6)
+[hydra02:463639] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325282] *** Process received signal ***
+[hydra03:325282] Signal: Aborted (6)
+[hydra03:325282] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:324159] *** Process received signal ***
+[hydra04:324159] Signal: Aborted (6)
+[hydra04:324159] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325284] *** Process received signal ***
+[hydra03:325284] Signal: Aborted (6)
+[hydra03:325284] Signal code:  (-6)
+[hydra03:325282] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f598f94bde0]
+[hydra03:325284] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fe26089dde0]
+[hydra03:325282] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f598f94bd61]
+[hydra03:325284] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fe26089dd61]
+[hydra03:325282] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f598f935537]
+[hydra03:325284] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fe260887537]
+[hydra03:325282] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f598f93540f]
+[hydra03:325284] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fe26088740f]
+[hydra03:325282] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f598f9446e2]
+[hydra03:325282] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5593365c3540]
+[hydra03:325282] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5593365bdab0]
+[hydra03:325284] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fe2608966e2]
+[hydra03:325284] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55cc5649c540]
+[hydra03:325284] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55cc56496ab0]
+[hydra03:325282] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f598f936d7a]
+[hydra03:325282] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5593365bd32a]
+[hydra03:325282] *** End of error message ***
+[hydra03:325284] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fe260888d7a]
+[hydra03:325284] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55cc5649632a]
+[hydra03:325284] *** End of error message ***
+[hydra02:463639] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f8ab00dbde0]
+[hydra02:463639] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f8ab00dbd61]
+[hydra02:463639] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f8ab00c5537]
+[hydra02:463639] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f8ab00c540f]
+[hydra02:463639] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f8ab00d46e2]
+[hydra02:463639] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x557026e25540]
+[hydra02:463639] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x557026e1fab0]
+[hydra02:463639] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f8ab00c6d7a]
+[hydra02:463639] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x557026e1f32a]
+[hydra02:463639] *** End of error message ***
+[hydra04:324159] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f97a6de8de0]
+[hydra04:324159] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f97a6de8d61]
+[hydra04:324159] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f97a6dd2537]
+[hydra04:324159] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f97a6dd240f]
+[hydra04:324159] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f97a6de16e2]
+[hydra04:324159] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55ce7567b540]
+[hydra04:324159] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55ce75675ab0]
+[hydra04:324159] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f97a6dd3d7a]
+[hydra04:324159] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55ce7567532a]
+[hydra04:324159] *** End of error message ***
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.3:4]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.3:10]
+slurmstepd: error: *** STEP 5008603.3 ON hydra01 CANCELLED AT 2025-10-13T11:44:59 ***
+slurmstepd: error: *** STEP 5008603.3 ON hydra01 CANCELLED AT 2025-10-13T11:44:59 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: hydra03: task 7: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 4
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325323] *** Process received signal ***
+[hydra03:325323] Signal: Aborted (6)
+[hydra03:325323] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:463681] *** Process received signal ***
+[hydra02:463681] Signal: Aborted (6)
+[hydra02:463681] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325325] *** Process received signal ***
+[hydra03:325325] Signal: Aborted (6)
+[hydra03:325325] Signal code:  (-6)
+[hydra03:325323] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fe41f764de0]
+[hydra03:325325] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f7ff95bdde0]
+[hydra03:325323] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fe41f764d61]
+[hydra03:325325] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f7ff95bdd61]
+[hydra03:325323] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fe41f74e537]
+[hydra03:325325] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f7ff95a7537]
+[hydra03:325323] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fe41f74e40f]
+[hydra03:325325] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f7ff95a740f]
+[hydra03:325325] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f7ff95b66e2]
+[hydra03:325323] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fe41f75d6e2]
+[hydra03:325323] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5615e2753540]
+[hydra03:325323] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5615e274dab0]
+[hydra03:325325] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55869439b540]
+[hydra03:325325] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x558694395ab0]
+[hydra03:325323] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fe41f74fd7a]
+[hydra03:325323] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5615e274d32a]
+[hydra03:325323] *** End of error message ***
+[hydra03:325325] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f7ff95a8d7a]
+[hydra03:325325] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55869439532a]
+[hydra03:325325] *** End of error message ***
+[hydra02:463681] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f97a49bade0]
+[hydra04:324201] *** Process received signal ***
+[hydra04:324201] Signal: Aborted (6)
+[hydra04:324201] Signal code:  (-6)
+[hydra02:463681] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f97a49bad61]
+[hydra04:324201] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f82ff506de0]
+[hydra02:463681] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f97a49a4537]
+[hydra04:324201] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f82ff506d61]
+[hydra02:463681] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f97a49a440f]
+[hydra04:324201] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f82ff4f0537]
+[hydra02:463681] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f97a49b36e2]
+[hydra02:463681] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x564a61a7f540]
+[hydra04:324201] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f82ff4f040f]
+[hydra02:463681] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x564a61a79ab0]
+[hydra04:324201] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f82ff4ff6e2]
+[hydra04:324201] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55c56386e540]
+[hydra02:463681] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f97a49a5d7a]
+[hydra04:324201] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55c563868ab0]
+[hydra02:463681] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x564a61a7932a]
+[hydra02:463681] *** End of error message ***
+[hydra04:324201] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f82ff4f1d7a]
+[hydra04:324201] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55c56386832a]
+[hydra04:324201] *** End of error message ***
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.4:4]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.4:10]
+slurmstepd: error: *** STEP 5008603.4 ON hydra01 CANCELLED AT 2025-10-13T11:45:01 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 5008603.4 ON hydra01 CANCELLED AT 2025-10-13T11:45:01 ***
+srun: error: hydra03: task 7: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 5
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325365] *** Process received signal ***
+[hydra03:325365] Signal: Aborted (6)
+[hydra03:325365] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:324243] *** Process received signal ***
+[hydra04:324243] Signal: Aborted (6)
+[hydra04:324243] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:463722] *** Process received signal ***
+[hydra02:463722] Signal: Aborted (6)
+[hydra02:463722] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325367] *** Process received signal ***
+[hydra03:325367] Signal: Aborted (6)
+[hydra03:325367] Signal code:  (-6)
+[hydra03:325365] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f6a6e03fde0]
+[hydra03:325367] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fa06b439de0]
+[hydra03:325365] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f6a6e03fd61]
+[hydra03:325367] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fa06b439d61]
+[hydra03:325365] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f6a6e029537]
+[hydra03:325367] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fa06b423537]
+[hydra03:325365] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f6a6e02940f]
+[hydra03:325367] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fa06b42340f]
+[hydra03:325365] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f6a6e0386e2]
+[hydra03:325367] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fa06b4326e2]
+[hydra03:325367] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55768306a540]
+[hydra03:325367] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x557683064ab0]
+[hydra03:325365] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x563dc5a09540]
+[hydra03:325365] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x563dc5a03ab0]
+[hydra03:325365] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f6a6e02ad7a]
+[hydra03:325365] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x563dc5a0332a]
+[hydra03:325365] *** End of error message ***
+[hydra03:325367] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fa06b424d7a]
+[hydra03:325367] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55768306432a]
+[hydra03:325367] *** End of error message ***
+[hydra02:463722] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f10ecffade0]
+[hydra02:463722] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f10ecffad61]
+[hydra02:463722] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f10ecfe4537]
+[hydra02:463722] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f10ecfe440f]
+[hydra02:463722] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f10ecff36e2]
+[hydra02:463722] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x557bce864540]
+[hydra02:463722] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x557bce85eab0]
+[hydra02:463722] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f10ecfe5d7a]
+[hydra02:463722] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x557bce85e32a]
+[hydra02:463722] *** End of error message ***
+[hydra04:324243] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f38a5568de0]
+[hydra04:324243] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f38a5568d61]
+[hydra04:324243] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f38a5552537]
+[hydra04:324243] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f38a555240f]
+[hydra04:324243] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f38a55616e2]
+[hydra04:324243] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x564fbaf8f540]
+[hydra04:324243] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x564fbaf89ab0]
+[hydra04:324243] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f38a5553d7a]
+[hydra04:324243] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x564fbaf8932a]
+[hydra04:324243] *** End of error message ***
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.5:10]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.5:4]
+slurmstepd: error: *** STEP 5008603.5 ON hydra01 CANCELLED AT 2025-10-13T11:45:03 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: hydra03: task 7: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 6
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:324285] *** Process received signal ***
+[hydra04:324285] Signal: Aborted (6)
+[hydra04:324285] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:463763] *** Process received signal ***
+[hydra02:463763] Signal: Aborted (6)
+[hydra02:463763] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325407] *** Process received signal ***
+[hydra03:325407] Signal: Aborted (6)
+[hydra03:325407] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325409] *** Process received signal ***
+[hydra03:325409] Signal: Aborted (6)
+[hydra03:325409] Signal code:  (-6)
+[hydra03:325407] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fa3a6579de0]
+[hydra03:325409] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f29a3bd1de0]
+[hydra03:325409] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f29a3bd1d61]
+[hydra03:325407] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fa3a6579d61]
+[hydra03:325409] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f29a3bbb537]
+[hydra03:325407] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fa3a6563537]
+[hydra03:325407] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fa3a656340f]
+[hydra03:325409] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f29a3bbb40f]
+[hydra03:325407] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fa3a65726e2]
+[hydra03:325409] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f29a3bca6e2]
+[hydra03:325409] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55c9a9336540]
+[hydra03:325409] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55c9a9330ab0]
+[hydra03:325407] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55986712c540]
+[hydra03:325407] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x559867126ab0]
+[hydra03:325407] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fa3a6564d7a]
+[hydra03:325409] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f29a3bbcd7a]
+[hydra03:325409] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55c9a933032a]
+[hydra03:325409] *** End of error message ***
+[hydra03:325407] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55986712632a]
+[hydra03:325407] *** End of error message ***
+[hydra04:324285] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fd1e0a80de0]
+[hydra04:324285] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fd1e0a80d61]
+[hydra04:324285] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fd1e0a6a537]
+[hydra02:463763] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f1c2ebcade0]
+[hydra04:324285] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fd1e0a6a40f]
+[hydra02:463763] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f1c2ebcad61]
+[hydra04:324285] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fd1e0a796e2]
+[hydra04:324285] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5605e3eea540]
+[hydra02:463763] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f1c2ebb4537]
+[hydra04:324285] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5605e3ee4ab0]
+[hydra02:463763] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f1c2ebb440f]
+[hydra04:324285] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fd1e0a6bd7a]
+[hydra02:463763] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f1c2ebc36e2]
+[hydra02:463763] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x560b31777540]
+[hydra04:324285] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5605e3ee432a]
+[hydra04:324285] *** End of error message ***
+[hydra02:463763] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x560b31771ab0]
+[hydra02:463763] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f1c2ebb5d7a]
+[hydra02:463763] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x560b3177132a]
+[hydra02:463763] *** End of error message ***
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.6:10]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.6:4]
+slurmstepd: error: *** STEP 5008603.6 ON hydra01 CANCELLED AT 2025-10-13T11:45:05 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: hydra03: task 7: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 7
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:324326] *** Process received signal ***
+[hydra04:324326] Signal: Aborted (6)
+[hydra04:324326] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:463804] *** Process received signal ***
+[hydra02:463804] Signal: Aborted (6)
+[hydra02:463804] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325449] *** Process received signal ***
+[hydra03:325449] Signal: Aborted (6)
+[hydra03:325449] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325451] *** Process received signal ***
+[hydra03:325451] Signal: Aborted (6)
+[hydra03:325451] Signal code:  (-6)
+[hydra03:325451] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fa6cdbdbde0]
+[hydra03:325449] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f7ddd7fbde0]
+[hydra03:325449] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f7ddd7fbd61]
+[hydra03:325451] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fa6cdbdbd61]
+[hydra03:325449] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f7ddd7e5537]
+[hydra03:325451] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fa6cdbc5537]
+[hydra03:325449] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f7ddd7e540f]
+[hydra03:325451] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fa6cdbc540f]
+[hydra03:325449] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f7ddd7f46e2]
+[hydra03:325451] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fa6cdbd46e2]
+[hydra03:325451] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5581a9747540]
+[hydra03:325451] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5581a9741ab0]
+[hydra03:325449] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5568f2a5e540]
+[hydra03:325449] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5568f2a58ab0]
+[hydra03:325451] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fa6cdbc6d7a]
+[hydra03:325451] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5581a974132a]
+[hydra03:325449] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f7ddd7e6d7a]
+[hydra03:325449] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5568f2a5832a]
+[hydra03:325449] *** End of error message ***
+[hydra03:325451] *** End of error message ***
+[hydra02:463804] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fe35cf51de0]
+[hydra04:324326] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fce89cffde0]
+[hydra02:463804] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fe35cf51d61]
+[hydra04:324326] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fce89cffd61]
+[hydra02:463804] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fe35cf3b537]
+[hydra04:324326] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fce89ce9537]
+[hydra02:463804] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fe35cf3b40f]
+[hydra04:324326] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fce89ce940f]
+[hydra02:463804] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fe35cf4a6e2]
+[hydra02:463804] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x560451d5f540]
+[hydra04:324326] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fce89cf86e2]
+[hydra04:324326] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55f30b147540]
+[hydra02:463804] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x560451d59ab0]
+[hydra04:324326] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55f30b141ab0]
+[hydra02:463804] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fe35cf3cd7a]
+[hydra04:324326] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fce89cead7a]
+[hydra02:463804] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x560451d5932a]
+[hydra02:463804] *** End of error message ***
+[hydra04:324326] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55f30b14132a]
+[hydra04:324326] *** End of error message ***
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.7:4]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.7:10]
+slurmstepd: error: *** STEP 5008603.7 ON hydra01 CANCELLED AT 2025-10-13T11:45:07 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: hydra03: task 7: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 8
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:463846] *** Process received signal ***
+[hydra02:463846] Signal: Aborted (6)
+[hydra02:463846] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325491] *** Process received signal ***
+[hydra03:325491] Signal: Aborted (6)
+[hydra03:325491] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325493] *** Process received signal ***
+[hydra03:325493] Signal: Aborted (6)
+[hydra03:325493] Signal code:  (-6)
+[hydra03:325491] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f98d0490de0]
+[hydra03:325493] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f790a07ade0]
+[hydra03:325491] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f98d0490d61]
+[hydra03:325493] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f790a07ad61]
+[hydra03:325491] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f98d047a537]
+[hydra03:325493] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f790a064537]
+[hydra03:325491] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f98d047a40f]
+[hydra03:325493] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f790a06440f]
+[hydra03:325493] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f790a0736e2]
+[hydra03:325491] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f98d04896e2]
+[hydra03:325491] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x557d22432540]
+[hydra03:325491] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x557d2242cab0]
+[hydra03:325493] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x563eaf518540]
+[hydra03:325493] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x563eaf512ab0]
+[hydra03:325491] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f98d047bd7a]
+[hydra03:325491] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x557d2242c32a]
+[hydra03:325491] *** End of error message ***
+[hydra03:325493] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f790a065d7a]
+[hydra03:325493] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x563eaf51232a]
+[hydra03:325493] *** End of error message ***
+[hydra04:324368] *** Process received signal ***
+[hydra04:324368] Signal: Aborted (6)
+[hydra04:324368] Signal code:  (-6)
+[hydra02:463846] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fba48f1ede0]
+[hydra04:324368] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f66fa083de0]
+[hydra02:463846] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fba48f1ed61]
+[hydra04:324368] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f66fa083d61]
+[hydra02:463846] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fba48f08537]
+[hydra04:324368] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f66fa06d537]
+[hydra02:463846] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fba48f0840f]
+[hydra04:324368] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f66fa06d40f]
+[hydra02:463846] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fba48f176e2]
+[hydra02:463846] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55b7007d0540]
+[hydra04:324368] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f66fa07c6e2]
+[hydra04:324368] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5615d64d3540]
+[hydra02:463846] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55b7007caab0]
+[hydra04:324368] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5615d64cdab0]
+[hydra02:463846] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fba48f09d7a]
+[hydra04:324368] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f66fa06ed7a]
+[hydra02:463846] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55b7007ca32a]
+[hydra02:463846] *** End of error message ***
+[hydra04:324368] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5615d64cd32a]
+[hydra04:324368] *** End of error message ***
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+srun: error: hydra04: task 10: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.8:4]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.8:10]
+slurmstepd: error: *** STEP 5008603.8 ON hydra01 CANCELLED AT 2025-10-13T11:45:09 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra03 [2]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.8:8]
+srun: error: hydra03: task 7: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 9
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:463891] *** Process received signal ***
+[hydra02:463891] Signal: Aborted (6)
+[hydra02:463891] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325536] *** Process received signal ***
+[hydra03:325536] Signal: Aborted (6)
+[hydra03:325536] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:324413] *** Process received signal ***
+[hydra04:324413] Signal: Aborted (6)
+[hydra04:324413] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325538] *** Process received signal ***
+[hydra03:325538] Signal: Aborted (6)
+[hydra03:325538] Signal code:  (-6)
+[hydra03:325536] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f78022dade0]
+[hydra03:325538] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f8921c49de0]
+[hydra03:325536] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f78022dad61]
+[hydra03:325538] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f8921c49d61]
+[hydra03:325536] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f78022c4537]
+[hydra03:325538] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f8921c33537]
+[hydra03:325536] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f78022c440f]
+[hydra03:325538] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f8921c3340f]
+[hydra03:325536] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f78022d36e2]
+[hydra03:325538] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f8921c426e2]
+[hydra03:325538] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5598ddcff540]
+[hydra03:325538] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5598ddcf9ab0]
+[hydra03:325536] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x555d858aa540]
+[hydra03:325536] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x555d858a4ab0]
+[hydra03:325536] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f78022c5d7a]
+[hydra03:325536] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x555d858a432a]
+[hydra03:325536] *** End of error message ***
+[hydra03:325538] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f8921c34d7a]
+[hydra03:325538] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5598ddcf932a]
+[hydra03:325538] *** End of error message ***
+[hydra02:463891] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fd89887ade0]
+[hydra02:463891] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fd89887ad61]
+[hydra02:463891] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fd898864537]
+[hydra02:463891] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fd89886440f]
+[hydra02:463891] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fd8988736e2]
+[hydra02:463891] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55a275f17540]
+[hydra02:463891] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55a275f11ab0]
+[hydra02:463891] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fd898865d7a]
+[hydra02:463891] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55a275f1132a]
+[hydra02:463891] *** End of error message ***
+[hydra04:324413] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fd3a9680de0]
+[hydra04:324413] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fd3a9680d61]
+[hydra04:324413] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fd3a966a537]
+[hydra04:324413] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fd3a966a40f]
+[hydra04:324413] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fd3a96796e2]
+[hydra04:324413] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55b533508540]
+[hydra04:324413] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55b533502ab0]
+[hydra04:324413] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fd3a966bd7a]
+[hydra04:324413] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55b53350232a]
+[hydra04:324413] *** End of error message ***
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.9:4]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.9:10]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra03 [2]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.9:8]
+slurmstepd: error: *** STEP 5008603.9 ON hydra01 CANCELLED AT 2025-10-13T11:45:10 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: hydra03: task 7: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 10
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:463935] *** Process received signal ***
+[hydra02:463935] Signal: Aborted (6)
+[hydra02:463935] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:324457] *** Process received signal ***
+[hydra04:324457] Signal: Aborted (6)
+[hydra04:324457] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325580] *** Process received signal ***
+[hydra03:325580] Signal: Aborted (6)
+[hydra03:325580] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325582] *** Process received signal ***
+[hydra03:325582] Signal: Aborted (6)
+[hydra03:325582] Signal code:  (-6)
+[hydra03:325580] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fa7b4c8cde0]
+[hydra03:325582] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fe4cde87de0]
+[hydra03:325580] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fa7b4c8cd61]
+[hydra03:325582] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fe4cde87d61]
+[hydra03:325580] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fa7b4c76537]
+[hydra03:325582] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fe4cde71537]
+[hydra03:325580] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fa7b4c7640f]
+[hydra03:325582] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fe4cde7140f]
+[hydra03:325580] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fa7b4c856e2]
+[hydra03:325582] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fe4cde806e2]
+[hydra03:325582] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55ccb645e540]
+[hydra03:325582] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55ccb6458ab0]
+[hydra03:325580] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x556d6c22d540]
+[hydra03:325580] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x556d6c227ab0]
+[hydra03:325580] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fa7b4c77d7a]
+[hydra03:325580] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x556d6c22732a]
+[hydra03:325580] *** End of error message ***
+[hydra03:325582] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fe4cde72d7a]
+[hydra03:325582] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55ccb645832a]
+[hydra03:325582] *** End of error message ***
+[hydra02:463935] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f98357b2de0]
+[hydra04:324457] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fbbbabebde0]
+[hydra02:463935] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f98357b2d61]
+[hydra04:324457] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fbbbabebd61]
+[hydra02:463935] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f983579c537]
+[hydra04:324457] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fbbbabd5537]
+[hydra02:463935] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f983579c40f]
+[hydra04:324457] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fbbbabd540f]
+[hydra02:463935] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f98357ab6e2]
+[hydra02:463935] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55f235b99540]
+[hydra04:324457] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fbbbabe46e2]
+[hydra02:463935] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55f235b93ab0]
+[hydra04:324457] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5622a10f7540]
+[hydra04:324457] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5622a10f1ab0]
+[hydra02:463935] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f983579dd7a]
+[hydra04:324457] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fbbbabd6d7a]
+[hydra02:463935] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55f235b9332a]
+[hydra02:463935] *** End of error message ***
+[hydra04:324457] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5622a10f132a]
+[hydra04:324457] *** End of error message ***
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.10:4]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.10:10]
+slurmstepd: error: *** STEP 5008603.10 ON hydra01 CANCELLED AT 2025-10-13T11:45:12 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra03 [2]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.10:8]
+srun: error: hydra03: task 7: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 11
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:463979] *** Process received signal ***
+[hydra02:463979] Signal: Aborted (6)
+[hydra02:463979] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325624] *** Process received signal ***
+[hydra03:325624] Signal: Aborted (6)
+[hydra03:325624] Signal code:  (-6)
+[hydra02:463979] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fb32fc6ade0]
+[hydra04:324501] *** Process received signal ***
+[hydra04:324501] Signal: Aborted (6)
+[hydra04:324501] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325626] *** Process received signal ***
+[hydra03:325626] Signal: Aborted (6)
+[hydra03:325626] Signal code:  (-6)
+[hydra04:324501] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f63393bede0]
+[hydra02:463979] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fb32fc6ad61]
+[hydra03:325624] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f96d54fdde0]
+[hydra04:324501] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f63393bed61]
+[hydra03:325626] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f847846fde0]
+[hydra04:324501] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f63393a8537]
+[hydra03:325624] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f96d54fdd61]
+[hydra04:324501] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f63393a840f]
+[hydra02:463979] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fb32fc54537]
+[hydra03:325626] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f847846fd61]
+[hydra04:324501] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f63393b76e2]
+[hydra04:324501] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x565323302540]
+[hydra02:463979] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fb32fc5440f]
+[hydra03:325626] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f8478459537]
+[hydra04:324501] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5653232fcab0]
+[hydra02:463979] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fb32fc636e2]
+[hydra02:463979] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55aa1d1d9540]
+[hydra03:325624] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f96d54e7537]
+[hydra04:324501] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f63393a9d7a]
+[hydra02:463979] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55aa1d1d3ab0]
+[hydra03:325626] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f847845940f]
+[hydra04:324501] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5653232fc32a]
+[hydra04:324501] *** End of error message ***
+[hydra02:463979] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fb32fc55d7a]
+[hydra02:463979] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55aa1d1d332a]
+[hydra03:325624] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f96d54e740f]
+[hydra02:463979] *** End of error message ***
+[hydra03:325626] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f84784686e2]
+[hydra03:325624] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f96d54f66e2]
+[hydra03:325624] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55cec97f7540]
+[hydra03:325626] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x564191c20540]
+[hydra03:325626] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x564191c1aab0]
+[hydra03:325624] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55cec97f1ab0]
+[hydra03:325624] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f96d54e8d7a]
+[hydra03:325624] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55cec97f132a]
+[hydra03:325626] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f847845ad7a]
+[hydra03:325626] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x564191c1a32a]
+[hydra03:325626] *** End of error message ***
+[hydra03:325624] *** End of error message ***
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.11:10]
+slurmstepd: error: *** STEP 5008603.11 ON hydra01 CANCELLED AT 2025-10-13T11:45:14 ***
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.11:4]
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: hydra03: task 7: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 12
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325665] *** Process received signal ***
+[hydra03:325665] Signal: Aborted (6)
+[hydra03:325665] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325667] *** Process received signal ***
+[hydra03:325667] Signal: Aborted (6)
+[hydra03:325667] Signal code:  (-6)
+[hydra03:325665] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f41fdfe6de0]
+[hydra03:325667] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7ff6cdde8de0]
+[hydra03:325665] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f41fdfe6d61]
+[hydra03:325667] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7ff6cdde8d61]
+[hydra03:325665] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f41fdfd0537]
+[hydra03:325667] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7ff6cddd2537]
+[hydra03:325665] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f41fdfd040f]
+[hydra03:325667] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7ff6cddd240f]
+[hydra03:325665] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f41fdfdf6e2]
+[hydra03:325667] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7ff6cdde16e2]
+[hydra03:325667] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5595dd9b2540]
+[hydra03:325667] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5595dd9acab0]
+[hydra03:325665] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x564a54b46540]
+[hydra03:325665] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x564a54b40ab0]
+[hydra03:325667] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7ff6cddd3d7a]
+[hydra03:325667] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5595dd9ac32a]
+[hydra03:325667] *** End of error message ***
+[hydra03:325665] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f41fdfd1d7a]
+[hydra03:325665] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x564a54b4032a]
+[hydra03:325665] *** End of error message ***
+[hydra02:464021] *** Process received signal ***
+[hydra02:464021] Signal: Aborted (6)
+[hydra02:464021] Signal code:  (-6)
+[hydra02:464021] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f000aa43de0]
+[hydra04:324543] *** Process received signal ***
+[hydra04:324543] Signal: Aborted (6)
+[hydra04:324543] Signal code:  (-6)
+[hydra02:464021] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f000aa43d61]
+[hydra04:324543] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f3aca876de0]
+[hydra02:464021] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f000aa2d537]
+[hydra04:324543] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f3aca876d61]
+[hydra02:464021] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f000aa2d40f]
+[hydra04:324543] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f3aca860537]
+[hydra02:464021] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f000aa3c6e2]
+[hydra04:324543] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f3aca86040f]
+[hydra02:464021] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5605316f3540]
+[hydra04:324543] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f3aca86f6e2]
+[hydra04:324543] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x555d2dd68540]
+[hydra02:464021] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5605316edab0]
+[hydra04:324543] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x555d2dd62ab0]
+[hydra02:464021] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f000aa2ed7a]
+[hydra04:324543] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f3aca861d7a]
+[hydra02:464021] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5605316ed32a]
+[hydra04:324543] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x555d2dd6232a]
+[hydra04:324543] *** End of error message ***
+[hydra02:464021] *** End of error message ***
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.12:10]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.12:4]
+slurmstepd: error: *** STEP 5008603.12 ON hydra01 CANCELLED AT 2025-10-13T11:45:16 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: hydra03: task 7: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 13
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325707] *** Process received signal ***
+[hydra03:325707] Signal: Aborted (6)
+[hydra03:325707] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:464062] *** Process received signal ***
+[hydra02:464062] Signal: Aborted (6)
+[hydra02:464062] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325709] *** Process received signal ***
+[hydra03:325709] Signal: Aborted (6)
+[hydra03:325709] Signal code:  (-6)
+[hydra03:325707] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f8b39635de0]
+[hydra03:325709] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f3463660de0]
+[hydra03:325707] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f8b39635d61]
+[hydra03:325709] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f3463660d61]
+[hydra03:325707] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f8b3961f537]
+[hydra03:325709] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f346364a537]
+[hydra03:325707] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f8b3961f40f]
+[hydra03:325709] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f346364a40f]
+[hydra03:325709] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f34636596e2]
+[hydra03:325709] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x560e73934540]
+[hydra03:325707] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f8b3962e6e2]
+[hydra03:325707] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x561d34d06540]
+[hydra03:325707] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x561d34d00ab0]
+[hydra03:325709] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x560e7392eab0]
+[hydra03:325709] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f346364bd7a]
+[hydra03:325707] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f8b39620d7a]
+[hydra03:325707] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x561d34d0032a]
+[hydra03:325707] *** End of error message ***
+[hydra03:325709] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x560e7392e32a]
+[hydra03:325709] *** End of error message ***
+[hydra04:324584] *** Process received signal ***
+[hydra04:324584] Signal: Aborted (6)
+[hydra04:324584] Signal code:  (-6)
+[hydra04:324584] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fac38d8bde0]
+[hydra04:324584] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fac38d8bd61]
+[hydra04:324584] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fac38d75537]
+[hydra04:324584] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fac38d7540f]
+[hydra04:324584] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fac38d846e2]
+[hydra04:324584] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55f6d6939540]
+[hydra04:324584] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55f6d6933ab0]
+[hydra04:324584] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fac38d76d7a]
+[hydra04:324584] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55f6d693332a]
+[hydra04:324584] *** End of error message ***
+[hydra02:464062] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7ffb425fdde0]
+[hydra02:464062] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7ffb425fdd61]
+[hydra02:464062] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7ffb425e7537]
+[hydra02:464062] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7ffb425e740f]
+[hydra02:464062] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7ffb425f66e2]
+[hydra02:464062] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x56371e891540]
+[hydra02:464062] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x56371e88bab0]
+[hydra02:464062] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7ffb425e8d7a]
+[hydra02:464062] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x56371e88b32a]
+[hydra02:464062] *** End of error message ***
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.13:4]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.13:10]
+slurmstepd: error: *** STEP 5008603.13 ON hydra01 CANCELLED AT 2025-10-13T11:45:18 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: hydra03: task 7: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra01: tasks 0-2: Killed
+srun: error: hydra04: tasks 9,11: Killed
+⚠️ Warning: No runtime found for run 14
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325748] *** Process received signal ***
+[hydra03:325748] Signal: Aborted (6)
+[hydra03:325748] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:464103] *** Process received signal ***
+[hydra02:464103] Signal: Aborted (6)
+[hydra02:464103] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:324625] *** Process received signal ***
+[hydra04:324625] Signal: Aborted (6)
+[hydra04:324625] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325750] *** Process received signal ***
+[hydra03:325750] Signal: Aborted (6)
+[hydra03:325750] Signal code:  (-6)
+[hydra03:325748] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f13d3756de0]
+[hydra03:325750] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fc35af39de0]
+[hydra03:325748] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f13d3756d61]
+[hydra03:325750] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fc35af39d61]
+[hydra03:325748] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f13d3740537]
+[hydra03:325750] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fc35af23537]
+[hydra03:325748] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f13d374040f]
+[hydra03:325750] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fc35af2340f]
+[hydra03:325748] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f13d374f6e2]
+[hydra03:325750] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fc35af326e2]
+[hydra03:325750] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55676cad4540]
+[hydra03:325750] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55676caceab0]
+[hydra03:325748] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5576ac2e2540]
+[hydra03:325748] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5576ac2dcab0]
+[hydra03:325748] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f13d3741d7a]
+[hydra03:325748] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5576ac2dc32a]
+[hydra03:325748] *** End of error message ***
+[hydra03:325750] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fc35af24d7a]
+[hydra03:325750] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55676cace32a]
+[hydra03:325750] *** End of error message ***
+[hydra02:464103] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f0d6b51bde0]
+[hydra02:464103] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f0d6b51bd61]
+[hydra04:324625] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fd48a0efde0]
+[hydra02:464103] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f0d6b505537]
+[hydra04:324625] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fd48a0efd61]
+[hydra02:464103] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f0d6b50540f]
+[hydra04:324625] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fd48a0d9537]
+[hydra02:464103] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f0d6b5146e2]
+[hydra02:464103] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5615a3e7b540]
+[hydra04:324625] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fd48a0d940f]
+[hydra02:464103] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5615a3e75ab0]
+[hydra04:324625] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fd48a0e86e2]
+[hydra04:324625] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x555c124b4540]
+[hydra02:464103] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f0d6b506d7a]
+[hydra04:324625] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x555c124aeab0]
+[hydra02:464103] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5615a3e7532a]
+[hydra02:464103] *** End of error message ***
+[hydra04:324625] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fd48a0dad7a]
+[hydra04:324625] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x555c124ae32a]
+[hydra04:324625] *** End of error message ***
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.14:10]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.14:4]
+slurmstepd: error: *** STEP 5008603.14 ON hydra01 CANCELLED AT 2025-10-13T11:45:20 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: hydra03: task 7: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 15
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:464145] *** Process received signal ***
+[hydra02:464145] Signal: Aborted (6)
+[hydra02:464145] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325790] *** Process received signal ***
+[hydra03:325790] Signal: Aborted (6)
+[hydra03:325790] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325792] *** Process received signal ***
+[hydra03:325792] Signal: Aborted (6)
+[hydra03:325792] Signal code:  (-6)
+[hydra03:325790] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f14eda4bde0]
+[hydra03:325792] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fb0fe3bdde0]
+[hydra03:325790] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f14eda4bd61]
+[hydra03:325792] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fb0fe3bdd61]
+[hydra03:325790] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f14eda35537]
+[hydra03:325792] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fb0fe3a7537]
+[hydra03:325792] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fb0fe3a740f]
+[hydra03:325790] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f14eda3540f]
+[hydra03:325792] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fb0fe3b66e2]
+[hydra03:325792] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55c98d67e540]
+[hydra03:325790] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f14eda446e2]
+[hydra03:325790] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x556f8c45d540]
+[hydra03:325790] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x556f8c457ab0]
+[hydra03:325792] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55c98d678ab0]
+[hydra03:325792] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fb0fe3a8d7a]
+[hydra03:325790] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f14eda36d7a]
+[hydra03:325790] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x556f8c45732a]
+[hydra03:325790] *** End of error message ***
+[hydra03:325792] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55c98d67832a]
+[hydra03:325792] *** End of error message ***
+[hydra02:464145] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f5ac45c8de0]
+[hydra02:464145] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f5ac45c8d61]
+[hydra02:464145] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f5ac45b2537]
+[hydra02:464145] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f5ac45b240f]
+[hydra02:464145] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f5ac45c16e2]
+[hydra02:464145] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55e812d36540]
+[hydra02:464145] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55e812d30ab0]
+[hydra02:464145] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f5ac45b3d7a]
+[hydra02:464145] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55e812d3032a]
+[hydra02:464145] *** End of error message ***
+[hydra04:324667] *** Process received signal ***
+[hydra04:324667] Signal: Aborted (6)
+[hydra04:324667] Signal code:  (-6)
+[hydra04:324667] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f05045fbde0]
+[hydra04:324667] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f05045fbd61]
+[hydra04:324667] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f05045e5537]
+[hydra04:324667] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f05045e540f]
+[hydra04:324667] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f05045f46e2]
+[hydra04:324667] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5578eab75540]
+[hydra04:324667] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5578eab6fab0]
+[hydra04:324667] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f05045e6d7a]
+[hydra04:324667] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5578eab6f32a]
+[hydra04:324667] *** End of error message ***
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.15:10]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.15:4]
+slurmstepd: error: *** STEP 5008603.15 ON hydra01 CANCELLED AT 2025-10-13T11:45:21 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: hydra03: task 7: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 16
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325831] *** Process received signal ***
+[hydra03:325831] Signal: Aborted (6)
+[hydra03:325831] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:324709] *** Process received signal ***
+[hydra04:324709] Signal: Aborted (6)
+[hydra04:324709] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325833] *** Process received signal ***
+[hydra03:325833] Signal: Aborted (6)
+[hydra03:325833] Signal code:  (-6)
+[hydra03:325833] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f102f63ade0]
+[hydra03:325831] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fc92272ade0]
+[hydra03:325833] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f102f63ad61]
+[hydra03:325831] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fc92272ad61]
+[hydra03:325833] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f102f624537]
+[hydra03:325831] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fc922714537]
+[hydra03:325831] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fc92271440f]
+[hydra03:325833] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f102f62440f]
+[hydra03:325833] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f102f6336e2]
+[hydra03:325831] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fc9227236e2]
+[hydra03:325831] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x561bf2e26540]
+[hydra03:325831] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x561bf2e20ab0]
+[hydra03:325833] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x556f4a920540]
+[hydra03:325833] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x556f4a91aab0]
+[hydra03:325831] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fc922715d7a]
+[hydra03:325831] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x561bf2e2032a]
+[hydra03:325831] *** End of error message ***
+[hydra03:325833] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f102f625d7a]
+[hydra03:325833] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x556f4a91a32a]
+[hydra03:325833] *** End of error message ***
+[hydra04:324709] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f05c782cde0]
+[hydra02:464186] *** Process received signal ***
+[hydra02:464186] Signal: Aborted (6)
+[hydra02:464186] Signal code:  (-6)
+[hydra04:324709] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f05c782cd61]
+[hydra02:464186] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fa81deb7de0]
+[hydra04:324709] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f05c7816537]
+[hydra02:464186] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fa81deb7d61]
+[hydra04:324709] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f05c781640f]
+[hydra02:464186] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fa81dea1537]
+[hydra04:324709] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f05c78256e2]
+[hydra04:324709] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55e9d2fbb540]
+[hydra02:464186] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fa81dea140f]
+[hydra04:324709] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55e9d2fb5ab0]
+[hydra02:464186] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fa81deb06e2]
+[hydra02:464186] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5617f7bba540]
+[hydra04:324709] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f05c7817d7a]
+[hydra02:464186] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5617f7bb4ab0]
+[hydra04:324709] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55e9d2fb532a]
+[hydra04:324709] *** End of error message ***
+[hydra02:464186] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fa81dea2d7a]
+[hydra02:464186] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5617f7bb432a]
+[hydra02:464186] *** End of error message ***
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.16:4]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.16:10]
+slurmstepd: error: *** STEP 5008603.16 ON hydra01 CANCELLED AT 2025-10-13T11:45:23 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra03 [2]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.16:8]
+srun: error: hydra03: task 7: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 17
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:464231] *** Process received signal ***
+[hydra02:464231] Signal: Aborted (6)
+[hydra02:464231] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325877] *** Process received signal ***
+[hydra03:325877] Signal: Aborted (6)
+[hydra03:325877] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:324754] *** Process received signal ***
+[hydra04:324754] Signal: Aborted (6)
+[hydra04:324754] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325879] *** Process received signal ***
+[hydra03:325879] Signal: Aborted (6)
+[hydra03:325879] Signal code:  (-6)
+[hydra03:325877] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fe288bd5de0]
+[hydra03:325879] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f6a311c5de0]
+[hydra03:325877] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fe288bd5d61]
+[hydra03:325879] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f6a311c5d61]
+[hydra03:325879] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f6a311af537]
+[hydra03:325877] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fe288bbf537]
+[hydra03:325879] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f6a311af40f]
+[hydra03:325877] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fe288bbf40f]
+[hydra03:325879] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f6a311be6e2]
+[hydra03:325877] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fe288bce6e2]
+[hydra03:325877] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55cfd2932540]
+[hydra03:325877] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55cfd292cab0]
+[hydra03:325879] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x56010df17540]
+[hydra03:325879] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x56010df11ab0]
+[hydra03:325877] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fe288bc0d7a]
+[hydra03:325877] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55cfd292c32a]
+[hydra03:325877] *** End of error message ***
+[hydra03:325879] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f6a311b0d7a]
+[hydra03:325879] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x56010df1132a]
+[hydra03:325879] *** End of error message ***
+[hydra02:464231] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f390c23ade0]
+[hydra04:324754] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f6f98a18de0]
+[hydra02:464231] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f390c23ad61]
+[hydra04:324754] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f6f98a18d61]
+[hydra02:464231] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f390c224537]
+[hydra04:324754] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f6f98a02537]
+[hydra02:464231] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f390c22440f]
+[hydra04:324754] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f6f98a0240f]
+[hydra02:464231] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f390c2336e2]
+[hydra02:464231] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x562b1a837540]
+[hydra04:324754] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f6f98a116e2]
+[hydra04:324754] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5585e90a8540]
+[hydra02:464231] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x562b1a831ab0]
+[hydra04:324754] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5585e90a2ab0]
+[hydra02:464231] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f390c225d7a]
+[hydra04:324754] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f6f98a03d7a]
+[hydra02:464231] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x562b1a83132a]
+[hydra02:464231] *** End of error message ***
+[hydra04:324754] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5585e90a232a]
+[hydra04:324754] *** End of error message ***
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.17:4]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.17:10]
+slurmstepd: error: *** STEP 5008603.17 ON hydra01 CANCELLED AT 2025-10-13T11:45:25 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra03 [2]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.17:6]
+srun: error: hydra03: task 7: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 18
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:464276] *** Process received signal ***
+[hydra02:464276] Signal: Aborted (6)
+[hydra02:464276] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325921] *** Process received signal ***
+[hydra03:325921] Signal: Aborted (6)
+[hydra03:325921] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325923] *** Process received signal ***
+[hydra03:325923] Signal: Aborted (6)
+[hydra03:325923] Signal code:  (-6)
+[hydra03:325921] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f614ac9ade0]
+[hydra03:325923] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fa4465e5de0]
+[hydra03:325921] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f614ac9ad61]
+[hydra03:325923] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fa4465e5d61]
+[hydra03:325921] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f614ac84537]
+[hydra03:325923] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fa4465cf537]
+[hydra03:325921] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f614ac8440f]
+[hydra03:325923] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fa4465cf40f]
+[hydra03:325921] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f614ac936e2]
+[hydra03:325923] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fa4465de6e2]
+[hydra03:325923] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x557fa6645540]
+[hydra03:325923] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x557fa663fab0]
+[hydra03:325921] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x564e36676540]
+[hydra03:325921] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x564e36670ab0]
+[hydra03:325921] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f614ac85d7a]
+[hydra03:325921] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x564e3667032a]
+[hydra03:325921] *** End of error message ***
+[hydra03:325923] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fa4465d0d7a]
+[hydra03:325923] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x557fa663f32a]
+[hydra03:325923] *** End of error message ***
+[hydra04:324798] *** Process received signal ***
+[hydra04:324798] Signal: Aborted (6)
+[hydra04:324798] Signal code:  (-6)
+[hydra02:464276] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f1bcb0c7de0]
+[hydra04:324798] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f3d5a772de0]
+[hydra02:464276] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f1bcb0c7d61]
+[hydra04:324798] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f3d5a772d61]
+[hydra02:464276] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f1bcb0b1537]
+[hydra04:324798] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f3d5a75c537]
+[hydra02:464276] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f1bcb0b140f]
+[hydra04:324798] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f3d5a75c40f]
+[hydra02:464276] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f1bcb0c06e2]
+[hydra02:464276] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55b50de93540]
+[hydra04:324798] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f3d5a76b6e2]
+[hydra04:324798] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55f8d6d3d540]
+[hydra02:464276] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55b50de8dab0]
+[hydra04:324798] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55f8d6d37ab0]
+[hydra02:464276] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f1bcb0b2d7a]
+[hydra04:324798] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f3d5a75dd7a]
+[hydra02:464276] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55b50de8d32a]
+[hydra02:464276] *** End of error message ***
+[hydra04:324798] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55f8d6d3732a]
+[hydra04:324798] *** End of error message ***
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.18:10]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.18:4]
+slurmstepd: error: *** STEP 5008603.18 ON hydra01 CANCELLED AT 2025-10-13T11:45:27 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra03 [2]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.18:6]
+srun: error: hydra03: task 7: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 19
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:324843] *** Process received signal ***
+[hydra04:324843] Signal: Aborted (6)
+[hydra04:324843] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:464320] *** Process received signal ***
+[hydra02:464320] Signal: Aborted (6)
+[hydra02:464320] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325965] *** Process received signal ***
+[hydra03:325965] Signal: Aborted (6)
+[hydra03:325965] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:325967] *** Process received signal ***
+[hydra03:325967] Signal: Aborted (6)
+[hydra03:325967] Signal code:  (-6)
+[hydra03:325965] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fabf5767de0]
+[hydra03:325967] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f3787e0fde0]
+[hydra03:325965] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fabf5767d61]
+[hydra03:325967] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f3787e0fd61]
+[hydra03:325965] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fabf5751537]
+[hydra03:325967] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f3787df9537]
+[hydra03:325965] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fabf575140f]
+[hydra03:325967] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f3787df940f]
+[hydra03:325965] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fabf57606e2]
+[hydra03:325967] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f3787e086e2]
+[hydra03:325967] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55bd645a8540]
+[hydra03:325967] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55bd645a2ab0]
+[hydra03:325965] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x56481473d540]
+[hydra03:325965] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x564814737ab0]
+[hydra03:325965] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fabf5752d7a]
+[hydra03:325965] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x56481473732a]
+[hydra03:325965] *** End of error message ***
+[hydra03:325967] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f3787dfad7a]
+[hydra03:325967] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55bd645a232a]
+[hydra03:325967] *** End of error message ***
+[hydra02:464320] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fa3faff8de0]
+[hydra02:464320] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fa3faff8d61]
+[hydra02:464320] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fa3fafe2537]
+[hydra02:464320] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fa3fafe240f]
+[hydra02:464320] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fa3faff16e2]
+[hydra02:464320] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x560733b34540]
+[hydra02:464320] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x560733b2eab0]
+[hydra02:464320] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fa3fafe3d7a]
+[hydra02:464320] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x560733b2e32a]
+[hydra02:464320] *** End of error message ***
+[hydra04:324843] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f827b248de0]
+[hydra04:324843] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f827b248d61]
+[hydra04:324843] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f827b232537]
+[hydra04:324843] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f827b23240f]
+[hydra04:324843] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f827b2416e2]
+[hydra04:324843] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x560aface3540]
+[hydra04:324843] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x560afacddab0]
+[hydra04:324843] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f827b233d7a]
+[hydra04:324843] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x560afacdd32a]
+[hydra04:324843] *** End of error message ***
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.19:10]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.19:4]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra03 [2]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.19:6]
+slurmstepd: error: *** STEP 5008603.19 ON hydra01 CANCELLED AT 2025-10-13T11:45:29 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: hydra03: task 7: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 20
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:324888] *** Process received signal ***
+[hydra04:324888] Signal: Aborted (6)
+[hydra04:324888] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:464364] *** Process received signal ***
+[hydra02:464364] Signal: Aborted (6)
+[hydra02:464364] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:326009] *** Process received signal ***
+[hydra03:326009] Signal: Aborted (6)
+[hydra03:326009] Signal code:  (-6)
+[hydra04:324888] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f86b8d0bde0]
+[hydra02:464364] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7feff4379de0]
+[hydra04:324888] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f86b8d0bd61]
+[hydra02:464364] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7feff4379d61]
+[hydra04:324888] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f86b8cf5537]
+[hydra02:464364] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7feff4363537]
+[hydra04:324888] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f86b8cf540f]
+[hydra02:464364] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7feff436340f]
+[hydra04:324888] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f86b8d046e2]
+[hydra04:324888] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x559d20d16540]
+[hydra02:464364] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7feff43726e2]
+[hydra02:464364] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x558919f50540]
+[hydra04:324888] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x559d20d10ab0]
+[hydra02:464364] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x558919f4aab0]
+[hydra04:324888] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f86b8cf6d7a]
+[hydra04:324888] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x559d20d1032a]
+[hydra02:464364] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7feff4364d7a]
+[hydra02:464364] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x558919f4a32a]
+[hydra04:324888] *** End of error message ***
+[hydra02:464364] *** End of error message ***
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:326011] *** Process received signal ***
+[hydra03:326011] Signal: Aborted (6)
+[hydra03:326011] Signal code:  (-6)
+[hydra03:326009] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f51f6b44de0]
+[hydra03:326011] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fb66d473de0]
+[hydra03:326009] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f51f6b44d61]
+[hydra03:326011] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fb66d473d61]
+[hydra03:326011] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fb66d45d537]
+[hydra03:326009] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f51f6b2e537]
+[hydra03:326011] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fb66d45d40f]
+[hydra03:326009] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f51f6b2e40f]
+[hydra03:326009] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f51f6b3d6e2]
+[hydra03:326011] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fb66d46c6e2]
+[hydra03:326011] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x559541d05540]
+[hydra03:326011] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x559541cffab0]
+[hydra03:326009] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55fffb058540]
+[hydra03:326009] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55fffb052ab0]
+[hydra03:326011] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fb66d45ed7a]
+[hydra03:326011] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x559541cff32a]
+[hydra03:326009] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f51f6b2fd7a]
+[hydra03:326009] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55fffb05232a]
+[hydra03:326009] *** End of error message ***
+[hydra03:326011] *** End of error message ***
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.20:10]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.20:4]
+slurmstepd: error: *** STEP 5008603.20 ON hydra01 CANCELLED AT 2025-10-13T11:45:31 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra03 [2]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.20:8]
+srun: error: hydra03: task 7: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 21
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:324932] *** Process received signal ***
+[hydra04:324932] Signal: Aborted (6)
+[hydra04:324932] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:326053] *** Process received signal ***
+[hydra03:326053] Signal: Aborted (6)
+[hydra03:326053] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:326055] *** Process received signal ***
+[hydra03:326055] Signal: Aborted (6)
+[hydra03:326055] Signal code:  (-6)
+[hydra03:326053] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fb78ef30de0]
+[hydra03:326055] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fbe68117de0]
+[hydra03:326055] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fbe68117d61]
+[hydra03:326053] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fb78ef30d61]
+[hydra03:326053] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fb78ef1a537]
+[hydra03:326055] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fbe68101537]
+[hydra03:326053] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fb78ef1a40f]
+[hydra03:326055] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fbe6810140f]
+[hydra03:326053] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fb78ef296e2]
+[hydra03:326055] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fbe681106e2]
+[hydra03:326055] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55c12fbdd540]
+[hydra03:326055] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55c12fbd7ab0]
+[hydra03:326053] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55fd5aa83540]
+[hydra03:326053] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55fd5aa7dab0]
+[hydra03:326055] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fbe68102d7a]
+[hydra03:326055] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55c12fbd732a]
+[hydra03:326053] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fb78ef1bd7a]
+[hydra03:326053] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55fd5aa7d32a]
+[hydra03:326053] *** End of error message ***
+[hydra03:326055] *** End of error message ***
+[hydra02:464408] *** Process received signal ***
+[hydra02:464408] Signal: Aborted (6)
+[hydra02:464408] Signal code:  (-6)
+[hydra02:464408] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fd5a8904de0]
+[hydra02:464408] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fd5a8904d61]
+[hydra04:324932] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7feeafe14de0]
+[hydra02:464408] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fd5a88ee537]
+[hydra04:324932] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7feeafe14d61]
+[hydra02:464408] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fd5a88ee40f]
+[hydra04:324932] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7feeafdfe537]
+[hydra02:464408] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fd5a88fd6e2]
+[hydra02:464408] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x560559eec540]
+[hydra04:324932] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7feeafdfe40f]
+[hydra02:464408] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x560559ee6ab0]
+[hydra04:324932] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7feeafe0d6e2]
+[hydra04:324932] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5652ca605540]
+[hydra02:464408] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fd5a88efd7a]
+[hydra02:464408] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x560559ee632a]
+[hydra04:324932] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5652ca5ffab0]
+[hydra02:464408] *** End of error message ***
+[hydra04:324932] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7feeafdffd7a]
+[hydra04:324932] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5652ca5ff32a]
+[hydra04:324932] *** End of error message ***
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.21:4]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.21:10]
+slurmstepd: error: *** STEP 5008603.21 ON hydra01 CANCELLED AT 2025-10-13T11:45:33 ***
+slurmstepd: error: *** STEP 5008603.21 ON hydra01 CANCELLED AT 2025-10-13T11:45:33 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: hydra03: task 7: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 22
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:326094] *** Process received signal ***
+[hydra03:326094] Signal: Aborted (6)
+[hydra03:326094] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:324974] *** Process received signal ***
+[hydra04:324974] Signal: Aborted (6)
+[hydra04:324974] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:464450] *** Process received signal ***
+[hydra02:464450] Signal: Aborted (6)
+[hydra02:464450] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:326096] *** Process received signal ***
+[hydra03:326096] Signal: Aborted (6)
+[hydra03:326096] Signal code:  (-6)
+[hydra03:326094] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f38ee916de0]
+[hydra03:326096] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f983f0f1de0]
+[hydra03:326096] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f983f0f1d61]
+[hydra03:326094] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f38ee916d61]
+[hydra03:326096] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f983f0db537]
+[hydra03:326094] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f38ee900537]
+[hydra03:326096] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f983f0db40f]
+[hydra03:326094] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f38ee90040f]
+[hydra03:326096] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f983f0ea6e2]
+[hydra03:326094] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f38ee90f6e2]
+[hydra03:326094] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55da6bc05540]
+[hydra03:326094] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55da6bbffab0]
+[hydra03:326096] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55e4f42d5540]
+[hydra03:326096] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55e4f42cfab0]
+[hydra03:326094] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f38ee901d7a]
+[hydra03:326094] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55da6bbff32a]
+[hydra03:326094] *** End of error message ***
+[hydra03:326096] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f983f0dcd7a]
+[hydra03:326096] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55e4f42cf32a]
+[hydra03:326096] *** End of error message ***
+[hydra04:324974] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fa7f07a1de0]
+[hydra02:464450] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f25309e8de0]
+[hydra04:324974] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fa7f07a1d61]
+[hydra02:464450] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f25309e8d61]
+[hydra04:324974] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fa7f078b537]
+[hydra02:464450] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f25309d2537]
+[hydra04:324974] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fa7f078b40f]
+[hydra02:464450] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f25309d240f]
+[hydra04:324974] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fa7f079a6e2]
+[hydra04:324974] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55a3347f8540]
+[hydra02:464450] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f25309e16e2]
+[hydra02:464450] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5643a6b17540]
+[hydra04:324974] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55a3347f2ab0]
+[hydra02:464450] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5643a6b11ab0]
+[hydra04:324974] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fa7f078cd7a]
+[hydra02:464450] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f25309d3d7a]
+[hydra04:324974] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55a3347f232a]
+[hydra04:324974] *** End of error message ***
+[hydra02:464450] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5643a6b1132a]
+[hydra02:464450] *** End of error message ***
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.22:10]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.22:4]
+slurmstepd: error: *** STEP 5008603.22 ON hydra01 CANCELLED AT 2025-10-13T11:45:34 ***
+slurmstepd: error: *** STEP 5008603.22 ON hydra01 CANCELLED AT 2025-10-13T11:45:34 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: hydra03: task 7: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 23
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:464491] *** Process received signal ***
+[hydra02:464491] Signal: Aborted (6)
+[hydra02:464491] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:326135] *** Process received signal ***
+[hydra03:326135] Signal: Aborted (6)
+[hydra03:326135] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:326137] *** Process received signal ***
+[hydra03:326137] Signal: Aborted (6)
+[hydra03:326137] Signal code:  (-6)
+[hydra03:326135] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fe2683b5de0]
+[hydra03:326137] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f2aa1416de0]
+[hydra03:326135] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fe2683b5d61]
+[hydra03:326137] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f2aa1416d61]
+[hydra03:326137] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f2aa1400537]
+[hydra03:326135] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fe26839f537]
+[hydra03:326135] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fe26839f40f]
+[hydra03:326137] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f2aa140040f]
+[hydra03:326137] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f2aa140f6e2]
+[hydra03:326135] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fe2683ae6e2]
+[hydra03:326135] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55a1de18d540]
+[hydra03:326135] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55a1de187ab0]
+[hydra03:326137] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5618705e5540]
+[hydra03:326137] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5618705dfab0]
+[hydra03:326135] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fe2683a0d7a]
+[hydra03:326135] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55a1de18732a]
+[hydra03:326135] *** End of error message ***
+[hydra03:326137] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f2aa1401d7a]
+[hydra03:326137] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5618705df32a]
+[hydra03:326137] *** End of error message ***
+[hydra04:325015] *** Process received signal ***
+[hydra04:325015] Signal: Aborted (6)
+[hydra04:325015] Signal code:  (-6)
+[hydra04:325015] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f4725a44de0]
+[hydra04:325015] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f4725a44d61]
+[hydra04:325015] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f4725a2e537]
+[hydra04:325015] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f4725a2e40f]
+[hydra04:325015] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f4725a3d6e2]
+[hydra04:325015] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x556db7921540]
+[hydra04:325015] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x556db791bab0]
+[hydra04:325015] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f4725a2fd7a]
+[hydra04:325015] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x556db791b32a]
+[hydra04:325015] *** End of error message ***
+[hydra02:464491] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f397c54fde0]
+[hydra02:464491] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f397c54fd61]
+[hydra02:464491] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f397c539537]
+[hydra02:464491] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f397c53940f]
+[hydra02:464491] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f397c5486e2]
+[hydra02:464491] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5579ccc5a540]
+[hydra02:464491] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5579ccc54ab0]
+[hydra02:464491] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f397c53ad7a]
+[hydra02:464491] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5579ccc5432a]
+[hydra02:464491] *** End of error message ***
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.23:4]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.23:10]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra03 [2]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.23:8]
+slurmstepd: error: *** STEP 5008603.23 ON hydra01 CANCELLED AT 2025-10-13T11:45:36 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: hydra03: task 7: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 24
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:464535] *** Process received signal ***
+[hydra02:464535] Signal: Aborted (6)
+[hydra02:464535] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:326179] *** Process received signal ***
+[hydra03:326179] Signal: Aborted (6)
+[hydra03:326179] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:325060] *** Process received signal ***
+[hydra04:325060] Signal: Aborted (6)
+[hydra04:325060] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:326181] *** Process received signal ***
+[hydra03:326181] Signal: Aborted (6)
+[hydra03:326181] Signal code:  (-6)
+[hydra03:326179] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f4003429de0]
+[hydra03:326181] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fe08842cde0]
+[hydra03:326179] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f4003429d61]
+[hydra03:326181] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fe08842cd61]
+[hydra03:326181] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fe088416537]
+[hydra03:326179] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f4003413537]
+[hydra03:326181] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fe08841640f]
+[hydra03:326179] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f400341340f]
+[hydra03:326179] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f40034226e2]
+[hydra03:326181] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fe0884256e2]
+[hydra03:326181] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x562084df9540]
+[hydra03:326181] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x562084df3ab0]
+[hydra03:326179] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55d731b2f540]
+[hydra03:326179] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55d731b29ab0]
+[hydra03:326179] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f4003414d7a]
+[hydra03:326179] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55d731b2932a]
+[hydra03:326179] *** End of error message ***
+[hydra03:326181] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fe088417d7a]
+[hydra03:326181] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x562084df332a]
+[hydra03:326181] *** End of error message ***
+[hydra02:464535] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fe272a96de0]
+[hydra02:464535] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fe272a96d61]
+[hydra02:464535] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fe272a80537]
+[hydra04:325060] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fee29b73de0]
+[hydra02:464535] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fe272a8040f]
+[hydra04:325060] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fee29b73d61]
+[hydra02:464535] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fe272a8f6e2]
+[hydra02:464535] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55c4226b2540]
+[hydra04:325060] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fee29b5d537]
+[hydra02:464535] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55c4226acab0]
+[hydra04:325060] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fee29b5d40f]
+[hydra02:464535] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fe272a81d7a]
+[hydra04:325060] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fee29b6c6e2]
+[hydra04:325060] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x562c9f7e3540]
+[hydra02:464535] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55c4226ac32a]
+[hydra02:464535] *** End of error message ***
+[hydra04:325060] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x562c9f7ddab0]
+[hydra04:325060] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fee29b5ed7a]
+[hydra04:325060] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x562c9f7dd32a]
+[hydra04:325060] *** End of error message ***
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.24:10]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.24:4]
+slurmstepd: error: *** STEP 5008603.24 ON hydra01 CANCELLED AT 2025-10-13T11:45:38 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra03 [2]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.24:6]
+srun: error: hydra03: task 7: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra01: tasks 0-2: Killed
+srun: error: hydra02: tasks 3,5: Killed
+⚠️ Warning: No runtime found for run 25
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:326223] *** Process received signal ***
+[hydra03:326223] Signal: Aborted (6)
+[hydra03:326223] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:325104] *** Process received signal ***
+[hydra04:325104] Signal: Aborted (6)
+[hydra04:325104] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:464579] *** Process received signal ***
+[hydra02:464579] Signal: Aborted (6)
+[hydra02:464579] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:326225] *** Process received signal ***
+[hydra03:326225] Signal: Aborted (6)
+[hydra03:326225] Signal code:  (-6)
+[hydra03:326223] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f235fcd2de0]
+[hydra03:326225] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7febf43e6de0]
+[hydra03:326223] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f235fcd2d61]
+[hydra03:326225] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7febf43e6d61]
+[hydra03:326223] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f235fcbc537]
+[hydra03:326225] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7febf43d0537]
+[hydra03:326223] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f235fcbc40f]
+[hydra03:326225] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7febf43d040f]
+[hydra03:326223] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f235fccb6e2]
+[hydra03:326225] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7febf43df6e2]
+[hydra03:326225] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x559b327e0540]
+[hydra03:326225] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x559b327daab0]
+[hydra03:326223] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x558a308b2540]
+[hydra03:326223] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x558a308acab0]
+[hydra03:326223] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f235fcbdd7a]
+[hydra03:326223] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x558a308ac32a]
+[hydra03:326223] *** End of error message ***
+[hydra03:326225] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7febf43d1d7a]
+[hydra03:326225] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x559b327da32a]
+[hydra03:326225] *** End of error message ***
+[hydra04:325104] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fea183d8de0]
+[hydra04:325104] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fea183d8d61]
+[hydra04:325104] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fea183c2537]
+[hydra04:325104] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fea183c240f]
+[hydra04:325104] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fea183d16e2]
+[hydra04:325104] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x562cf3450540]
+[hydra04:325104] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x562cf344aab0]
+[hydra04:325104] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fea183c3d7a]
+[hydra04:325104] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x562cf344a32a]
+[hydra04:325104] *** End of error message ***
+[hydra02:464579] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f997476ade0]
+[hydra02:464579] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f997476ad61]
+[hydra02:464579] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f9974754537]
+[hydra02:464579] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f997475440f]
+[hydra02:464579] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f99747636e2]
+[hydra02:464579] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55c536147540]
+[hydra02:464579] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55c536141ab0]
+[hydra02:464579] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f9974755d7a]
+[hydra02:464579] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55c53614132a]
+[hydra02:464579] *** End of error message ***
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.25:10]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.25:4]
+slurmstepd: error: *** STEP 5008603.25 ON hydra01 CANCELLED AT 2025-10-13T11:45:40 ***
+slurmstepd: error: *** STEP 5008603.25 ON hydra01 CANCELLED AT 2025-10-13T11:45:40 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: hydra03: task 7: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 26
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:326264] *** Process received signal ***
+[hydra03:326264] Signal: Aborted (6)
+[hydra03:326264] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:464620] *** Process received signal ***
+[hydra02:464620] Signal: Aborted (6)
+[hydra02:464620] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:325145] *** Process received signal ***
+[hydra04:325145] Signal: Aborted (6)
+[hydra04:325145] Signal code:  (-6)
+[hydra02:464620] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f16c2d8cde0]
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:326266] *** Process received signal ***
+[hydra03:326266] Signal: Aborted (6)
+[hydra03:326266] Signal code:  (-6)
+[hydra02:464620] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f16c2d8cd61]
+[hydra03:326264] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fb423cf7de0]
+[hydra02:464620] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f16c2d76537]
+[hydra03:326266] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7efda48b3de0]
+[hydra02:464620] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f16c2d7640f]
+[hydra03:326264] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fb423cf7d61]
+[hydra02:464620] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f16c2d856e2]
+[hydra02:464620] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55749ff99540]
+[hydra03:326266] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7efda48b3d61]
+[hydra02:464620] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55749ff93ab0]
+[hydra03:326264] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fb423ce1537]
+[hydra03:326266] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7efda489d537]
+[hydra03:326264] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fb423ce140f]
+[hydra02:464620] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f16c2d77d7a]
+[hydra03:326266] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7efda489d40f]
+[hydra02:464620] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55749ff9332a]
+[hydra02:464620] *** End of error message ***
+[hydra03:326264] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fb423cf06e2]
+[hydra03:326266] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7efda48ac6e2]
+[hydra03:326266] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55aa3b330540]
+[hydra03:326266] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55aa3b32aab0]
+[hydra03:326264] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x563b13f92540]
+[hydra03:326264] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x563b13f8cab0]
+[hydra03:326264] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fb423ce2d7a]
+[hydra03:326264] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x563b13f8c32a]
+[hydra03:326264] *** End of error message ***
+[hydra03:326266] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7efda489ed7a]
+[hydra03:326266] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55aa3b32a32a]
+[hydra03:326266] *** End of error message ***
+[hydra04:325145] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fc139133de0]
+[hydra04:325145] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fc139133d61]
+[hydra04:325145] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fc13911d537]
+[hydra04:325145] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fc13911d40f]
+[hydra04:325145] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fc13912c6e2]
+[hydra04:325145] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55d98da19540]
+[hydra04:325145] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55d98da13ab0]
+[hydra04:325145] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fc13911ed7a]
+[hydra04:325145] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55d98da1332a]
+[hydra04:325145] *** End of error message ***
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.26:10]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.26:4]
+slurmstepd: error: *** STEP 5008603.26 ON hydra01 CANCELLED AT 2025-10-13T11:45:42 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra03 [2]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.26:6]
+srun: error: hydra03: task 7: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 27
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:325191] *** Process received signal ***
+[hydra04:325191] Signal: Aborted (6)
+[hydra04:325191] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:464664] *** Process received signal ***
+[hydra02:464664] Signal: Aborted (6)
+[hydra02:464664] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:326308] *** Process received signal ***
+[hydra03:326308] Signal: Aborted (6)
+[hydra03:326308] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:326310] *** Process received signal ***
+[hydra03:326310] Signal: Aborted (6)
+[hydra03:326310] Signal code:  (-6)
+[hydra03:326308] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f7ac6e8ade0]
+[hydra03:326310] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f22a6d29de0]
+[hydra03:326308] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f7ac6e8ad61]
+[hydra03:326310] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f22a6d29d61]
+[hydra03:326308] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f7ac6e74537]
+[hydra03:326310] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f22a6d13537]
+[hydra03:326308] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f7ac6e7440f]
+[hydra03:326310] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f22a6d1340f]
+[hydra03:326308] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f7ac6e836e2]
+[hydra03:326310] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f22a6d226e2]
+[hydra03:326310] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x56433bbc1540]
+[hydra03:326310] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x56433bbbbab0]
+[hydra03:326308] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55c8ea3b2540]
+[hydra03:326308] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55c8ea3acab0]
+[hydra03:326310] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f22a6d14d7a]
+[hydra03:326310] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x56433bbbb32a]
+[hydra03:326308] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f7ac6e75d7a]
+[hydra03:326308] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55c8ea3ac32a]
+[hydra03:326308] *** End of error message ***
+[hydra03:326310] *** End of error message ***
+[hydra04:325191] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f90db77bde0]
+[hydra02:464664] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f5e8be1ede0]
+[hydra04:325191] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f90db77bd61]
+[hydra02:464664] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f5e8be1ed61]
+[hydra04:325191] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f90db765537]
+[hydra02:464664] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f5e8be08537]
+[hydra04:325191] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f90db76540f]
+[hydra02:464664] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f5e8be0840f]
+[hydra04:325191] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f90db7746e2]
+[hydra04:325191] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x5638037c2540]
+[hydra02:464664] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f5e8be176e2]
+[hydra02:464664] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x560df00cf540]
+[hydra04:325191] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x5638037bcab0]
+[hydra02:464664] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x560df00c9ab0]
+[hydra04:325191] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f90db766d7a]
+[hydra02:464664] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f5e8be09d7a]
+[hydra04:325191] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x5638037bc32a]
+[hydra04:325191] *** End of error message ***
+[hydra02:464664] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x560df00c932a]
+[hydra02:464664] *** End of error message ***
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.27:10]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.27:4]
+slurmstepd: error: *** STEP 5008603.27 ON hydra01 CANCELLED AT 2025-10-13T11:45:44 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: hydra03: task 7: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 28
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:464705] *** Process received signal ***
+[hydra02:464705] Signal: Aborted (6)
+[hydra02:464705] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:326350] *** Process received signal ***
+[hydra03:326350] Signal: Aborted (6)
+[hydra03:326350] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:326352] *** Process received signal ***
+[hydra03:326352] Signal: Aborted (6)
+[hydra03:326352] Signal code:  (-6)
+[hydra03:326350] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f91dd2dade0]
+[hydra03:326352] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f56857e7de0]
+[hydra03:326350] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f91dd2dad61]
+[hydra03:326352] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f56857e7d61]
+[hydra03:326350] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f91dd2c4537]
+[hydra03:326352] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f56857d1537]
+[hydra03:326350] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f91dd2c440f]
+[hydra03:326352] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f56857d140f]
+[hydra03:326350] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f91dd2d36e2]
+[hydra03:326352] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f56857e06e2]
+[hydra03:326352] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x56013c6d1540]
+[hydra03:326352] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x56013c6cbab0]
+[hydra03:326350] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x562f8e9e0540]
+[hydra03:326350] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x562f8e9daab0]
+[hydra03:326350] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f91dd2c5d7a]
+[hydra03:326350] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x562f8e9da32a]
+[hydra03:326350] *** End of error message ***
+[hydra03:326352] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f56857d2d7a]
+[hydra03:326352] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x56013c6cb32a]
+[hydra03:326352] *** End of error message ***
+[hydra02:464705] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f4e4ee03de0]
+[hydra02:464705] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f4e4ee03d61]
+[hydra04:325232] *** Process received signal ***
+[hydra04:325232] Signal: Aborted (6)
+[hydra04:325232] Signal code:  (-6)
+[hydra02:464705] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f4e4eded537]
+[hydra04:325232] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f70813bade0]
+[hydra02:464705] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f4e4eded40f]
+[hydra04:325232] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f70813bad61]
+[hydra02:464705] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f4e4edfc6e2]
+[hydra02:464705] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x558a0605e540]
+[hydra04:325232] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f70813a4537]
+[hydra02:464705] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x558a06058ab0]
+[hydra04:325232] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f70813a440f]
+[hydra02:464705] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f4e4edeed7a]
+[hydra04:325232] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f70813b36e2]
+[hydra04:325232] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x562723253540]
+[hydra02:464705] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x558a0605832a]
+[hydra02:464705] *** End of error message ***
+[hydra04:325232] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x56272324dab0]
+[hydra04:325232] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f70813a5d7a]
+[hydra04:325232] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x56272324d32a]
+[hydra04:325232] *** End of error message ***
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.28:10]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.28:4]
+slurmstepd: error: *** STEP 5008603.28 ON hydra01 CANCELLED AT 2025-10-13T11:45:45 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra03 [2]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.28:6]
+srun: error: hydra03: task 7: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 29
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra02:464749] *** Process received signal ***
+[hydra02:464749] Signal: Aborted (6)
+[hydra02:464749] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra04:325276] *** Process received signal ***
+[hydra04:325276] Signal: Aborted (6)
+[hydra04:325276] Signal code:  (-6)
+MPI_SYRK_implementation: /home/thesis/jheld/MPI_Syrk_implementation/src/three_d_syrk.c:172: distribute_input_matrix_3D: Assertion `pMpiCommunicators[i] != MPI_COMM_NULL' failed.
+[hydra03:326396] *** Process received signal ***
+[hydra03:326396] Signal: Aborted (6)
+[hydra03:326396] Signal code:  (-6)
+[hydra03:326394] *** Process received signal ***
+[hydra03:326394] Signal: Aborted (6)
+[hydra03:326394] Signal code:  (-6)
+[hydra03:326394] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f0e5c172de0]
+[hydra04:325276] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7fdd0cb71de0]
+[hydra03:326396] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f24cc997de0]
+[hydra04:325276] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7fdd0cb71d61]
+[hydra03:326394] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f0e5c172d61]
+[hydra04:325276] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7fdd0cb5b537]
+[hydra03:326396] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f24cc997d61]
+[hydra03:326394] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f0e5c15c537]
+[hydra03:326396] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f24cc981537]
+[hydra04:325276] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7fdd0cb5b40f]
+[hydra04:325276] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7fdd0cb6a6e2]
+[hydra04:325276] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x56524cbcd540]
+[hydra03:326394] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f0e5c15c40f]
+[hydra03:326396] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f24cc98140f]
+[hydra04:325276] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x56524cbc7ab0]
+[hydra03:326394] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f0e5c16b6e2]
+[hydra03:326394] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55a9396e1540]
+[hydra04:325276] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7fdd0cb5cd7a]
+[hydra04:325276] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x56524cbc732a]
+[hydra03:326396] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f24cc9906e2]
+[hydra03:326396] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x55d188382540]
+[hydra03:326396] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55d18837cab0]
+[hydra04:325276] *** End of error message ***
+[hydra03:326394] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x55a9396dbab0]
+[hydra03:326396] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f24cc982d7a]
+[hydra03:326396] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55d18837c32a]
+[hydra03:326396] *** End of error message ***
+[hydra03:326394] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f0e5c15dd7a]
+[hydra03:326394] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x55a9396db32a]
+[hydra03:326394] *** End of error message ***
+[hydra02:464749] [ 0] /lib/x86_64-linux-gnu/libc.so.6(+0x38de0)[0x7f83c0979de0]
+[hydra02:464749] [ 1] /lib/x86_64-linux-gnu/libc.so.6(gsignal+0x141)[0x7f83c0979d61]
+[hydra02:464749] [ 2] /lib/x86_64-linux-gnu/libc.so.6(abort+0x123)[0x7f83c0963537]
+[hydra02:464749] [ 3] /lib/x86_64-linux-gnu/libc.so.6(+0x2240f)[0x7f83c096340f]
+[hydra02:464749] [ 4] /lib/x86_64-linux-gnu/libc.so.6(+0x316e2)[0x7f83c09726e2]
+[hydra02:464749] [ 5] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x8540)[0x559febb89540]
+[hydra02:464749] [ 6] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x2ab0)[0x559febb83ab0]
+[hydra02:464749] [ 7] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xea)[0x7f83c0964d7a]
+[hydra02:464749] [ 8] /home/thesis/jheld/MPI_Syrk_implementation/build/src/MPI_SYRK_implementation(+0x232a)[0x559febb8332a]
+[hydra02:464749] *** End of error message ***
+srun: error: hydra02: task 4: Aborted
+srun: error: hydra04: task 10: Aborted
+srun: error: hydra03: tasks 6,8: Aborted
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra04 [3]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.29:10]
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra02 [1]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.29:4]
+slurmstepd: error: *** STEP 5008603.29 ON hydra01 CANCELLED AT 2025-10-13T11:45:47 ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error:  mpi/pmix_v4: _errhandler: hydra03 [2]: pmixp_client_v2.c:211: Error handler invoked: status = -61, source = [slurm.pmix.5008603.29:8]
+srun: error: hydra03: task 7: Killed
+srun: error: hydra04: tasks 9,11: Killed
+srun: error: hydra02: tasks 3,5: Killed
+srun: error: hydra01: tasks 0-2: Killed
+⚠️ Warning: No runtime found for run 30

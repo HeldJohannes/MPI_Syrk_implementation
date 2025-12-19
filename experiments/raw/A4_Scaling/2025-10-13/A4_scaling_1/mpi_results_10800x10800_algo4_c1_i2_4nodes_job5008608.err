@@ -1,0 +1,3 @@
+srun: Warning: can't honor --ntasks-per-node set to 1 which doesn't match the requested tasks 12 with the number of requested nodes 4. Ignoring --ntasks-per-node.
+missing input file name --> Generate random input
+slurmstepd: error: *** STEP 5008608.0 ON hydra25 CANCELLED AT 2025-10-13T11:46:15 ***

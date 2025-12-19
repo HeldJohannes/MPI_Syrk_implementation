@@ -1,0 +1,390 @@
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+missing input file name --> Generate random input
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 1] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
+[rank 0] s->m = 7200, s->n = 2400, s->c = 1, s->world_size = 2
+block_size = 8640000, block_height = 7200, block_length = 1200
